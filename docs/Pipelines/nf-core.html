@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="en"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Foundamentals">
+    <meta name="description" content="">
+    <title>nf-core</title>
+    <link rel="stylesheet" href="../nicepage.css" media="screen">
+<link rel="stylesheet" href="nf-core.css" media="screen">
+    <script class="u-script" type="text/javascript" src="../jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="../nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 5.17.1, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "",
+		"logo": "../images/UCL-logo2.png"
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="nf-core">
+    <meta property="og:type" content="website">
+  <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
+  <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-header u-sticky u-white u-header" id="sec-2a5c"><div class="u-clearfix u-sheet u-sheet-1">
+        <a href="https://www.ucl.ac.uk/cancer/welcome-ucl-cancer-institute" class="u-image u-logo u-image-1" data-image-width="349" data-image-height="140" title="UCL CI">
+          <img src="../images/UCL-logo2.png" class="u-logo-image u-logo-image-1">
+        </a>
+        <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1" data-responsive-from="MD">
+          <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px; text-transform: uppercase; font-weight: 500;">
+            <a class="u-button-style u-custom-active-border-color u-custom-active-color u-custom-border u-custom-border-color u-custom-borders u-custom-hover-border-color u-custom-hover-color u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-decoration u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
+              <svg class="u-svg-link" viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
+              <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</g></svg>
+            </a>
+          </div>
+          <div class="u-custom-menu u-nav-container" style="">
+            <ul class="u-nav u-spacing-2 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-active-palette-1-base u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-button-style u-hover-palette-1-light-1 u-nav-link u-text-active-white u-text-grey-90 u-text-hover-white" href="../Home.html" style="padding: 10px 20px;">Home</a>
+</li><li class="u-nav-item"><a class="u-active-palette-1-base u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-button-style u-hover-palette-1-light-1 u-nav-link u-text-active-white u-text-grey-90 u-text-hover-white" href="../Fundamentals/Fundamentals.html" style="padding: 10px 20px;">Fundamentals</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../Fundamentals/UCL-Cluster.html">UCL Cluster</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../Fundamentals/The-Unix-Shell.html">The Unix Shell</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../Fundamentals/Basic-R.html">Basic R</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../Fundamentals/Bash-Scripting.html">Bash Scripting</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../Fundamentals/Advanced-R.html">Advanced R</a>
+</li></ul>
+</div>
+</li><li class="u-nav-item"><a class="u-active-palette-1-base u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-button-style u-hover-palette-1-light-1 u-nav-link u-text-active-white u-text-grey-90 u-text-hover-white" href="../NGS-Data-Analysis/NGS-data-analysis.html" style="padding: 10px 20px;">NGS data analysis</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../NGS-Data-Analysis/Preprocessing.html">Preprocessing</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../NGS-Data-Analysis/Gene-Expression.html">Gene Expression</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../NGS-Data-Analysis/Variant-Calling.html">Variant Calling</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../NGS-Data-Analysis/ChIP-Seq.html">ChIP-Seq</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../NGS-Data-Analysis/Single-Cell-Gene-Expression.html">Single Cell Gene Expression</a>
+</li></ul>
+</div>
+</li><li class="u-nav-item"><a class="u-active-palette-1-base u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-button-style u-hover-palette-1-light-1 u-nav-link u-text-active-white u-text-grey-90 u-text-hover-white" href="Pipelines.html" style="padding: 10px 20px;">Pipelines</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="nf-core.html">nf-core</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="Nextflow.html">Nextflow</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="nf-core-pipelines-in-Myriad.html">nf-core pipelines in Myriad</a>
+</li></ul>
+</div>
+</li></ul>
+          </div>
+          <div class="u-custom-menu u-nav-container-collapse">
+            <div class="u-black u-border-2 u-border-grey-75 u-container-style u-inner-container-layout u-sidenav">
+              <div class="u-inner-container-layout u-sidenav-overflow">
+                <div class="u-menu-close"></div>
+                <ul class="u-align-center u-nav u-popupmenu-items u-spacing-0 u-unstyled u-nav-5"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Home.html">Home</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Fundamentals/Fundamentals.html">Fundamentals</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Fundamentals/UCL-Cluster.html">UCL Cluster</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Fundamentals/The-Unix-Shell.html">The Unix Shell</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Fundamentals/Basic-R.html">Basic R</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Fundamentals/Bash-Scripting.html">Bash Scripting</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Fundamentals/Advanced-R.html">Advanced R</a>
+</li></ul>
+</div>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../NGS-Data-Analysis/NGS-data-analysis.html">NGS data analysis</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../NGS-Data-Analysis/Preprocessing.html">Preprocessing</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../NGS-Data-Analysis/Gene-Expression.html">Gene Expression</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../NGS-Data-Analysis/Variant-Calling.html">Variant Calling</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../NGS-Data-Analysis/ChIP-Seq.html">ChIP-Seq</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../NGS-Data-Analysis/Single-Cell-Gene-Expression.html">Single Cell Gene Expression</a>
+</li></ul>
+</div>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Pipelines.html">Pipelines</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="nf-core.html">nf-core</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Nextflow.html">Nextflow</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="nf-core-pipelines-in-Myriad.html">nf-core pipelines in Myriad</a>
+</li></ul>
+</div>
+</li></ul>
+              </div>
+            </div>
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+          </div>
+        </nav>
+      </div></header>
+    <section class="u-clearfix u-palette-2-light-2 u-section-1" id="sec-0cfb">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h2 class="u-align-center u-text u-text-default u-text-1">nf-core</h2>
+        <p class="u-align-center u-text u-text-black u-text-2">Nf-core is a community effort to collect a curated set of analysis pipelines, all of which are built using Nextflow. You will learn more about Nextflow in the next section, but <span style="font-weight: 700;">knowing Nextflow is not a strict requirement to run nf-core pipelines</span>.&nbsp;<br>
+          <br>To run an nf-core pipeline, you typically need to:
+        </p>
+        <ul class="u-align-left u-text u-text-3">
+          <li>
+            <span style="font-weight: 700;"></span>
+            <span style="font-weight: 700;">Install Nextflow</span>: You need to have Nextflow installed on your system, as nf-core pipelines are written in Nextflow.
+          </li>
+          <li>
+            <span style="font-weight: 700;">Install Docker or Singularity (optional)</span>: Some nf-core pipelines may rely on Docker or Singularity containers for software dependencies. Depending on the pipeline and your system setup, you may need to have one of these containerization tools installed.
+          </li>
+          <li>
+            <span style="font-weight: 700;">Clone the pipeline repository</span>: You can clone the nf-core pipeline repository that corresponds to the analysis you want to perform.
+          </li>
+          <li>
+            <span style="font-weight: 700;">Configure and run the pipeline</span>: You can follow the specific instructions provided in the pipeline's documentation to configure and run it. This typically involves providing input data, specifying parameters, and specifying any customizations you need.
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-2" id="sec-6661">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-align-center u-text u-text-1">The main place to look for nf-core documentation is of course the <a href="https://nf-co.re/" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" target="_blank">nf-core website</a>. There you will find plenty of training materials, and not all might be relevant for you (some are specific for users, and some for developers).<br>The best place to start are probably the <span style="font-weight: 700;">
+            <a href="https://nf-co.re/docs" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-2" target="_blank">Docs</a>
+          </span> and <span style="font-weight: 700;">
+            <a href="https://nf-co.re/events" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-3" target="_blank">Events</a>
+          </span> sections.&nbsp;The first contains documentation on how to use nf-core pipelines and nf-core tools, and the latter contains details of past and future trainings around nf-core (talks, workshops, hackatons...).&nbsp;<br>
+        </p>
+        <img class="u-border-2 u-border-grey-75 u-image u-image-default u-image-1" src="../images/Screenshot2023-09-15at13.17.24.png" alt="" data-image-width="2380" data-image-height="1278">
+        <p class="u-align-center u-text u-text-2">Below we have selected a few of these materials to get you started</p>
+        <div class="u-align-left u-container-style u-group u-palette-1-light-3 u-radius-30 u-shape-round u-group-1">
+          <div class="u-container-layout u-container-layout-1">
+            <blockquote class="u-align-center u-text u-text-3">The nf-core and nextflow tutorials below, explain how to install and run piplines from scratch, and we encourage you to follow these tutorials and try to install and run the pipelines by yourself. However, please note that at the BLIC, we have created modules for many of these pipelines (saving you from having to download the pipelines, creating config files specific for Myriad, etc). We will explain in more detail how to use the nf-core pipeline modules already available in Myriad in a later section.</blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-palette-2-light-2 u-section-3" id="sec-8e74">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="fr-view u-clearfix u-rich-text u-text u-text-1">
+          <h1 style="text-align: center;">
+            <span style="font-weight: 700; text-decoration: underline;">TO DO</span>
+          </h1>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-4" id="sec-84c7">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="data-layout-selected u-clearfix u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-row">
+              <div class="u-align-left u-container-style u-layout-cell u-left-cell u-size-43 u-layout-cell-1">
+                <div class="u-container-layout u-container-layout-1">
+                  <ol class="u-text u-text-1">
+                    <li>Go to<span style="font-weight: 400;"> t</span>
+                      <span style="font-weight: 700;">
+                        <span style="font-weight: 400;">he Docs section</span>
+                        <span style="font-weight: 400;">a</span>
+                        <span style="font-weight: 700;">
+                          <span style="font-weight: 400;">n</span>
+                          <span style="font-weight: 700;">
+                            <span style="font-weight: 400;">d read all the </span>
+                            <span style="font-weight: 400;">Usage&nbsp;</span>
+                          </span>
+                        </span>
+                      </span>
+                      <span style="font-weight: 700;">documentation</span>, from "Getting Started" to "Trouble<span style="font-size: 1.125rem; color: #111111; font-family: 'Open Sans',sans-serif; background-color: #ffffff;">shooting"</span>
+                    </li>
+                    <li>Then take the "<span style="font-weight: 700;">Introduction to running nf-core pipelines</span>" usage tutorial.
+                    </li>
+                    <li>Finally, if you are interested in nf-core as a developer, then take a look at the "<span style="font-weight: 700;">Developer tutorials</span>"
+                    </li>
+                  </ol>
+                </div>
+              </div>
+              <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-17 u-layout-cell-2">
+                <div class="u-container-layout u-container-layout-2">
+                  <a href="https://nf-co.re/docs" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-1" target="_blank">USAGE DOCS<span class="u-file-icon u-icon u-text-white"><img src="../images/2722998-4748ad96.png" alt=""></span>
+                  </a>
+                  <a href="https://nf-co.re/docs/usage/tutorials/nf_core_usage_tutorial" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-2" target="_blank">USAGE TUTORIAL<span class="u-file-icon u-icon u-text-white"><img src="../images/2722998-4748ad96.png" alt=""></span>
+                  </a>
+                  <a href="https://nf-co.re/docs/contributing/tutorials" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-3" target="_blank">DEVELOPER TUTORIALS</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-container-align-center u-section-5" id="sec-fa4c">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1"><span class="u-file-icon u-icon u-icon-1"><img src="../images/9974562.png" alt=""></span>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-6" id="sec-257a">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="data-layout-selected u-clearfix u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-row">
+              <div class="u-align-left u-container-style u-layout-cell u-left-cell u-size-43 u-layout-cell-1">
+                <div class="u-container-layout u-container-layout-1">
+                  <p class="u-text u-text-1">Another good short nf-core tutorial is the "<span style="font-weight: 700;">nf-core</span>" section of the "<a href="https://sateeshperi.github.io/nextflow_varcal/nextflow/" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" target="_blank">Introduction to Nextflow</a>" tutorial developed by&nbsp;Sateesh Peri.
+                  </p>
+                </div>
+              </div>
+              <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-17 u-layout-cell-2">
+                <div class="u-container-layout u-container-layout-2">
+                  <a href="https://nf-co.re/docs" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-2" target="_blank">TAKE THE COURSE<span class="u-file-icon u-icon u-text-white"><img src="../images/2722998-4748ad96.png" alt=""></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-palette-2-light-2 u-section-7" id="sec-7650">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-align-left u-container-style u-group u-palette-1-light-3 u-radius-30 u-shape-round u-group-1">
+          <div class="u-container-layout u-container-layout-1">
+            <blockquote class="u-spacing-20 u-text u-text-1">
+              <span style="font-weight: 700;">After this section you should be able to:</span>
+              <br>&nbsp; &nbsp; &nbsp; &nbsp; - Understand what nf-core is and how it relates to nextflow<br>&nbsp; &nbsp; &nbsp; &nbsp; - Find available pipeplines in nf-core<br>&nbsp; &nbsp; &nbsp; &nbsp; - Install and run nf-core pipelines<br>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-8" id="sec-c94c">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="data-layout-selected u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-row">
+              <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-1">
+                <div class="u-container-layout u-container-layout-1"></div>
+              </div>
+              <div class="u-align-right u-container-style u-layout-cell u-size-30 u-layout-cell-2">
+                <div class="u-container-layout u-container-layout-2">
+                  <p class="u-align-right u-text u-text-default u-text-1">
+                    <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" href="Nextflow.html">Nextflow&nbsp;<span class="u-file-icon u-icon u-text-palette-2-light-2" data-href="../Fundamentals/The-Unix-Shell.html"><img src="../images/1371-38c6c3c6.png" alt=""></span>
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+    
+    <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-f5ca"><div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-small-text u-text u-text-variant u-text-1">If you have any questions or feedback, please send us an email to the <a href="mailto:l.conde@ucl.ac.uk?subject=Message%20from%20the%20%22Learn%20Bioinformatics%22%20website" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1">BLIC</a>
+        </p>
+      </div></footer>
+    <section class="u-backlink u-clearfix u-grey-80">
+      <a class="u-link" href="https://nicepage.com/templates" target="_blank">
+        <span>Templates</span>
+      </a>
+      <p class="u-text">
+        <span>created with</span>
+      </p>
+      <a class="u-link" href="" target="_blank">
+        <span>Website Builder Software</span>
+      </a>. 
+    </section><span style="height: 64px; width: 64px; margin-left: 0px; margin-right: auto; margin-top: 0px; background-image: none; right: 20px; bottom: 20px; padding: 15px" class="u-back-to-top u-icon u-icon-circle u-opacity u-opacity-85 u-palette-1-base" data-href="#">
+        <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 551.13 551.13"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-1d98"></use></svg>
+        <svg class="u-svg-content" enable-background="new 0 0 551.13 551.13" viewBox="0 0 551.13 551.13" xmlns="http://www.w3.org/2000/svg" id="svg-1d98"><path d="m275.565 189.451 223.897 223.897h51.668l-275.565-275.565-275.565 275.565h51.668z"></path></svg>
+    </span>
+  
+</body></html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="en"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Foundamentals">
+    <meta name="description" content="">
+    <title>Variant Calling</title>
+    <link rel="stylesheet" href="../nicepage.css" media="screen">
+<link rel="stylesheet" href="Variant-Calling.css" media="screen">
+    <script class="u-script" type="text/javascript" src="../jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="../nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 5.17.1, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "",
+		"logo": "../images/UCL-logo2.png"
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Variant Calling">
+    <meta property="og:type" content="website">
+  <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
+  <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-header u-sticky u-white u-header" id="sec-2a5c"><div class="u-clearfix u-sheet u-sheet-1">
+        <a href="https://www.ucl.ac.uk/cancer/welcome-ucl-cancer-institute" class="u-image u-logo u-image-1" data-image-width="349" data-image-height="140" title="UCL CI">
+          <img src="../images/UCL-logo2.png" class="u-logo-image u-logo-image-1">
+        </a>
+        <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1" data-responsive-from="MD">
+          <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px; text-transform: uppercase; font-weight: 500;">
+            <a class="u-button-style u-custom-active-border-color u-custom-active-color u-custom-border u-custom-border-color u-custom-borders u-custom-hover-border-color u-custom-hover-color u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-decoration u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
+              <svg class="u-svg-link" viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
+              <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</g></svg>
+            </a>
+          </div>
+          <div class="u-custom-menu u-nav-container" style="">
+            <ul class="u-nav u-spacing-2 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-active-palette-1-base u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-button-style u-hover-palette-1-light-1 u-nav-link u-text-active-white u-text-grey-90 u-text-hover-white" href="../Home.html" style="padding: 10px 20px;">Home</a>
+</li><li class="u-nav-item"><a class="u-active-palette-1-base u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-button-style u-hover-palette-1-light-1 u-nav-link u-text-active-white u-text-grey-90 u-text-hover-white" href="../Fundamentals/Fundamentals.html" style="padding: 10px 20px;">Fundamentals</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../Fundamentals/UCL-Cluster.html">UCL Cluster</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../Fundamentals/The-Unix-Shell.html">The Unix Shell</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../Fundamentals/Basic-R.html">Basic R</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../Fundamentals/Bash-Scripting.html">Bash Scripting</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../Fundamentals/Advanced-R.html">Advanced R</a>
+</li></ul>
+</div>
+</li><li class="u-nav-item"><a class="u-active-palette-1-base u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-button-style u-hover-palette-1-light-1 u-nav-link u-text-active-white u-text-grey-90 u-text-hover-white" href="NGS-data-analysis.html" style="padding: 10px 20px;">NGS data analysis</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="Preprocessing.html">Preprocessing</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="Gene-Expression.html">Gene Expression</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="Variant-Calling.html">Variant Calling</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="ChIP-Seq.html">ChIP-Seq</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="Single-Cell-Gene-Expression.html">Single Cell Gene Expression</a>
+</li></ul>
+</div>
+</li><li class="u-nav-item"><a class="u-active-palette-1-base u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-button-style u-hover-palette-1-light-1 u-nav-link u-text-active-white u-text-grey-90 u-text-hover-white" href="../Pipelines/Pipelines.html" style="padding: 10px 20px;">Pipelines</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../Pipelines/nf-core.html">nf-core</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../Pipelines/Nextflow.html">Nextflow</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../Pipelines/nf-core-pipelines-in-Myriad.html">nf-core pipelines in Myriad</a>
+</li></ul>
+</div>
+</li></ul>
+          </div>
+          <div class="u-custom-menu u-nav-container-collapse">
+            <div class="u-black u-border-2 u-border-grey-75 u-container-style u-inner-container-layout u-sidenav">
+              <div class="u-inner-container-layout u-sidenav-overflow">
+                <div class="u-menu-close"></div>
+                <ul class="u-align-center u-nav u-popupmenu-items u-spacing-0 u-unstyled u-nav-5"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Home.html">Home</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Fundamentals/Fundamentals.html">Fundamentals</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Fundamentals/UCL-Cluster.html">UCL Cluster</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Fundamentals/The-Unix-Shell.html">The Unix Shell</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Fundamentals/Basic-R.html">Basic R</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Fundamentals/Bash-Scripting.html">Bash Scripting</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Fundamentals/Advanced-R.html">Advanced R</a>
+</li></ul>
+</div>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="NGS-data-analysis.html">NGS data analysis</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Preprocessing.html">Preprocessing</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Gene-Expression.html">Gene Expression</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Variant-Calling.html">Variant Calling</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="ChIP-Seq.html">ChIP-Seq</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Single-Cell-Gene-Expression.html">Single Cell Gene Expression</a>
+</li></ul>
+</div>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Pipelines/Pipelines.html">Pipelines</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Pipelines/nf-core.html">nf-core</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Pipelines/Nextflow.html">Nextflow</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Pipelines/nf-core-pipelines-in-Myriad.html">nf-core pipelines in Myriad</a>
+</li></ul>
+</div>
+</li></ul>
+              </div>
+            </div>
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+          </div>
+        </nav>
+      </div></header>
+    <section class="u-clearfix u-palette-3-light-1 u-section-1" id="sec-0cfb">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h2 class="u-align-center u-text u-text-default u-text-1">Variant Calling<br>
+        </h2>
+        <p class="u-align-center u-text u-text-black u-text-2">
+          <span style="font-weight: 400;">NGS variant calling is the process of identifying and characterizing genetic variants within a sequenced DNA (or less frequently RNA) sample.&nbsp;</span>
+          <br>
+          <br>
+          <span style="font-weight: 400;">NGS variant calling is a vast and multifaceted topic within the field of genomics and bioinformatics. It encompasses various approaches depending on the types of genetic variants being analyzed. Here are some common types of NGS variant calling and some of the tools often used for each:</span>
+          <br>
+        </p>
+        <ul class="u-align-left u-text u-text-3">
+          <li>
+            <span style="font-weight: 700;">SNP Calling (SNVs)</span>: GATK, FreeBayes, VarScan...
+          </li>
+          <li>
+            <span style="font-weight: 700;">Indel Calling (Indels)</span>: GATK, Samtools, VarScan, Pindel...
+          </li>
+          <li>
+            <span style="font-weight: 700;">Structural Variant (SV) Calling</span>: Lumpy, Delly, Manta, GRIDSS, Strelka...
+          </li>
+          <li>
+            <span style="font-weight: 700;">CNV Calling (CN)</span>: CNVkit, CNVnator, Control-FREEC...
+          </li>
+          <li>
+            <span style="font-weight: 700;">Somatic Variant Calling</span>: Mutect2, VarScan, Strelka, manta, ASCAT, CNVkit...
+          </li>
+        </ul>
+        <p class="u-align-center u-text u-text-4"> The choice of the variant calling approach and tool depends on the specific research goals, the nature of the data (e.g., DNA-seq, RNA-seq, whole-genome, exome), and the desired level of sensitivity and specificity. Often, a combination of tools and strategies is used to improve the accuracy of the variant callset. This is particularly true when it comes to Structural Variants. Additionally, best practices and quality control measures, including filtering to remove low-quality variants,&nbsp;are critical to ensure reliable variant calls in NGS data analysis.<br>
+          <br>After obtaining the variant call format (VCF) file with the variants, the next crucial step is to annotate the identified variants to gain insights into their potential functional significance and relevance in the context of your study. Usually this is done with tools such as Funcotator,&nbsp;ANNOVAR, or the Variant Effect Predictor (VEP) that provide annotations based on known genomic databases, including information about gene names, coding consequences, allele frequencies in populations, and potential functional impact.<br>
+          <br>Finally, you can use specialized packages like maftools to generate summary statistics and visualizations of the mutation data. This is often useful to assess the results, e.g., if the mutation load is higehr than expected, you might wnat to go back and tweak the parameters used in mutect2, or do some additional filering.&nbsp;
+        </p>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-2" id="sec-6661">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <p class="u-align-center u-text u-text-1">NGS variant calling represents a complex and substantial topic. We don't typically advise beginners ​to delve into it, ​as it often demands a significant commitment of time and effort. Nevertheless, if you are determined,​ we have included a non-comprehensive list of resources below to help you with NGS variant calling, particularly in the context of somatic analysis.</p>
+      </div>
+    </section>
+    <section class="u-clearfix u-palette-3-light-1 u-section-3" id="sec-8e74">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="fr-view u-clearfix u-rich-text u-text u-text-1">
+          <h1 style="text-align: center;">
+            <span style="font-weight: 700; text-decoration: underline;">TO DO</span>
+          </h1>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-4" id="sec-84c7">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="data-layout-selected u-clearfix u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-row">
+              <div class="u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-md u-align-left-xl u-container-style u-layout-cell u-left-cell u-size-43 u-layout-cell-1">
+                <div class="u-container-layout u-container-layout-1">
+                  <p class="u-text u-text-1">
+                    <span style="font-weight: 700;"> SNVs</span>
+                    <br>
+                    <br>The "<span style="font-weight: 700;">
+                      <a href="https://gatk.broadinstitute.org/hc/en-us/sections/360007226651-Best-Practices-Workflows" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" target="_blank">GATK Best Practices</a>"
+                    </span> is a set of guidelines and recommended workflows developed by the Broad Institute for the analysis of NGS data. These have become a widely adopted standard in the genomics community and it's probably the best place to start. Workflows include best practices for Somatic and Germline SNVs, Somatic CNV, RNAseq variant calling, and others, but we want to specifically recommend the "<span style="font-weight: 700;">Somatic SNV best practices</span>", that uses Mutect2, and the "<span style="font-weight: 700;">Germline SNV best practices</span>", that employs the GATK HaplotypeCaller<br>
+                    <br>Furthermore, if you want to have a full understanding of all the steps involved in these particular workflows, we recommend that you take a look at the "<span style="font-weight: 700;">Variant Analysis with GATK Course</span>" lectures available on YouTube
+                  </p>
+                </div>
+              </div>
+              <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-17 u-layout-cell-2">
+                <div class="u-container-layout u-container-layout-2">
+                  <a href="https://gatk.broadinstitute.org/hc/en-us/articles/360035894731-Somatic-short-variant-discovery-SNVs-Indels-" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-2" target="_blank">SOMATIC VARIANT CALLING<span class="u-file-icon u-icon u-text-white"><img src="../images/2722998-4748ad96.png" alt=""></span>
+                  </a>
+                  <a href="https://gatk.broadinstitute.org/hc/en-us/articles/360035535932-Germline-short-variant-discovery-SNPs-Indels-" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-3" target="_blank">GERMLINE VARIANT CALLING<span class="u-file-icon u-icon u-text-white"><img src="../images/2722998-4748ad96.png" alt=""></span>
+                  </a>
+                  <a href="https://www.youtube.com/playlist?list=PLjiXAZO27elDHGlQwfd06r7coiFtpPkvI" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-4" target="_blank">YouTube lectures<span class="u-file-icon u-icon u-text-white"><img src="../images/2722998-4748ad96.png" alt=""></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-container-align-center u-section-5" id="sec-947a">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1"><span class="u-file-icon u-icon u-icon-1"><img src="../images/9974562.png" alt=""></span>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-6" id="carousel_3080">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="data-layout-selected u-clearfix u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-row">
+              <div class="u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-md u-align-left-xl u-container-style u-layout-cell u-left-cell u-size-60 u-layout-cell-1">
+                <div class="u-container-layout u-container-layout-1">
+                  <p class="u-text u-text-1">
+                    <span style="font-weight: 400;">
+                      <span style="font-weight: 700;">Annotations</span>
+                      <br>
+                      <br>Once you have a final list of variants, typically you will use a tool like <a href="https://gatk.broadinstitute.org/hc/en-us/articles/360035889931-Funcotator-Information-and-Tutorial" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" target="_blank">Funcotator</a> or <a href="https://www.ensembl.org/info/docs/tools/vep/script/index.html" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-2" target="_blank">VEP</a> to annotate them. Since Funcotator is part of the GATK, if you have followed their best practices for somatic variant calling, that might be a good option for the annotations too. Check their website for details on how to use it.&nbsp;<br>
+                      <br>One additional advantage of using Funcotator is that it allows you to output the annotated variants in MAF format, a tabular text file that can be used with <a href="https://bioconductor.org/packages/release/bioc/html/maftools.html" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-3" target="_blank">maftools</a>.&nbsp;This is a really useful&nbsp;
+                    </span>
+                    <span style="font-weight: 400;">R package that provides a collection of functions and visualization tools for the analysis of variants, allowing you to generate, among other things, summary plots, oncoplots, or to compare mutation burden of your cohort against other TCGA studies. Check the maftools website for more information on this package.</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-container-align-center u-section-7" id="sec-7433">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1"><span class="u-file-icon u-icon u-icon-1"><img src="../images/9974562.png" alt=""></span>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-8" id="sec-1b4e">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="data-layout-selected u-clearfix u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-row">
+              <div class="u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-md u-align-left-xl u-container-style u-layout-cell u-left-cell u-size-60 u-layout-cell-1">
+                <div class="u-container-layout u-container-layout-1">
+                  <p class="u-text u-text-1">
+                    <span style="font-weight: 700;">CNA</span>
+                    <br>
+                    <br>
+                    <span style="font-weight: 700;">
+                      <a href="https://www.mdanderson.org/research/departments-labs-institutes/labs/van-loo-laboratory/resources.html#ASCAT" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" target="_blank">ASCAT</a>
+                    </span> is a well-established method for calling copy number alterations in NGS data, particularly in cancer genomics. Check their website to learn how to use it.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-9" id="sec-f402">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="data-layout-selected u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-row">
+              <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-1">
+                <div class="u-container-layout u-container-layout-1">
+                  <p class="u-align-left u-text u-text-default u-text-1">
+                    <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" href="Gene-Expression.html"><span class="u-file-icon u-icon u-text-palette-3-light-1" data-href="../Fundamentals/UCL-Cluster.html"><img src="../images/2147-81ad1bdf.png" alt=""></span>&nbsp;Gene Expression<br>
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <div class="u-align-right u-container-style u-layout-cell u-size-30 u-layout-cell-2">
+                <div class="u-container-layout u-container-layout-2">
+                  <p class="u-align-right u-text u-text-default u-text-2">
+                    <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-2" href="ChIP-Seq.html">ChIP-Seq&nbsp;&nbsp;<span class="u-file-icon u-icon u-text-palette-3-light-1" data-href="https://nicepage.com"><img src="../images/1371-03ea24dc.png" alt=""></span>
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-palette-3-light-1 u-section-10" id="sec-f3dd">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="u-align-left u-container-style u-group u-palette-1-light-3 u-radius-30 u-shape-round u-group-1">
+          <div class="u-container-layout u-container-layout-1">
+            <blockquote class="u-spacing-20 u-text u-text-1">
+              <span style="font-weight: 700;">After this section you should be able to:</span>
+              <br>&nbsp; &nbsp; &nbsp; &nbsp; - Call somatic variants (SNVs, indels and CNA) from NGS data<br>&nbsp; &nbsp; &nbsp; &nbsp; - Generate oncoplots and summary plots of your somatic variant callset<br>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+    
+    <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-f5ca"><div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-small-text u-text u-text-variant u-text-1">If you have any questions or feedback, please send us an email to the <a href="mailto:l.conde@ucl.ac.uk?subject=Message%20from%20the%20%22Learn%20Bioinformatics%22%20website" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1">BLIC</a>
+        </p>
+      </div></footer>
+    <section class="u-backlink u-clearfix u-grey-80">
+      <a class="u-link" href="https://nicepage.com/one-page-template" target="_blank">
+        <span>One Page Template</span>
+      </a>
+      <p class="u-text">
+        <span>created with</span>
+      </p>
+      <a class="u-link" href="" target="_blank">
+        <span>Website Design Software</span>
+      </a>. 
+    </section><span style="height: 64px; width: 64px; margin-left: 0px; margin-right: auto; margin-top: 0px; background-image: none; right: 20px; bottom: 20px; padding: 15px" class="u-back-to-top u-icon u-icon-circle u-opacity u-opacity-85 u-palette-1-base" data-href="#">
+        <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 551.13 551.13"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-1d98"></use></svg>
+        <svg class="u-svg-content" enable-background="new 0 0 551.13 551.13" viewBox="0 0 551.13 551.13" xmlns="http://www.w3.org/2000/svg" id="svg-1d98"><path d="m275.565 189.451 223.897 223.897h51.668l-275.565-275.565-275.565 275.565h51.668z"></path></svg>
+    </span>
+  
+</body></html>
