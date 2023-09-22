@@ -1,234 +1,2692 @@
 <!DOCTYPE html>
-<html style="font-size: 16px;" lang="en"><head>
+<html style="font-size: 16px;"><head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Foundamentals">
-    <meta name="description" content="">
-    <title>nf-core-pipelines-in-Myriad</title>
-    <link rel="stylesheet" href="../nicepage.css" media="screen">
-<link rel="stylesheet" href="nf-core-pipelines-in-Myriad.css" media="screen">
-    <script class="u-script" type="text/javascript" src="../jquery.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="../nicepage.js" defer=""></script>
-    <meta name="generator" content="Nicepage 5.17.1, nicepage.com">
-    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <meta name="keywords" content="Foundamentals"><meta name="description" content="">
+    <title></title>
+    <link rel="stylesheet" href="/nicepage.css" media="screen">
+    <script class="u-script" type="text/javascript" src="np://app.desktop.nicepage.com/jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="np://app.desktop.nicepage.com/nicepage.js" defer=""></script>
+<meta name="generator" content="Nicepage 5.18.6, nicepage.com"></head>
+<body class="u-body u-show-back-to-top u-xl-mode" data-style="blank" data-posts="" data-global-section-properties="{&quot;colorings&quot;:{&quot;light&quot;:[&quot;clean&quot;],&quot;colored&quot;:[&quot;clean&quot;],&quot;dark&quot;:[&quot;dark&quot;]}}" data-source="" data-lang="en" data-page-sections-style="[{&quot;name&quot;:&quot;blank&quot;}]" data-page-coloring-types="{&quot;light&quot;:[&quot;clean&quot;],&quot;colored&quot;:[&quot;clean&quot;],&quot;dark&quot;:[&quot;dark&quot;]}" data-page-category="&quot;Basic&quot;" data-back-link="https://nicepage.com/templates" data-back-link-title="Templates" data-wp-back-link="https://nicepage.com/wordpress-themes" data-wp-back-link-title="WordPress Themes" data-jm-back-link="https://nicepage.com/joomla-templates" data-jm-back-link-title="Joomla Templates" data-created-with-title="Website Builder Software" data-wp-created-with-link="https://nicepage.com/wordpress-website-builder" data-wp-created-with-title="WordPress Website Builder" data-jm-created-with-link="https://nicepage.com/joomla-page-builder" data-jm-created-with-title="Joomla Template Creator"><section class="u-clearfix u-palette-2-light-2 u-block-b8be-1" custom-posts-hash="[[I,T],[I,T],[I,T]]" data-post-id="2300667477;2300667477;2300667477" data-section-properties="{&quot;stretch&quot;:true}" data-id="b8be" data-posts-content="[{'images':[[373,461]],'maps':[],'videos':[],'icons':[],'textWidth':1140,'textHeight':581,'id':1,'groupId':2,'headingProp':'h3','textProp':'text'},{'images':[[373,461]],'maps':[],'videos':[],'icons':[],'textWidth':1140,'textHeight':581,'id':1,'groupId':2,'headingProp':'h3','textProp':'text'},{'images':[[373,461]],'maps':[],'videos':[],'icons':[],'textWidth':1140,'textHeight':581,'id':1,'groupId':2,'headingProp':'h3','textProp':'text'}]" data-style="list-image-bg-3-cols" id="sec-3d95" data-source="fix">
+  <div class="u-clearfix u-sheet u-block-b8be-2">
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <script type="application/ld+json">{
-		"@context": "http://schema.org",
-		"@type": "Organization",
-		"name": "Site1",
-		"logo": "../images/UCL-logo2.png"
-}</script>
-    <meta name="theme-color" content="#478ac9">
-    <meta property="og:title" content="nf-core-pipelines-in-Myriad">
-    <meta property="og:type" content="website">
-  <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
-  <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-header u-sticky u-white u-header" id="sec-2a5c"><div class="u-clearfix u-sheet u-sheet-1">
-        <a href="https://www.ucl.ac.uk/cancer/welcome-ucl-cancer-institute" class="u-image u-logo u-image-1" data-image-width="349" data-image-height="140" title="UCL CI">
-          <img src="../images/UCL-logo2.png" class="u-logo-image u-logo-image-1">
-        </a>
-        <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1" data-responsive-from="MD">
-          <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px; text-transform: uppercase; font-weight: 500;">
-            <a class="u-button-style u-custom-active-border-color u-custom-active-color u-custom-border u-custom-border-color u-custom-borders u-custom-hover-border-color u-custom-hover-color u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-decoration u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
-              <svg class="u-svg-link" viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
-              <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
-</g></svg>
-            </a>
-          </div>
-          <div class="u-custom-menu u-nav-container" style="">
-            <ul class="u-nav u-spacing-2 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-active-palette-1-base u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-button-style u-hover-palette-1-light-1 u-nav-link u-text-active-white u-text-grey-90 u-text-hover-white" href="../Home.html" style="padding: 10px 20px;">Home</a>
-</li><li class="u-nav-item"><a class="u-active-palette-1-base u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-button-style u-hover-palette-1-light-1 u-nav-link u-text-active-white u-text-grey-90 u-text-hover-white" href="../Fundamentals/Fundamentals.html" style="padding: 10px 20px;">Fundamentals</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../Fundamentals/UCL-Cluster.html">UCL Cluster</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../Fundamentals/The-Unix-Shell.html">The Unix Shell</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../Fundamentals/Basic-R.html">Basic R</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../Fundamentals/Bash-Scripting.html">Bash Scripting</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../Fundamentals/Advanced-R.html">Advanced R</a>
-</li></ul>
-</div>
-</li><li class="u-nav-item"><a class="u-active-palette-1-base u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-button-style u-hover-palette-1-light-1 u-nav-link u-text-active-white u-text-grey-90 u-text-hover-white" href="../NGS-Data-Analysis/NGS-data-analysis.html" style="padding: 10px 20px;">NGS data analysis</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../NGS-Data-Analysis/Preprocessing.html">Preprocessing</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../NGS-Data-Analysis/Gene-Expression.html">Gene Expression</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../NGS-Data-Analysis/Variant-Calling.html">Variant Calling</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../NGS-Data-Analysis/ChIP-Seq.html">ChIP-Seq</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../NGS-Data-Analysis/Single-Cell-Gene-Expression.html">Single Cell Gene Expression</a>
-</li></ul>
-</div>
-</li><li class="u-nav-item"><a class="u-active-palette-1-base u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-button-style u-hover-palette-1-light-1 u-nav-link u-text-active-white u-text-grey-90 u-text-hover-white" href="Pipelines.html" style="padding: 10px 20px;">Pipelines</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="nf-core-pipelines-in-Myriad.html">nf-core</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="Nextflow.html">Nextflow</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="nf-core-pipelines-in-Myriad.html">nf-core pipelines in Myriad</a>
-</li></ul>
-</div>
-</li></ul>
-          </div>
-          <div class="u-custom-menu u-nav-container-collapse">
-            <div class="u-black u-border-2 u-border-grey-75 u-container-style u-inner-container-layout u-sidenav">
-              <div class="u-inner-container-layout u-sidenav-overflow">
-                <div class="u-menu-close"></div>
-                <ul class="u-align-center u-nav u-popupmenu-items u-spacing-0 u-unstyled u-nav-5"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Home.html">Home</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Fundamentals/Fundamentals.html">Fundamentals</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Fundamentals/UCL-Cluster.html">UCL Cluster</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Fundamentals/The-Unix-Shell.html">The Unix Shell</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Fundamentals/Basic-R.html">Basic R</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Fundamentals/Bash-Scripting.html">Bash Scripting</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Fundamentals/Advanced-R.html">Advanced R</a>
-</li></ul>
-</div>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../NGS-Data-Analysis/NGS-data-analysis.html">NGS data analysis</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../NGS-Data-Analysis/Preprocessing.html">Preprocessing</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../NGS-Data-Analysis/Gene-Expression.html">Gene Expression</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../NGS-Data-Analysis/Variant-Calling.html">Variant Calling</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../NGS-Data-Analysis/ChIP-Seq.html">ChIP-Seq</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../NGS-Data-Analysis/Single-Cell-Gene-Expression.html">Single Cell Gene Expression</a>
-</li></ul>
-</div>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Pipelines.html">Pipelines</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="nf-core-pipelines-in-Myriad.html">nf-core</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Nextflow.html">Nextflow</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="nf-core-pipelines-in-Myriad.html">nf-core pipelines in Myriad</a>
-</li></ul>
-</div>
-</li></ul>
-              </div>
-            </div>
-            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
-          </div>
-        </nav>
-      </div></header>
-    <section class="u-clearfix u-palette-2-light-2 u-section-1" id="sec-0cfb">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <h2 class="u-align-center u-text u-text-default u-text-1">nf-core pipelines in Myriad</h2>
-        <p class="u-align-center u-text u-text-black u-text-2">By now you have learnt everything you need to kwow to run nf-core pipelines. Briefly:</p>
-      </div>
-    </section>
-    <section class="u-clearfix u-palette-2-light-2 u-section-2" id="carousel_ca1e">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <p class="u-align-left u-text u-text-1">1. Install software dependencies (Nextflow + Singularity/ Docker&nbsp;/ Conda)<br>2. Choose one of the available pipelines to run.<br>3. Configure Nextflow to run on your system.<br>4. Test the pipeline:
-        </p>
-      </div>
-    </section>
-    <section class="u-clearfix u-palette-2-light-2 u-section-3" id="carousel_d635">
-      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <p class="u-align-left u-custom-font u-font-courier-new u-text u-text-black u-text-1">nextflow run nf-core/&lt;pipeline_name&gt; -profile test,singularity --outdir &lt;OUTDIR&gt;<br>
-        </p>
-      </div>
-    </section>
-    <section class="u-clearfix u-palette-2-light-2 u-section-4" id="sec-af3b">
-      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <p class="u-align-left u-text u-text-1">5. Check the pipeline documentation to understand the arguments that the pipeline needs<br>6. ​Run the pipeline with real data. For example:<br>
-        </p>
-      </div>
-    </section>
-    <section class="u-clearfix u-palette-2-light-2 u-section-5" id="sec-f98e">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <p class="u-align-left u-custom-font u-font-courier-new u-text u-text-black u-text-1"> nextflow run nf-core/methylseq -profile singularity --input 'input_data/*.fastq.gz' --outdir results --genome GRCh38<br>
-        </p>
-      </div>
-    </section>
-    <section class="u-clearfix u-palette-2-light-2 u-section-6" id="carousel_d795">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <p class="u-align-left u-text u-text-black u-text-1">
-          <br>
-          <br>
-          <br>
-          <br>Replace&nbsp;&lt;pipeline_name&gt;&nbsp;with the name of an nf-core pipeline.<br>If you don’t have Docker installed, replace&nbsp;docker&nbsp;in the command with either&nbsp;singularity&nbsp;or&nbsp;conda.<br>There is no need to download anything first — nextflow will pull the code from the GitHub repository and fetch the software requirements automatically.<br>If the pipeline fails, check the&nbsp;<a href="https://nf-co.re/docs/usage/troubleshooting/" class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1">troubleshooting docs</a>&nbsp;and ask for help on the nf-core Slack channel for that particular pipeline (see&nbsp;<a href="https://nf-co.re/join" class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-2">https://nf-co.re/join</a>).<br>
-          <br>Read the pipeline documentation to see which command-line parameters are required. These will be specific to your data type and usage.<br>Launch the pipeline with some real data by omitting the&nbsp;test&nbsp;config profile and providing the required pipeline-specific parameters. For example, if you want to run the&nbsp;methylseq&nbsp;pipeline, you might use the following command:<br>nextflow run nf-core/methylseq -profile docker --input 'input_data/*.fastq.gz' --outdir myproj/results --genome GRCh38<i></i>
-          <br>Once complete, check the pipeline execution and quality control reports. Each pipeline’s documentation describes the different outputs to expect.&nbsp;<br>You just need to install nextflow and run&nbsp;
-        </p>
-      </div>
-    </section>
-    <section class="u-clearfix u-palette-2-light-2 u-section-7" id="carousel_1875">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <p class="u-align-left u-text u-text-black u-text-1">
-          <br>1- Install software dependencies (Nextflow + Docker / Singularity / Conda)<br>2- Choose one of the available pipelines to run.<br>3- Configure Nextflow to run on your system.<br>4- Test the pipeline:<br>nextflow run nf-core/&lt;pipeline_name&gt; -profile test,singularity --outdir &lt;OUTDIR&gt;<i></i>
-          <br>
-          <br>5- Check the pipeline documentation to understand the arguments that the pipeline needs<br>6- Run the pipeline with real data. For example:<br>nextflow run nf-core/methylseq -profile singularity --input 'input_data/*.fastq.gz' --outdir results --genome GRCh38<br>
-          <br>
-          <br>Launch the pipeline with some real data by omitting the&nbsp;test&nbsp;config profile and providing the required pipeline-specific parameters. For example, if you want to run the&nbsp;methylseq&nbsp;pipeline, you might use the following command:<br>nextflow run nf-core/methylseq -profile docker --input 'input_data/*.fastq.gz' --outdir myproj/results --genome GRCh38<br>
-          <br>
-          <br>Replace&nbsp;&lt;pipeline_name&gt;&nbsp;with the name of an nf-core pipeline.<br>If you don’t have Docker installed, replace&nbsp;docker&nbsp;in the command with either&nbsp;singularity&nbsp;or&nbsp;conda.<br>There is no need to download anything first — nextflow will pull the code from the GitHub repository and fetch the software requirements automatically.<br>If the pipeline fails, check the&nbsp;<a href="https://nf-co.re/docs/usage/troubleshooting/" class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1">troubleshooting docs</a>&nbsp;and ask for help on the nf-core Slack channel for that particular pipeline (see&nbsp;<a href="https://nf-co.re/join" class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-2">https://nf-co.re/join</a>).<br>
-          <br>Read the pipeline documentation to see which command-line parameters are required. These will be specific to your data type and usage.<br>Launch the pipeline with some real data by omitting the&nbsp;test&nbsp;config profile and providing the required pipeline-specific parameters. For example, if you want to run the&nbsp;methylseq&nbsp;pipeline, you might use the following command:<br>nextflow run nf-core/methylseq -profile docker --input 'input_data/*.fastq.gz' --outdir myproj/results --genome GRCh38<i></i>
-          <br>Once complete, check the pipeline execution and quality control reports. Each pipeline’s documentation describes the different outputs to expect.&nbsp;<br>You just need to install nextflow and run&nbsp;
-        </p>
-      </div>
-    </section>
-    <section class="u-clearfix u-section-8" id="sec-6661">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <p class="u-align-center u-text u-text-1">blah blah blah</p>
-      </div>
-    </section>
-    <section class="u-clearfix u-palette-2-light-2 u-section-9" id="sec-8e74">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <div class="fr-view u-clearfix u-rich-text u-text u-text-1">
-          <h1 style="text-align: center;">
-            <span style="font-weight: 700; text-decoration: underline;">TO DO</span>
-          </h1>
-        </div>
-      </div>
-    </section>
-    <section class="u-clearfix u-container-align-center u-section-10" id="sec-fa4c">
-      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1"><span class="u-file-icon u-icon u-icon-1"><img src="../images/9974562.png" alt=""></span>
-      </div>
-    </section>
-    <section class="u-clearfix u-palette-2-light-2 u-section-11" id="sec-7650">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <div class="u-align-left u-container-style u-group u-palette-1-light-3 u-radius-30 u-shape-round u-group-1">
-          <div class="u-container-layout u-container-layout-1">
-            <blockquote class="u-spacing-20 u-text u-text-1">
-              <span style="font-weight: 700;">After this section you should be able to:</span>
-              <br>&nbsp; &nbsp; &nbsp; &nbsp; - blah blahs<br>
-            </blockquote>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="u-clearfix u-section-12" id="sec-9ca0">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <div class="data-layout-selected u-clearfix u-layout-wrap u-layout-wrap-1">
-          <div class="u-layout">
-            <div class="u-layout-row">
-              <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-1">
-                <div class="u-container-layout u-container-layout-1">
-                  <p class="u-align-left u-text u-text-default u-text-1">
-                    <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" href="Nextflow.html"><span class="u-file-icon u-icon u-text-palette-2-light-2" data-href="../Fundamentals/UCL-Cluster.html"><img src="../images/2147-cf24dfca.png" alt=""></span>Nextflow<br>
-                    </a>
-                  </p>
-                </div>
-              </div>
-              <div class="u-align-right u-container-style u-layout-cell u-size-30 u-layout-cell-2">
-                <div class="u-container-layout u-container-layout-2"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    
-    
-    <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-f5ca"><div class="u-clearfix u-sheet u-sheet-1">
-        <p class="u-small-text u-text u-text-variant u-text-1">If you have any questions or feedback, please send us an email to the <a href="mailto:l.conde@ucl.ac.uk?subject=Message%20from%20the%20%22Learn%20Bioinformatics%22%20website" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1">BLIC</a>
-        </p>
-      </div></footer>
-    <section class="u-backlink u-clearfix u-grey-80">
-      <a class="u-link" href="https://nicepage.com/templates" target="_blank">
-        <span>Templates</span>
-      </a>
-      <p class="u-text">
-        <span>created with</span>
-      </p>
-      <a class="u-link" href="" target="_blank">
-        <span>Website Builder Software</span>
-      </a>. 
-    </section><span style="height: 64px; width: 64px; margin-left: 0px; margin-right: auto; margin-top: 0px; background-image: none; right: 20px; bottom: 20px; padding: 15px" class="u-back-to-top u-icon u-icon-circle u-opacity u-opacity-85 u-palette-1-base" data-href="#">
-        <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 551.13 551.13"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-1d98"></use></svg>
-        <svg class="u-svg-content" enable-background="new 0 0 551.13 551.13" viewBox="0 0 551.13 551.13" xmlns="http://www.w3.org/2000/svg" id="svg-1d98"><path d="m275.565 189.451 223.897 223.897h51.668l-275.565-275.565-275.565 275.565h51.668z"></path></svg>
-    </span>
+  <h2 class="u-align-center u-text u-block-b8be-59">Nf-core pipelines installed in Myriad</h2><p class="u-align-center u-text u-text-black u-block-b8be-58">​By now, you've acquired all the essential knowledge required to execute nf-core pipelines. In summary, the process involves installing the necessary dependencies (Nextflow, Docker/Singularity/Conda), reviewing the pipeline documentation to grasp the specific parameters relevant to your task, and then running it like in this example:</p><p class="u-align-left u-custom-font u-font-courier-new u-text u-text-black u-block-b8be-57">​nextflow run nf-core/rnaseq -profile singularity --input 'input_data/*.fastq.gz' --outdir results --genome GRCh38<br></p><p class="u-align-center u-text u-text-black u-block-b8be-51">The above command will download the rnaseq pipeline code (from nf-core) and the required software (from singularity) and will execute the pipeline <span style="font-style: italic; font-weight: 400;">​on the local system.<span style="font-style: normal;">​<span style="font-weight: 400;">​.</span></span></span><br><br><span style="font-weight: 700; font-size: 1.5rem;">Config file</span><span style="font-size: 1.5rem;"><br></span><br>One of the problems with the command above is that the jobs will be run locally on the head node, which is considered poor practice. You should always submit your jobs to the queue.  To ensure proper job submission, you can create a configuration file and configure it to instruct nextflow to route all pipeline jobs through the queue system. Once you have created this configuration file, you can incorporate it into the command above using the -c argument,&nbsp;e.g.:<br></p><p class="u-align-left u-custom-font u-font-courier-new u-text u-text-black u-block-b8be-52">​nextflow run nf-core/rnaseq -profile singularity <span style="font-weight: 700;">-c myconfig.txt</span>​​ --input 'input_data/*.fastq.gz' --outdir results --genome GRCh38<br></p><p class="u-align-center u-text u-text-black u-block-b8be-53">You can refer to the Nextflow <a href="https://www.nextflow.io/docs/latest/config.html" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-block-b8be-60" target="_blank">documentation</a> for detailed instructions on configuring config files. However, for added convenience, you have the option to use the <a href="https://nf-co.re/configs/ucl_myriad" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-block-b8be-61" target="_blank">institutional UCL config file</a> provided within nf-core. This is a very general config, but accomplishes two essential tasks: instructs&nbsp;Nextflow to use singularity and to submit jobs to the queue. To use this config, you can include it as a profile&nbsp;like this:<br></p><p class="u-align-left u-custom-font u-font-courier-new u-text u-text-black u-block-b8be-55">​nextflow run nf-core/rnaseq&nbsp;<span style="font-weight: 700;">-profile ​</span><span style="font-weight: 700;">ucl_myriad</span>​​ --input 'input_data/*.fastq.gz' --outdir results --genome GRCh38<br></p><p class="u-align-center u-text u-text-black u-block-b8be-56">However, it's worth noting that while the institutional UCL configuration addresses these two important aspects (singularity integration and the queue system), it's not pipeline-specific. In other words, each pipeline operates with the default configuration and resource allocations (memory, time, CPUs) established by nf-core for that specific pipeline. These default resource allocations may not align optimally with Myriad's resource policies.<br><br>For instance, suppose nf-core assigns a default of 72 hours of runtime and 2 CPU cores to a process like BWA in the nf-core/rnaseq pipeline. In such a case, this configuration would be in conflict with Myriad's policies (Myriad might permit 2 cores for 48 hours or 1 core for 72 hours, but not 2 cores for 72 hours)<br><br>.By creating a pipeline-specific configuration, you gain the flexibility to fine-tune resource allocations and tailor the pipeline to Myriad's specific requirements and policies.<br></p></div>
   
+  
+  
+  
+  
+<style data-mode="XL">@media (min-width: 1200px) {
+  .u-block-b8be-1 {
+    background-image: none;
+  }
+  .u-block-b8be-2 {
+    min-height: 1317px;
+  }
+  .u-block-b8be-59 {
+    font-size: 3rem;
+    margin-top: 69px;
+    margin-right: 62px;
+    margin-bottom: 0;
+    margin-left: 84px;
+  }
+  .u-block-b8be-58 {
+    font-size: 1.25rem;
+    line-height: 1.4;
+    background-image: none;
+    margin-top: 58px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
+  .u-block-b8be-57 {
+    font-size: 1rem;
+    line-height: 1.4;
+    background-image: none;
+    margin-top: 37px;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 22px;
+  }
+  .u-block-b8be-51 {
+    font-size: 1.25rem;
+    line-height: 1.4;
+    background-image: none;
+    margin-top: 39px;
+    margin-right: 38px;
+    margin-bottom: 0;
+    margin-left: 22px;
+  }
+  .u-block-b8be-52 {
+    font-size: 0.875rem;
+    line-height: 1.4;
+    background-image: none;
+    margin-top: 35px;
+    margin-left: 11px;
+    margin-right: 11px;
+    margin-bottom: 0;
+  }
+  .u-block-b8be-53 {
+    font-size: 1.25rem;
+    line-height: 1.4;
+    background-image: none;
+    margin-top: 47px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
+  .u-block-b8be-60 {
+    background-image: none;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .u-block-b8be-61 {
+    background-image: none;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .u-block-b8be-55 {
+    font-size: 1rem;
+    line-height: 1.4;
+    background-image: none;
+    margin-top: 46px;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 22px;
+  }
+  .u-block-b8be-56 {
+    font-size: 1.25rem;
+    line-height: 1.4;
+    background-image: none;
+    margin-top: 46px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 36px;
+  }
+}</style><style data-mode="LG">@media (max-width: 1199px) and (min-width: 992px) {
+  .u-block-b8be-1 {
+    background-image: none;
+  }
+  .u-block-b8be-2 {
+    min-height: 1317px;
+  }
+  .u-block-b8be-59 {
+    font-size: 3rem;
+    width: 622px;
+    margin-top: 69px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .u-block-b8be-58 {
+    background-image: none;
+    font-size: 1.25rem;
+    line-height: 1.4;
+    margin-top: 58px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .u-block-b8be-57 {
+    background-image: none;
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-top: 37px;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+  .u-block-b8be-51 {
+    background-image: none;
+    font-size: 1.25rem;
+    line-height: 1.4;
+    margin-top: 39px;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+  .u-block-b8be-52 {
+    background-image: none;
+    font-size: 0.875rem;
+    line-height: 1.4;
+    margin-top: 35px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .u-block-b8be-53 {
+    background-image: none;
+    font-size: 1.25rem;
+    line-height: 1.4;
+    margin-top: 47px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .u-block-b8be-60 {
+    background-image: none;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .u-block-b8be-61 {
+    background-image: none;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .u-block-b8be-55 {
+    background-image: none;
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-top: 46px;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+  .u-block-b8be-56 {
+    background-image: none;
+    font-size: 1.25rem;
+    line-height: 1.4;
+    margin-top: 46px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 36px;
+  }
+}</style><style data-mode="MD">@media (max-width: 991px) and (min-width: 768px) {
+  .u-block-b8be-1 {
+    background-image: none;
+  }
+  .u-block-b8be-2 {
+    min-height: 1317px;
+  }
+  .u-block-b8be-59 {
+    font-size: 3rem;
+    width: 622px;
+    margin-top: 69px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .u-block-b8be-58 {
+    background-image: none;
+    font-size: 1.25rem;
+    line-height: 1.4;
+    margin-top: 58px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .u-block-b8be-57 {
+    background-image: none;
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-top: 37px;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+  .u-block-b8be-51 {
+    background-image: none;
+    font-size: 1.25rem;
+    line-height: 1.4;
+    margin-top: 39px;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+  .u-block-b8be-52 {
+    background-image: none;
+    font-size: 0.875rem;
+    line-height: 1.4;
+    margin-top: 35px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .u-block-b8be-53 {
+    background-image: none;
+    font-size: 1.25rem;
+    line-height: 1.4;
+    margin-top: 47px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .u-block-b8be-60 {
+    background-image: none;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .u-block-b8be-61 {
+    background-image: none;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .u-block-b8be-55 {
+    background-image: none;
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-top: 46px;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+  .u-block-b8be-56 {
+    background-image: none;
+    font-size: 1.25rem;
+    line-height: 1.4;
+    margin-top: 46px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 36px;
+  }
+}</style><style data-mode="SM">@media (max-width: 767px) and (min-width: 576px) {
+  .u-block-b8be-1 {
+    background-image: none;
+  }
+  .u-block-b8be-2 {
+    min-height: 1317px;
+  }
+  .u-block-b8be-59 {
+    font-size: 2.25rem;
+    width: 540px;
+    margin-top: 69px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .u-block-b8be-58 {
+    background-image: none;
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-top: 58px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .u-block-b8be-57 {
+    background-image: none;
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-top: 37px;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+  .u-block-b8be-51 {
+    background-image: none;
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-top: 39px;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+  .u-block-b8be-52 {
+    background-image: none;
+    font-size: 0.875rem;
+    line-height: 1.4;
+    margin-top: 35px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .u-block-b8be-53 {
+    background-image: none;
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-top: 47px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .u-block-b8be-60 {
+    background-image: none;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .u-block-b8be-61 {
+    background-image: none;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .u-block-b8be-55 {
+    background-image: none;
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-top: 46px;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+  .u-block-b8be-56 {
+    background-image: none;
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-top: 46px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 36px;
+  }
+}</style><style data-mode="XS">@media (max-width: 575px) {
+  .u-block-b8be-1 {
+    background-image: none;
+  }
+  .u-block-b8be-2 {
+    min-height: 1317px;
+  }
+  .u-block-b8be-59 {
+    font-size: 1.875rem;
+    width: 340px;
+    margin-top: 69px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .u-block-b8be-58 {
+    background-image: none;
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-top: 58px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .u-block-b8be-57 {
+    background-image: none;
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-top: 37px;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+  .u-block-b8be-51 {
+    background-image: none;
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-top: 39px;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+  .u-block-b8be-52 {
+    background-image: none;
+    font-size: 0.875rem;
+    line-height: 1.4;
+    margin-top: 35px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .u-block-b8be-53 {
+    background-image: none;
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-top: 47px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .u-block-b8be-60 {
+    background-image: none;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .u-block-b8be-61 {
+    background-image: none;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .u-block-b8be-55 {
+    background-image: none;
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-top: 46px;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+  .u-block-b8be-56 {
+    background-image: none;
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-top: 46px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 36px;
+  }
+}</style></section><section class="u-clearfix u-block-b090-1" custom-posts-hash="[[I,T],[I,T],[I,T]]" data-post-id="2300667477;2300667477;2300667477" data-section-properties="{&quot;stretch&quot;:true}" data-id="b090" data-posts-content="[{'images':[[373,461]],'maps':[],'videos':[],'icons':[],'textWidth':1140,'textHeight':581,'id':1,'groupId':2,'headingProp':'h3','textProp':'text'},{'images':[[373,461]],'maps':[],'videos':[],'icons':[],'textWidth':1140,'textHeight':581,'id':1,'groupId':2,'headingProp':'h3','textProp':'text'},{'images':[[373,461]],'maps':[],'videos':[],'icons':[],'textWidth':1140,'textHeight':581,'id':1,'groupId':2,'headingProp':'h3','textProp':'text'}]" data-style="list-image-bg-3-cols" id="carousel_d795" data-source="fix">
+  <div class="u-clearfix u-sheet u-block-b090-2">
+    
+  <h2 class="u-align-left u-text u-block-b090-62">How to run nf-core pipelines already installed in Myriad
+</h2><p class="u-align-center u-text u-block-b090-51"><br>​Running nf-core pipelines that are pre-installed on Myriad is designed to make the process even more user-friendly. This installation eliminates the need for users to handle various tasks such as installing pipelines, managing reference genomes, configuring files, and allocating resources.<br><br>Of course, you are not obligated to use these pre-installed pipelines; you can continue to run pipelines directly from nf-core on Myriad, following the instructions provided earlier. However, if you're still not entirely comfortable with running tasks on the cluster or using nf-core and Nextflow, this option may be more straightforward for you. The pipelines we have installed are ones that we use internally or have been requested by UCL collaborators to facilitate their work.<br><br>The process we follow to install nf-core pipelines is straightforward:<br></p><ol class="u-align-left u-text u-text-black u-block-b090-54"><li>We use nf-core tools to fetch the pipeline code.</li><li>Next, we create a configuration file. This file draws from the pipeline's default configuration but is carefully adjusted to ensure seamless operation within Myriad. These adjustments encompass adding Singularity support, facilitating queue submissions, configuring resource allocations for each pipeline process, and defining paths to reference genomes.</li><li>Lastly, we create a module for the pipeline, residing within "blic-modules." Loading this module activates the nfcore_&lt;pipeline&gt; command, which serves as your tool for executing the pipelines.</li></ol><p class="u-align-center u-text u-text-black u-block-b090-55">​To explore the complete list of installed pipelines, <span style="font-weight: 700;">load the blic-modules module</span> and employ the "<span style="font-weight: 700;">module avail</span>" command while searching for "nf-core."&nbsp;<br>To start using a specific pipeline, you can simply load it by employing the "<span style="font-weight: 700;">module load &lt;pipeline&gt;</span>" command. This will also automatically load nextflow, so you dont need to install it or even load it, it gets loaded by default.&nbsp;<br></p><img class="u-image u-image-round u-radius-10 u-block-b090-52" src="np://user.desktop.nicepage.com/Site_87799860/images/Screenshot2023-09-22at11.56.21.png?rand=264c" alt="" data-image-width="1494" data-image-height="538"><p class="u-align-center u-text u-text-black u-block-b090-53">After loading the pipeline, it becomes readily available for use. To initiate its execution, simply use the "<span style="font-weight: 700;">nfcore_&lt;pipeline&gt;</span>" command, substituting "&lt;pipeline&gt;" with the specific pipeline you loaded (e.g., nfcore_rnaseq, nfcore_chipseq, nfcore_sarek...).&nbsp; For comprehensive information on the arguments accepted by the pipeline, you can execute the pipeline with the "--help" argument (e.g., nfcore_rnaseq --help).<br></p><img class="u-image u-image-round u-radius-10 u-block-b090-56" src="np://user.desktop.nicepage.com/Site_87799860/images/Screenshot2023-09-22at12.17.46.png?rand=a6e3" alt="" data-image-width="1688" data-image-height="772"><p class="u-align-center u-text u-text-black u-block-b090-57">To clarify, once a pipeline is loaded, you dont' need to use "nextflow run". The "nfcore_&lt;pipeline&gt;" command is an alias for "​<span style="font-weight: 700;">nextflow run /path/to/pipeline&nbsp;-profile ​/path/to/config<span style="font-weight: 400;">​". I</span></span>t points to the code, the config file, the appropiate&nbsp;reference&nbsp;genomes, etc. So instead of<br></p><p class="u-align-center u-custom-font u-font-courier-new u-text u-text-black u-block-b090-58">​nextflow run /path/to/rnaseq/pipeline -profile /path/to/rnaseq/config&nbsp;[ARGS]<br></p><p class="u-align-center u-text u-text-black u-block-b090-59">You would just do</p><p class="u-align-left u-custom-font u-font-courier-new u-text u-text-black u-block-b090-60">nfcore_rnaseq [ARGS]</p></div>
+  
+  
+  
+  
+  
+<style data-mode="XL">@media (min-width: 1200px) {
+  .u-block-b090-2 {
+    min-height: 1866px;
+  }
+  .u-block-b090-62 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-top: 78px;
+    margin-left: 107px;
+    margin-right: 107px;
+    margin-bottom: 0;
+  }
+  .u-block-b090-51 {
+    margin-top: 24px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
+  .u-block-b090-54 {
+    width: 808px;
+    margin-top: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .u-block-b090-55 {
+    font-size: 1.25rem;
+    margin-top: 36px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
+  .u-block-b090-52 {
+    width: 570px;
+    height: 205px;
+    margin-top: 32px;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: 272px;
+  }
+  .u-block-b090-53 {
+    font-size: 1.25rem;
+    line-height: 1.4;
+    background-image: none;
+    margin-top: 38px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
+  .u-block-b090-56 {
+    width: 570px;
+    height: 261px;
+    margin-top: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .u-block-b090-57 {
+    font-size: 1.25rem;
+    line-height: 1.4;
+    background-image: none;
+    margin-top: 35px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
+  .u-block-b090-58 {
+    font-size: 1.25rem;
+    line-height: 1.4;
+    background-image: none;
+    margin-top: 26px;
+    margin-right: 46px;
+    margin-bottom: 0;
+    margin-left: 90px;
+  }
+  .u-block-b090-59 {
+    font-size: 1.25rem;
+    line-height: 1.4;
+    background-image: none;
+    margin-top: 32px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
+  .u-block-b090-60 {
+    font-size: 1.25rem;
+    line-height: 1.4;
+    background-image: none;
+    margin-top: 26px;
+    margin-right: 420px;
+    margin-bottom: 38px;
+    margin-left: 465px;
+  }
+}</style><style data-mode="LG">@media (max-width: 1199px) and (min-width: 992px) {
+  .u-block-b090-2 {
+    min-height: 1866px;
+  }
+  .u-block-b090-62 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-top: 78px;
+    margin-left: 7px;
+    margin-right: 7px;
+    margin-bottom: 0;
+  }
+  .u-block-b090-51 {
+    margin-top: 24px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .u-block-b090-54 {
+    width: 808px;
+    margin-top: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .u-block-b090-55 {
+    font-size: 1.25rem;
+    margin-top: 36px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .u-block-b090-52 {
+    width: 570px;
+    height: 205px;
+    margin-top: 32px;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: 272px;
+  }
+  .u-block-b090-53 {
+    background-image: none;
+    font-size: 1.25rem;
+    line-height: 1.4;
+    margin-top: 38px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .u-block-b090-56 {
+    width: 570px;
+    height: 261px;
+    margin-top: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .u-block-b090-57 {
+    background-image: none;
+    font-size: 1.25rem;
+    line-height: 1.4;
+    margin-top: 35px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .u-block-b090-58 {
+    background-image: none;
+    font-size: 1.25rem;
+    line-height: 1.4;
+    margin-top: 26px;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+  .u-block-b090-59 {
+    background-image: none;
+    font-size: 1.25rem;
+    line-height: 1.4;
+    margin-top: 32px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .u-block-b090-60 {
+    background-image: none;
+    font-size: 1.25rem;
+    line-height: 1.4;
+    margin-top: 26px;
+    margin-right: 320px;
+    margin-bottom: 38px;
+    margin-left: 365px;
+  }
+}</style><style data-mode="MD">@media (max-width: 991px) and (min-width: 768px) {
+  .u-block-b090-2 {
+    min-height: 1866px;
+  }
+  .u-block-b090-62 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-top: 78px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .u-block-b090-51 {
+    margin-top: 24px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .u-block-b090-54 {
+    width: 720px;
+    margin-top: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .u-block-b090-55 {
+    font-size: 1.25rem;
+    margin-top: 36px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .u-block-b090-52 {
+    width: 570px;
+    height: 205px;
+    margin-top: 32px;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: 150px;
+  }
+  .u-block-b090-53 {
+    background-image: none;
+    font-size: 1.25rem;
+    line-height: 1.4;
+    margin-top: 38px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .u-block-b090-56 {
+    width: 570px;
+    height: 261px;
+    margin-top: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .u-block-b090-57 {
+    background-image: none;
+    font-size: 1.25rem;
+    line-height: 1.4;
+    margin-top: 35px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .u-block-b090-58 {
+    background-image: none;
+    font-size: 1.25rem;
+    line-height: 1.4;
+    margin-top: 26px;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+  .u-block-b090-59 {
+    background-image: none;
+    font-size: 1.25rem;
+    line-height: 1.4;
+    margin-top: 32px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .u-block-b090-60 {
+    background-image: none;
+    font-size: 1.25rem;
+    line-height: 1.4;
+    margin-top: 26px;
+    margin-right: 210px;
+    margin-bottom: 38px;
+    margin-left: 255px;
+  }
+}</style><style data-mode="SM">@media (max-width: 767px) and (min-width: 576px) {
+  .u-block-b090-2 {
+    min-height: 1841px;
+  }
+  .u-block-b090-62 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-top: 78px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .u-block-b090-51 {
+    margin-top: 24px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .u-block-b090-54 {
+    width: 540px;
+    margin-top: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .u-block-b090-55 {
+    font-size: 1rem;
+    margin-top: 36px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .u-block-b090-52 {
+    width: 540px;
+    height: 194px;
+    margin-top: 32px;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+  .u-block-b090-53 {
+    background-image: none;
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-top: 38px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .u-block-b090-56 {
+    width: 540px;
+    height: 247px;
+    margin-top: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .u-block-b090-57 {
+    background-image: none;
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-top: 35px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .u-block-b090-58 {
+    background-image: none;
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-top: 26px;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+  .u-block-b090-59 {
+    background-image: none;
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-top: 32px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .u-block-b090-60 {
+    background-image: none;
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-top: 26px;
+    margin-right: 120px;
+    margin-bottom: 38px;
+    margin-left: 165px;
+  }
+}</style><style data-mode="XS">@media (max-width: 575px) {
+  .u-block-b090-2 {
+    min-height: 1678px;
+  }
+  .u-block-b090-62 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin-top: 78px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .u-block-b090-51 {
+    margin-top: 24px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .u-block-b090-54 {
+    width: 340px;
+    margin-top: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .u-block-b090-55 {
+    font-size: 1rem;
+    margin-top: 36px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .u-block-b090-52 {
+    width: 340px;
+    height: 122px;
+    margin-top: 32px;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+  .u-block-b090-53 {
+    background-image: none;
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-top: 38px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .u-block-b090-56 {
+    width: 340px;
+    height: 156px;
+    margin-top: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .u-block-b090-57 {
+    background-image: none;
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-top: 35px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .u-block-b090-58 {
+    background-image: none;
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-top: 26px;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+  .u-block-b090-59 {
+    background-image: none;
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-top: 32px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .u-block-b090-60 {
+    background-image: none;
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-top: 26px;
+    margin-right: 20px;
+    margin-bottom: 38px;
+    margin-left: 65px;
+  }
+}</style></section><section class="u-align-center u-clearfix u-block-4807-1" custom-posts-hash="[T,T,T,T]" data-section-properties="{&quot;margin&quot;:&quot;none&quot;,&quot;stretch&quot;:true}" data-id="4807" data-posts-content="[{'images':[],'maps':[],'videos':[],'icons':[],'textWidth':1140,'textHeight':650,'id':1,'groupId':1,'headingProp':'h2','textProp':'text'},{'images':[],'maps':[],'videos':[],'icons':[{}],'textWidth':1140,'textHeight':650,'id':2,'groupId':1,'headingProp':'h2','textProp':'text'},{'images':[],'maps':[],'videos':[],'icons':[{}],'textWidth':1140,'textHeight':650,'id':3,'groupId':1,'headingProp':'h2','textProp':'text'},{'images':[],'maps':[],'videos':[],'icons':[{}],'textWidth':1140,'textHeight':650,'id':4,'groupId':1,'headingProp':'h2','textProp':'text'}]" data-style="accordion-2" id="sec-1875" data-source="Sketch">
+  <div class="u-clearfix u-sheet u-block-4807-2">
+    
+    <div class="u-accordion u-spacing-3 u-block-4807-4">
+      
+      <div class="u-accordion-item u-block-4807-9">
+        <a class="active u-accordion-link u-button-style u-grey-5 u-text-active-black u-text-grey-60 u-text-hover-black u-block-4807-10" id="link-accordion-4c47" aria-controls="accordion-4c47" aria-selected="true">
+          <span class="u-accordion-link-text">CLICK TO SEE AN EXAMPLE QSUB SCRIPT<br></span><span class="u-accordion-link-icon u-icon u-text-grey-40 u-block-4807-22"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-55f1"></use></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" id="svg-55f1" style="enable-background:new 0 0 512 512;"><g><g><path d="M509.121,125.966c-3.838-3.838-10.055-3.838-13.893,0L256.005,365.194L16.771,125.966c-3.838-3.838-10.055-3.838-13.893,0    c-3.838,3.838-3.838,10.055,0,13.893l246.18,246.175c1.842,1.842,4.337,2.878,6.947,2.878c2.61,0,5.104-1.036,6.946-2.878    l246.17-246.175C512.959,136.021,512.959,129.804,509.121,125.966z"></path>
+</g>
+</g></svg></span>
+        </a>
+        <div class="u-accordion-active u-accordion-pane u-container-style u-block-4807-11" id="accordion-4c47" aria-labelledby="link-accordion-4c47">
+          <div class="u-container-layout u-valign-bottom u-block-4807-12">
+            
+          <p class="u-text u-block-4807-23">​#!/bin/bash -l&nbsp;<br><br>#$ -S /bin/bash<br>#$ -l h_rt=48:0:0<br>#$ -l mem=10G<br>#$ -l tmpfs=10G<br>#$ -pe smp 1<br>#$ -N&nbsp;<br>#$ -wd /path/to/project<br><br>shopt -s expand_aliases<br><br>module load blic-modules<br>module load nfcore/rnaseq/3.10.1<br><br>nfcore_rnaseq \&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --input 'inputfile.csv' \<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --outdir results \<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --genome GRCh38 \<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -resume \<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -with-tower
+</p></div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <style data-mode="XL">@media (min-width: 1200px) {
+  .u-block-4807-2 {
+    min-height: 115px;
+  }
+  .u-block-4807-4 {
+    width: 867px;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 35px;
+  }
+  .u-block-4807-10 {
+    background-image: none;
+    text-transform: uppercase;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-4807-22 {
+    height: 20px;
+    width: 20px;
+  }
+  .u-block-4807-11 {
+    min-height: 750px;
+    height: auto;
+  }
+  .u-block-4807-12 {
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 45px;
+  }
+  .u-block-4807-23 {
+    font-size: 1.25rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 42px;
+    margin-right: 42px;
+  }
+}</style>
+  <style data-mode="LG">@media (max-width: 1199px) and (min-width: 992px) {
+  .u-block-4807-2 {
+    min-height: 115px;
+  }
+  .u-block-4807-4 {
+    width: 867px;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 35px;
+  }
+  .u-block-4807-10 {
+    background-image: none;
+    text-transform: uppercase;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-4807-22 {
+    height: 20px;
+    width: 20px;
+  }
+  .u-block-4807-11 {
+    min-height: 750px;
+    height: auto;
+  }
+  .u-block-4807-12 {
+    padding-top: 0;
+    padding-bottom: 45px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .u-block-4807-23 {
+    font-size: 1.25rem;
+    margin-top: 0;
+    margin-right: 42px;
+    margin-bottom: 0;
+    margin-left: 42px;
+  }
+}</style>
+  <style data-mode="MD">@media (max-width: 991px) and (min-width: 768px) {
+  .u-block-4807-2 {
+    min-height: 115px;
+  }
+  .u-block-4807-4 {
+    width: 720px;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 35px;
+  }
+  .u-block-4807-10 {
+    background-image: none;
+    text-transform: uppercase;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-4807-22 {
+    height: 20px;
+    width: 20px;
+  }
+  .u-block-4807-11 {
+    min-height: 750px;
+    height: auto;
+  }
+  .u-block-4807-12 {
+    padding-top: 0;
+    padding-bottom: 30px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .u-block-4807-23 {
+    font-size: 1.25rem;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+}</style>
+  <style data-mode="SM">@media (max-width: 767px) and (min-width: 576px) {
+  .u-block-4807-2 {
+    min-height: 115px;
+  }
+  .u-block-4807-4 {
+    width: 540px;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 35px;
+  }
+  .u-block-4807-10 {
+    background-image: none;
+    text-transform: uppercase;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-4807-22 {
+    height: 20px;
+    width: 20px;
+  }
+  .u-block-4807-11 {
+    min-height: 750px;
+    height: auto;
+  }
+  .u-block-4807-12 {
+    padding-top: 0;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-4807-23 {
+    font-size: 1rem;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+}</style>
+  <style data-mode="XS">@media (max-width: 575px) {
+  .u-block-4807-2 {
+    min-height: 115px;
+  }
+  .u-block-4807-4 {
+    width: 340px;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 35px;
+  }
+  .u-block-4807-10 {
+    background-image: none;
+    text-transform: uppercase;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-4807-22 {
+    height: 20px;
+    width: 20px;
+  }
+  .u-block-4807-11 {
+    min-height: 750px;
+    height: auto;
+  }
+  .u-block-4807-12 {
+    padding-top: 0;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-4807-23 {
+    font-size: 1rem;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+}</style>
+</section><section class="u-align-center u-clearfix u-palette-2-light-2 u-block-6062-1" custom-posts-hash="[T,T,T,T]" data-section-properties="{&quot;margin&quot;:&quot;none&quot;,&quot;stretch&quot;:true}" data-id="6062" data-posts-content="[{'images':[],'maps':[],'videos':[],'icons':[],'textWidth':1140,'textHeight':650,'id':1,'groupId':1,'headingProp':'h2','textProp':'text'},{'images':[],'maps':[],'videos':[],'icons':[{}],'textWidth':1140,'textHeight':650,'id':2,'groupId':1,'headingProp':'h2','textProp':'text'},{'images':[],'maps':[],'videos':[],'icons':[{}],'textWidth':1140,'textHeight':650,'id':3,'groupId':1,'headingProp':'h2','textProp':'text'},{'images':[],'maps':[],'videos':[],'icons':[{}],'textWidth':1140,'textHeight':650,'id':4,'groupId':1,'headingProp':'h2','textProp':'text'}]" data-style="accordion-2" id="sec-1ea0" data-source="Sketch">
+  <div class="u-clearfix u-sheet u-block-6062-2">
+    <h2 class="u-text u-text-default u-block-6062-3">Tips and common mistakes</h2>
+    <div class="u-accordion u-spacing-3 u-block-6062-4">
+      <div class="u-accordion-item u-block-6062-43">
+        <a class="active u-accordion-link u-button-style u-grey-5 u-text-active-black u-text-grey-60 u-text-hover-black u-block-6062-44" id="link-accordion-a910" aria-controls="accordion-a910" aria-selected="true">
+          <span class="u-accordion-link-text">read the piepline documentation</span><span class="u-accordion-link-icon u-icon u-text-grey-40 u-block-6062-45"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-4ba1"></use></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" id="svg-4ba1" style="enable-background:new 0 0 512 512;"><g><g><path d="M509.121,125.966c-3.838-3.838-10.055-3.838-13.893,0L256.005,365.194L16.771,125.966c-3.838-3.838-10.055-3.838-13.893,0    c-3.838,3.838-3.838,10.055,0,13.893l246.18,246.175c1.842,1.842,4.337,2.878,6.947,2.878c2.61,0,5.104-1.036,6.946-2.878    l246.17-246.175C512.959,136.021,512.959,129.804,509.121,125.966z"></path>
+</g>
+</g></svg></span>
+        </a>
+        <div class="u-accordion-active u-accordion-pane u-container-style u-block-6062-46" id="accordion-a910" aria-labelledby="link-accordion-a910">
+          <div class="u-container-layout u-block-6062-47">
+            <p class="u-text u-block-6062-48">This is the most obvious and important tip. Before you run any piepeline, you need to read carefully the specific <a href="https://nf-co.re/pipelines" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-block-6062-49" target="_blank">pipeline documentation</a>, as each nf-core pipeline have specific arguments, input data requirements, and output formats. Familiarizing yourself with the pipeline's output format and structure will help you interpret the results and extract meaningful insights from your data. At the very least, make sure to check the pipeline's README and usage instructions to get a quick overview of its functionality and requirements.</p>
+          </div>
+        </div>
+      </div><div class="u-accordion-item u-block-6062-5">
+        <a class="u-accordion-link u-button-style u-grey-5 u-text-active-black u-text-grey-60 u-text-hover-black u-block-6062-6" id="link-accordion-0781" aria-controls="accordion-0781" aria-selected="false">
+          <span class="u-accordion-link-text">expand alias in the qsub script</span><span class="u-accordion-link-icon u-icon u-text-grey-40 u-block-6062-21"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-efcb"></use></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" id="svg-efcb" style="enable-background:new 0 0 512 512;"><g><g><path d="M509.121,125.966c-3.838-3.838-10.055-3.838-13.893,0L256.005,365.194L16.771,125.966c-3.838-3.838-10.055-3.838-13.893,0    c-3.838,3.838-3.838,10.055,0,13.893l246.18,246.175c1.842,1.842,4.337,2.878,6.947,2.878c2.61,0,5.104-1.036,6.946-2.878    l246.17-246.175C512.959,136.021,512.959,129.804,509.121,125.966z"></path>
+</g>
+</g></svg></span>
+        </a>
+        <div class="u-accordion-pane u-container-style u-block-6062-7" id="accordion-0781" aria-labelledby="link-accordion-0781">
+          <div class="u-container-layout u-valign-top u-block-6062-8">
+            
+            <p class="u-text u-block-6062-18">As you can see in the example qsub script above, we have added the "<i><span style="font-weight: 700;">shopt -s&nbsp;expand_aliases</span>" <span style="font-style: normal;">shell option in the script.</span></i><br><br><i><span style="font-style: normal;">You need to add this option of you run one of the installed pipelines within a qsub script. This is becasue as explained before,&nbsp;</span></i>the "nfcore_pipeline" commands are aliases, so&nbsp;if the shell is not interactive, the&nbsp;alias&nbsp;needfs to be “expanded” for the script to understand it.<br><br>You dont need to do this is you are running the nfcore_pipeline commands directly in the command line</p>
+          </div>
+        </div>
+      </div>
+      <div class="u-accordion-item u-block-6062-9">
+        <a class="u-accordion-link u-button-style u-grey-5 u-text-active-black u-text-grey-60 u-text-hover-black u-block-6062-10" id="link-accordion-4c47" aria-controls="accordion-4c47" aria-selected="false">
+          <span class="u-accordion-link-text">allocation of resources in the qsub script</span><span class="u-accordion-link-icon u-icon u-text-grey-40 u-block-6062-22"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-55f1"></use></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" id="svg-55f1" style="enable-background:new 0 0 512 512;"><g><g><path d="M509.121,125.966c-3.838-3.838-10.055-3.838-13.893,0L256.005,365.194L16.771,125.966c-3.838-3.838-10.055-3.838-13.893,0    c-3.838,3.838-3.838,10.055,0,13.893l246.18,246.175c1.842,1.842,4.337,2.878,6.947,2.878c2.61,0,5.104-1.036,6.946-2.878    l246.17-246.175C512.959,136.021,512.959,129.804,509.121,125.966z"></path>
+</g>
+</g></svg></span>
+        </a>
+        <div class="u-accordion-pane u-container-style u-block-6062-11" id="accordion-4c47" aria-labelledby="link-accordion-4c47">
+          <div class="u-container-layout u-block-6062-12">
+            
+          </div>
+        </div>
+      </div>
+      <div class="u-accordion-item u-block-6062-13">
+        <a class="u-accordion-link u-button-style u-grey-5 u-text-active-black u-text-grey-60 u-text-hover-black u-block-6062-14" id="link-accordion-a910" aria-controls="accordion-a910" aria-selected="false">
+          <span class="u-accordion-link-text">loading the pipeline module but not using it</span><span class="u-accordion-link-icon u-icon u-text-grey-40 u-block-6062-23"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-6813"></use></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" id="svg-6813" style="enable-background:new 0 0 512 512;"><g><g><path d="M509.121,125.966c-3.838-3.838-10.055-3.838-13.893,0L256.005,365.194L16.771,125.966c-3.838-3.838-10.055-3.838-13.893,0    c-3.838,3.838-3.838,10.055,0,13.893l246.18,246.175c1.842,1.842,4.337,2.878,6.947,2.878c2.61,0,5.104-1.036,6.946-2.878    l246.17-246.175C512.959,136.021,512.959,129.804,509.121,125.966z"></path>
+</g>
+</g></svg></span>
+        </a>
+        <div class="u-accordion-pane u-container-style u-block-6062-15" id="accordion-a910" aria-labelledby="link-accordion-a910">
+          <div class="u-container-layout u-block-6062-16">
+            <p class="u-text u-block-6062-20">Sample text. Click to select the text box. Click again or double click to start editing the text. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+      </div>
+    <div class="u-accordion-item u-block-6062-25">
+        <a class="u-accordion-link u-button-style u-grey-5 u-text-active-black u-text-grey-60 u-text-hover-black u-block-6062-26" id="link-accordion-a910" aria-controls="accordion-a910" aria-selected="false">
+          <span class="u-accordion-link-text">always use the -resume and -with-tower arguments</span><span class="u-accordion-link-icon u-icon u-text-grey-40 u-block-6062-27"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-db95"></use></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" id="svg-db95" style="enable-background:new 0 0 512 512;"><g><g><path d="M509.121,125.966c-3.838-3.838-10.055-3.838-13.893,0L256.005,365.194L16.771,125.966c-3.838-3.838-10.055-3.838-13.893,0    c-3.838,3.838-3.838,10.055,0,13.893l246.18,246.175c1.842,1.842,4.337,2.878,6.947,2.878c2.61,0,5.104-1.036,6.946-2.878    l246.17-246.175C512.959,136.021,512.959,129.804,509.121,125.966z"></path>
+</g>
+</g></svg></span>
+        </a>
+        <div class="u-accordion-pane u-container-style u-block-6062-28" id="accordion-a910" aria-labelledby="link-accordion-a910">
+          <div class="u-container-layout u-block-6062-29">
+            <p class="u-text u-block-6062-30">Sample text. Click to select the text box. Click again or double click to start editing the text. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+      </div><div class="u-accordion-item u-block-6062-31">
+        <a class="u-accordion-link u-button-style u-grey-5 u-text-active-black u-text-grey-60 u-text-hover-black u-block-6062-32" id="link-accordion-a910" aria-controls="accordion-a910" aria-selected="false">
+          <span class="u-accordion-link-text">loading the pipeline module not using it</span><span class="u-accordion-link-icon u-icon u-text-grey-40 u-block-6062-33"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-59bc"></use></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" id="svg-59bc" style="enable-background:new 0 0 512 512;"><g><g><path d="M509.121,125.966c-3.838-3.838-10.055-3.838-13.893,0L256.005,365.194L16.771,125.966c-3.838-3.838-10.055-3.838-13.893,0    c-3.838,3.838-3.838,10.055,0,13.893l246.18,246.175c1.842,1.842,4.337,2.878,6.947,2.878c2.61,0,5.104-1.036,6.946-2.878    l246.17-246.175C512.959,136.021,512.959,129.804,509.121,125.966z"></path>
+</g>
+</g></svg></span>
+        </a>
+        <div class="u-accordion-pane u-container-style u-block-6062-34" id="accordion-a910" aria-labelledby="link-accordion-a910">
+          <div class="u-container-layout u-block-6062-35">
+            <p class="u-text u-block-6062-36">Sample text. Click to select the text box. Click again or double click to start editing the text. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+      </div><div class="u-accordion-item u-block-6062-37">
+        <a class="u-accordion-link u-button-style u-grey-5 u-text-active-black u-text-grey-60 u-text-hover-black u-block-6062-38" id="link-accordion-a910" aria-controls="accordion-a910" aria-selected="false">
+          <span class="u-accordion-link-text">loading the pipeline module not using it</span><span class="u-accordion-link-icon u-icon u-text-grey-40 u-block-6062-39"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-9308"></use></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" id="svg-9308" style="enable-background:new 0 0 512 512;"><g><g><path d="M509.121,125.966c-3.838-3.838-10.055-3.838-13.893,0L256.005,365.194L16.771,125.966c-3.838-3.838-10.055-3.838-13.893,0    c-3.838,3.838-3.838,10.055,0,13.893l246.18,246.175c1.842,1.842,4.337,2.878,6.947,2.878c2.61,0,5.104-1.036,6.946-2.878    l246.17-246.175C512.959,136.021,512.959,129.804,509.121,125.966z"></path>
+</g>
+</g></svg></span>
+        </a>
+        <div class="u-accordion-pane u-container-style u-block-6062-40" id="accordion-a910" aria-labelledby="link-accordion-a910">
+          <div class="u-container-layout u-block-6062-41">
+            <p class="u-text u-block-6062-42">Sample text. Click to select the text box. Click again or double click to start editing the text. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+      </div></div>
+  </div>
+  <style data-mode="XL">@media (min-width: 1200px) {
+  .u-block-6062-1 {
+    background-image: none;
+  }
+  .u-block-6062-2 {
+    min-height: 946px;
+  }
+  .u-block-6062-3 {
+    font-weight: 700;
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .u-block-6062-4 {
+    width: 800px;
+    margin-top: 90px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+  }
+  .u-block-6062-43 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .u-block-6062-44 {
+    background-image: none;
+    text-transform: uppercase;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-45 {
+    height: 20px;
+    width: 20px;
+  }
+  .u-block-6062-46 {
+    min-height: 150px;
+  }
+  .u-block-6062-47 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-48 {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .u-block-6062-49 {
+    background-image: none;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .u-block-6062-5 {
+    margin-top: 3px;
+    margin-bottom: 0;
+  }
+  .u-block-6062-6 {
+    background-image: none;
+    text-transform: uppercase;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-21 {
+    height: 20px;
+    width: 20px;
+  }
+  .u-block-6062-7 {
+    min-height: 150px;
+  }
+  .u-block-6062-8 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-18 {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .u-block-6062-9 {
+    margin-top: 3px;
+    margin-bottom: 0;
+  }
+  .u-block-6062-10 {
+    background-image: none;
+    text-transform: uppercase;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-22 {
+    height: 20px;
+    width: 20px;
+  }
+  .u-block-6062-11 {
+    min-height: 150px;
+  }
+  .u-block-6062-12 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-13 {
+    margin-bottom: 0;
+    margin-top: 3px;
+  }
+  .u-block-6062-14 {
+    background-image: none;
+    text-transform: uppercase;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-23 {
+    height: 20px;
+    width: 20px;
+  }
+  .u-block-6062-15 {
+    min-height: 150px;
+  }
+  .u-block-6062-16 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-20 {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .u-block-6062-25 {
+    margin-bottom: 0;
+    margin-top: 3px;
+  }
+  .u-block-6062-26 {
+    background-image: none;
+    text-transform: uppercase;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-27 {
+    height: 20px;
+    width: 20px;
+  }
+  .u-block-6062-28 {
+    min-height: 150px;
+  }
+  .u-block-6062-29 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-30 {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .u-block-6062-31 {
+    margin-bottom: 0;
+    margin-top: 3px;
+  }
+  .u-block-6062-32 {
+    background-image: none;
+    text-transform: uppercase;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-33 {
+    height: 20px;
+    width: 20px;
+  }
+  .u-block-6062-34 {
+    min-height: 150px;
+  }
+  .u-block-6062-35 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-36 {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .u-block-6062-37 {
+    margin-bottom: 0;
+    margin-top: 3px;
+  }
+  .u-block-6062-38 {
+    background-image: none;
+    text-transform: uppercase;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-39 {
+    height: 20px;
+    width: 20px;
+  }
+  .u-block-6062-40 {
+    min-height: 150px;
+  }
+  .u-block-6062-41 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-42 {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}</style>
+  <style data-mode="LG">@media (max-width: 1199px) and (min-width: 992px) {
+  .u-block-6062-1 {
+    background-image: none;
+  }
+  .u-block-6062-2 {
+    min-height: 946px;
+  }
+  .u-block-6062-3 {
+    font-weight: 700;
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .u-block-6062-4 {
+    width: 800px;
+    margin-top: 90px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+  }
+  .u-block-6062-43 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .u-block-6062-44 {
+    background-image: none;
+    text-transform: uppercase;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-45 {
+    height: 20px;
+    width: 20px;
+  }
+  .u-block-6062-46 {
+    min-height: 150px;
+  }
+  .u-block-6062-47 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-48 {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .u-block-6062-49 {
+    background-image: none;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .u-block-6062-5 {
+    margin-top: 3px;
+    margin-bottom: 0;
+  }
+  .u-block-6062-6 {
+    background-image: none;
+    text-transform: uppercase;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-21 {
+    height: 20px;
+    width: 20px;
+  }
+  .u-block-6062-7 {
+    min-height: 150px;
+  }
+  .u-block-6062-8 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-18 {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .u-block-6062-9 {
+    margin-top: 3px;
+    margin-bottom: 0;
+  }
+  .u-block-6062-10 {
+    background-image: none;
+    text-transform: uppercase;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-22 {
+    height: 20px;
+    width: 20px;
+  }
+  .u-block-6062-11 {
+    min-height: 150px;
+  }
+  .u-block-6062-12 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-13 {
+    margin-bottom: 0;
+    margin-top: 3px;
+  }
+  .u-block-6062-14 {
+    background-image: none;
+    text-transform: uppercase;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-23 {
+    height: 20px;
+    width: 20px;
+  }
+  .u-block-6062-15 {
+    min-height: 150px;
+  }
+  .u-block-6062-16 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-20 {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .u-block-6062-25 {
+    margin-bottom: 0;
+    margin-top: 3px;
+  }
+  .u-block-6062-26 {
+    background-image: none;
+    text-transform: uppercase;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-27 {
+    height: 20px;
+    width: 20px;
+  }
+  .u-block-6062-28 {
+    min-height: 150px;
+  }
+  .u-block-6062-29 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-30 {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .u-block-6062-31 {
+    margin-bottom: 0;
+    margin-top: 3px;
+  }
+  .u-block-6062-32 {
+    background-image: none;
+    text-transform: uppercase;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-33 {
+    height: 20px;
+    width: 20px;
+  }
+  .u-block-6062-34 {
+    min-height: 150px;
+  }
+  .u-block-6062-35 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-36 {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .u-block-6062-37 {
+    margin-bottom: 0;
+    margin-top: 3px;
+  }
+  .u-block-6062-38 {
+    background-image: none;
+    text-transform: uppercase;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-39 {
+    height: 20px;
+    width: 20px;
+  }
+  .u-block-6062-40 {
+    min-height: 150px;
+  }
+  .u-block-6062-41 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-42 {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}</style>
+  <style data-mode="MD" data-visited="true">@media (max-width: 991px) and (min-width: 768px) {
+  .u-block-6062-1 {
+    background-image: none;
+  }
+  .u-block-6062-2 {
+    min-height: 946px;
+  }
+  .u-block-6062-3 {
+    font-weight: 700;
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .u-block-6062-4 {
+    width: 720px;
+    margin-top: 90px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+  }
+  .u-block-6062-43 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .u-block-6062-44 {
+    background-image: none;
+    text-transform: uppercase;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-45 {
+    height: 20px;
+    width: 20px;
+  }
+  .u-block-6062-46 {
+    min-height: 150px;
+  }
+  .u-block-6062-47 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-48 {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .u-block-6062-49 {
+    background-image: none;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .u-block-6062-5 {
+    margin-top: 3px;
+    margin-bottom: 0;
+  }
+  .u-block-6062-6 {
+    background-image: none;
+    text-transform: uppercase;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-21 {
+    height: 20px;
+    width: 20px;
+  }
+  .u-block-6062-7 {
+    min-height: 150px;
+  }
+  .u-block-6062-8 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-18 {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .u-block-6062-9 {
+    margin-top: 3px;
+    margin-bottom: 0;
+  }
+  .u-block-6062-10 {
+    background-image: none;
+    text-transform: uppercase;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-22 {
+    height: 20px;
+    width: 20px;
+  }
+  .u-block-6062-11 {
+    min-height: 150px;
+  }
+  .u-block-6062-12 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-13 {
+    margin-bottom: 0;
+    margin-top: 3px;
+  }
+  .u-block-6062-14 {
+    background-image: none;
+    text-transform: uppercase;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-23 {
+    height: 20px;
+    width: 20px;
+  }
+  .u-block-6062-15 {
+    min-height: 150px;
+  }
+  .u-block-6062-16 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-20 {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .u-block-6062-25 {
+    margin-bottom: 0;
+    margin-top: 3px;
+  }
+  .u-block-6062-26 {
+    background-image: none;
+    text-transform: uppercase;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-27 {
+    height: 20px;
+    width: 20px;
+  }
+  .u-block-6062-28 {
+    min-height: 150px;
+  }
+  .u-block-6062-29 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-30 {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .u-block-6062-31 {
+    margin-bottom: 0;
+    margin-top: 3px;
+  }
+  .u-block-6062-32 {
+    background-image: none;
+    text-transform: uppercase;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-33 {
+    height: 20px;
+    width: 20px;
+  }
+  .u-block-6062-34 {
+    min-height: 150px;
+  }
+  .u-block-6062-35 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-36 {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .u-block-6062-37 {
+    margin-bottom: 0;
+    margin-top: 3px;
+  }
+  .u-block-6062-38 {
+    background-image: none;
+    text-transform: uppercase;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-39 {
+    height: 20px;
+    width: 20px;
+  }
+  .u-block-6062-40 {
+    min-height: 150px;
+  }
+  .u-block-6062-41 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-42 {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}</style>
+  <style data-mode="SM" data-visited="true">@media (max-width: 767px) and (min-width: 576px) {
+  .u-block-6062-1 {
+    background-image: none;
+  }
+  .u-block-6062-2 {
+    min-height: 946px;
+  }
+  .u-block-6062-3 {
+    font-weight: 700;
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .u-block-6062-4 {
+    width: 540px;
+    margin-top: 90px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+  }
+  .u-block-6062-43 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .u-block-6062-44 {
+    background-image: none;
+    text-transform: uppercase;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-45 {
+    height: 20px;
+    width: 20px;
+  }
+  .u-block-6062-46 {
+    min-height: 150px;
+  }
+  .u-block-6062-47 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .u-block-6062-48 {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .u-block-6062-49 {
+    background-image: none;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .u-block-6062-5 {
+    margin-top: 3px;
+    margin-bottom: 0;
+  }
+  .u-block-6062-6 {
+    background-image: none;
+    text-transform: uppercase;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-21 {
+    height: 20px;
+    width: 20px;
+  }
+  .u-block-6062-7 {
+    min-height: 150px;
+  }
+  .u-block-6062-8 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-18 {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .u-block-6062-9 {
+    margin-top: 3px;
+    margin-bottom: 0;
+  }
+  .u-block-6062-10 {
+    background-image: none;
+    text-transform: uppercase;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-22 {
+    height: 20px;
+    width: 20px;
+  }
+  .u-block-6062-11 {
+    min-height: 150px;
+  }
+  .u-block-6062-12 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-13 {
+    margin-bottom: 0;
+    margin-top: 3px;
+  }
+  .u-block-6062-14 {
+    background-image: none;
+    text-transform: uppercase;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-23 {
+    height: 20px;
+    width: 20px;
+  }
+  .u-block-6062-15 {
+    min-height: 150px;
+  }
+  .u-block-6062-16 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-20 {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .u-block-6062-25 {
+    margin-bottom: 0;
+    margin-top: 3px;
+  }
+  .u-block-6062-26 {
+    background-image: none;
+    text-transform: uppercase;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-27 {
+    height: 20px;
+    width: 20px;
+  }
+  .u-block-6062-28 {
+    min-height: 150px;
+  }
+  .u-block-6062-29 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .u-block-6062-30 {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .u-block-6062-31 {
+    margin-bottom: 0;
+    margin-top: 3px;
+  }
+  .u-block-6062-32 {
+    background-image: none;
+    text-transform: uppercase;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-33 {
+    height: 20px;
+    width: 20px;
+  }
+  .u-block-6062-34 {
+    min-height: 150px;
+  }
+  .u-block-6062-35 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .u-block-6062-36 {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .u-block-6062-37 {
+    margin-bottom: 0;
+    margin-top: 3px;
+  }
+  .u-block-6062-38 {
+    background-image: none;
+    text-transform: uppercase;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-39 {
+    height: 20px;
+    width: 20px;
+  }
+  .u-block-6062-40 {
+    min-height: 150px;
+  }
+  .u-block-6062-41 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .u-block-6062-42 {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}</style>
+  <style data-mode="XS" data-visited="true">@media (max-width: 575px) {
+  .u-block-6062-1 {
+    background-image: none;
+  }
+  .u-block-6062-2 {
+    min-height: 946px;
+  }
+  .u-block-6062-3 {
+    font-weight: 700;
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .u-block-6062-4 {
+    width: 340px;
+    margin-top: 90px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+  }
+  .u-block-6062-43 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .u-block-6062-44 {
+    background-image: none;
+    text-transform: uppercase;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-45 {
+    height: 20px;
+    width: 20px;
+  }
+  .u-block-6062-46 {
+    min-height: 150px;
+  }
+  .u-block-6062-47 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .u-block-6062-48 {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .u-block-6062-49 {
+    background-image: none;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .u-block-6062-5 {
+    margin-top: 3px;
+    margin-bottom: 0;
+  }
+  .u-block-6062-6 {
+    background-image: none;
+    text-transform: uppercase;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-21 {
+    height: 20px;
+    width: 20px;
+  }
+  .u-block-6062-7 {
+    min-height: 150px;
+  }
+  .u-block-6062-8 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-18 {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .u-block-6062-9 {
+    margin-top: 3px;
+    margin-bottom: 0;
+  }
+  .u-block-6062-10 {
+    background-image: none;
+    text-transform: uppercase;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-22 {
+    height: 20px;
+    width: 20px;
+  }
+  .u-block-6062-11 {
+    min-height: 150px;
+  }
+  .u-block-6062-12 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-13 {
+    margin-bottom: 0;
+    margin-top: 3px;
+  }
+  .u-block-6062-14 {
+    background-image: none;
+    text-transform: uppercase;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-23 {
+    height: 20px;
+    width: 20px;
+  }
+  .u-block-6062-15 {
+    min-height: 150px;
+  }
+  .u-block-6062-16 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-20 {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .u-block-6062-25 {
+    margin-bottom: 0;
+    margin-top: 3px;
+  }
+  .u-block-6062-26 {
+    background-image: none;
+    text-transform: uppercase;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-27 {
+    height: 20px;
+    width: 20px;
+  }
+  .u-block-6062-28 {
+    min-height: 150px;
+  }
+  .u-block-6062-29 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .u-block-6062-30 {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .u-block-6062-31 {
+    margin-bottom: 0;
+    margin-top: 3px;
+  }
+  .u-block-6062-32 {
+    background-image: none;
+    text-transform: uppercase;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-33 {
+    height: 20px;
+    width: 20px;
+  }
+  .u-block-6062-34 {
+    min-height: 150px;
+  }
+  .u-block-6062-35 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .u-block-6062-36 {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .u-block-6062-37 {
+    margin-bottom: 0;
+    margin-top: 3px;
+  }
+  .u-block-6062-38 {
+    background-image: none;
+    text-transform: uppercase;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-6062-39 {
+    height: 20px;
+    width: 20px;
+  }
+  .u-block-6062-40 {
+    min-height: 150px;
+  }
+  .u-block-6062-41 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .u-block-6062-42 {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}</style>
+</section><section class="u-clearfix u-block-32b9-1" custom-posts-hash="[]" data-style="blank" data-section-properties="{&quot;margin&quot;:&quot;none&quot;,&quot;stretch&quot;:true}" id="sec-9ca0" data-source="Blank" data-id="32b9">
+  <div class="u-clearfix u-sheet u-block-32b9-2"><div class="data-layout-selected u-clearfix u-layout-wrap u-block-32b9-3"><div class="u-layout">  <div class="u-layout-row"><div class="u-container-style u-layout-cell u-size-30 u-block-32b9-4"><div class="u-container-layout u-block-32b9-5">
+<p class="u-align-left u-text u-text-default u-block-32b9-12"><a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-block-32b9-14" href="765920964">​<span class="u-file-icon u-icon u-text-palette-2-light-2 u-block-32b9-13" data-href="89360473"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAMCklEQVR4Xu2da2wc1RXH/2fWDsF2dhNCoFDeKe9XHxDCI0BKFTs2IZQGIfpQK8S7pQ9aKBQIhpQgIAmBImgbHqVJSGSJVunuzuw6UV2kqlVRPvC1n1oJqUKhwfuII+zuzqnu2LuYh+3Z2Xvv3tmZ/Wb53nPP+d/f3Ht2duZcQvyJtAIU6ejj4BEDEHEIYgBiACKuQMTDj1eAGICIKxDx8OMVIAYg4gpEPPx4BYgBiLgCEQ8/XgFiACKuQMTDj1eAGIDoKsBDQ4lyd/dSTiTciuseWNzfX2onNXhoaN6hrkVLq6Dxie7EgWNWrjz0yfgiuQKUbfscl62NDFpF4COnRKmAaZgtbF7Y3/vnMINQdJyL4dJGAFcCmDcVyzgBGXbxdGpN39u1+CIFgLjiS92pQYAfBJCYYZIZxC8k3/7Hj2lw0A0TCDwyMr90eHwTgLuBGX/prQK0ITXQ+5iILTIAjGazJ1tIvAHgMj+TysSbFvavvs9PWxPaiFWtyondBD7fjz9E+Fmyv29zJAAoZJwbiei3ABb6Eae+PDJdnry292+N9GlF20LWuQOwnp22nflxw2Vyz2hrAP6TTnd1WZ3PEXCrH0U+I0F6MznQty5IXx19CpnMIos6XmbghmDj8bNtC8BoOnehZWE3gLOCieNtkAdT/X1HB+6vsGMpk1vBhJ0ATmximHfaEoBi1vkhQE8DOKIJcbyuE5Xx5JK1a8vN2pHVfzKRXfAIQA/Pksj6HW6srQAopdNHs9X5GoBr/SowV7sEqsf1DAy8N1c7Hf//IL33pARVd4Jwhazx2gaAguNcQy5tB3CcLHGEHVMAKNj5dcS8rdFEdi4tQg8Aj4x0lA9/uIFB9wOw5gq40f+3GgCRyPZQ51Ym3Nao737ahxqAQmbfaUQV8d3+Ej/BBmnTSgA+cJwLEi6JRPbsIL776RNaAIpZ52aAfg0g6SfQoG1aBUAxk78HxM/ISGRniz10ABwYGek54vD4rwB8L+ikNtJPNwCTiWzHqwCtacTPoG1DBUAhnfsyTX63Pz1owI320wlAwc5/lcDbwTi+UT+Dtg8FAMxMZTv3EwY9Oe3XraAxN9RPBwCTiezE4wz+uYpENtRbQDmfP8at8OsA+hqaOUmNVQNQ+FP+VErwLpWJbGgBKNjDq4jd3wM4VtJ8NmxGJQC6EtnQAcD793cWD7y/kZh+2uqfrFUAoDuRDRUAxVzuC6iKJZEuavhyVdBBNgCtSGRDA0Axm/sOGC+C0KNgLgOZlAWAl8g6+XuZIR7Vqj2mFcgnmZ2M+Bbw/p49C+Yl5r0Eom/JDE6GLRkAHNqz79hqZ+V1MHpl+CTTRssBmHqAUWTBS2UGJstWswAUM04viMS3mJYlskZuAVNL4n3M+CWATlkTJttOUADEI9nFruRGItzb6kTWOAAOZbOfqyIhfrr9muwJk20vCADF9PDpsFyxqn1Ftj+y7WnfAoqO0w+XfgdgiexgVNhrFIBSJv9dBr9gUiJrxAoglsRST/IpMH5k8pL4SbH8AnDQtpMdbL0E4JsqQFRlU8sKUHKcM9klsSR+SVUgquz6AaCYzV8CuG8AdJoqP1TZVQ5Ayc7fwszPA+hWFYRKu7MBwIODVvHiS+8n8AYAHSr9UGVbGQAf7N2bSkxUfwPgJlXO67A7EwBjudxxlQq2g3CNDj9UjaEEgFLauZQtEo9qnaLKcV12PwuAUjZ/LYPF08dGvjPQiDZSAfCWxGXLHyCGePEwlEvibEkg2/YRJdAzYLqnEZFNbisNgLE9w8dXO9wdDKw0OeBGfautAOXM3rOZqrsYuLBRGya3lwJAKeNcxxa9CsZik4MN4psAoEKJNcTYCqAriA2T+zQFgPc++tj4MyD8wOQgm/RtXxjuWAaNMTAAU0vibgYuCDp43K/1CgQCoJDJ3w7C1gbfR299tLEHn1KgIQCm3kffxsA3Yi3bQwHfAJQc5wp2SbyPflJ7hB5HIRSYEwDvffSu5EMgrJfwPnqsumEKzArAwXz+xI4Ki6t+hWF+x+5IUmBGAEpp5+ts0SsAFkkaKzZjoAKfAoCHho4sdSe3ALjTQH9jlyQr8DEAypn8eS54NwjnSh4nNmeoAnUAph7VehPAfEN9jd1SoIAHgFdSjfDXsDzHpkCHyJqkqbdv9zdZby6yAoY9cCrY+buI+cWwBxL7H0wBKmZz4smdm4N1j3uFXQEqZXPvMnBC2AOJ/Q+mgFgB/g3g5GDd415hV4CK2fx2gL8d9kBi/4MpQKLWPE3W24s/EVSApgosizNkTo1g/JEP2bsRVErnz2KL/y67EHHk1Q2BAPVbwaNp52rLoj2qS6+GQJNIufixH4Omii+LlziXRUqFCAf76Z+D9+/vLB/47wZmiPLrcz4xFGHt2iL0GSdY1QEMbaFaGwUx6xVetu0lLlviJciBNoo5DmWaAr6W+GI2J6p6PKW6dn08M/oV8AWAcGs0O/xFC64o1X6mfjfjEVUp4BsA4cB7+Xz3/P/x80S4RZVDsV29CjQEQM21gp2/iZhF9Y+UXnfj0WQrEAgAb0twnFMs19oF8HLZTsX29CkQGADhonfSxdj4Y0x4QPdJF7okIuDNdn4XsikAapMwmsmttCzs0HnWjS4AvAIRbK0Icvq4Lh+bGUcKAMIB3addNRN0I31rJWJGs9mTLSTE43OXNdLf9LbSAKgFquu8O13CTq8SJra80uGJRwH+RbtsedIBEBOj48TLVgBQ3/LSztVkWTsI/HldfqgaRwkAwllx5m2X1fkcAbeqcl6H3ZkKRZb+sG8xz6+IwljX6fBD1RjKAKjfM8g4N4Y5gZqrVnAxm/s+gE1hfaVOOQDePYMQJ1BzASDiO5TNnl9FQtwmP0fVlarKrhYAvHsGk5VGHgXhoTAlUH4AmIrvyHLPgq3MdLuqyVJhVxsANefLtn0VsyUqiobiZRS/ANS3PDu/jpi3heX5Su0ACKGKudxRqOJVAGtVUC3TZqMAeN+C0ntPSlgVcX7A5TJ9UWGrJQB8dM/AuRtEm01OoIIAUN/yepLrwXjY5C2vpQCEIYEKCkB9y8vmr2TwTlO3vJYDUE+gulPPMvgOFctcMzabBaC25XEVrxBwfTO+qOhrBAC1wEYzzg0W0csmVSaTAcC0BFHUYhAFuIwpw2MUAEIo02oTygRAxGdaIS7jAKgnUN0LHgFIJFAJFUufX5uyAahteaaU4jMSgNrklDK5FUwQlUpP9DthstupAMCkLc9oAIRQUxXKX2bgBtmT68eeSgBM2PKMB6CeQGVzdwK0RfcZBaoBaPWWFxoAvAQqlzu3WsVuAs7zc/XKaKMDgFZueaECwLtaxDlFhyc2A3y3jAmey4ZOAFqx5YUOgPrVYuevZ2ZRzfyouSaxmf/rBkD3lhdaALwEyrZPSHBCPJp1VTOTPFvfVgGga8sLNQDeljA4aJWWLX8IjEdV3DNoJQD1LW9sfAsId6mAPPQAfLQlDF/O7Ip7BlJrHrYaANVbXtsAIIQa/ePIwkTnh9uYaJ2sq8UUAD7a8qydBFwpK762AqCeQNm522Qd9TpRGU8uWbu2LEvwZu14W95Fyx+WdIjXWFsC4CVQk4c9N3eyKeFgqr/PyCPiS7a35Yk3lZo5xu+dtgXAS6DEce+utamJs42HUgN9NzV71arq721588bFbfKgB3luaWsApiVQaxj8WsOnm7u4JLWmT1RRNfoT8CjfClfpjEgAIGZvbM/w8dUOVzyNvNLXbBKeSPX3iZ+jQ/Ep2/Y5VU7sJvD5vhwm3JPq73shMgDU7hkUL7r0QSIWp6DOm0EoZsaW1EDvfUTEvsQ0pNHkbfJx8ZaSuE0+09xWGLx+4cDqJ4XbkQKgNk+iugm5tJ4mf2Kulbn5F4C3XJdfX7Rm9V8MmdNAbniHgCXwOBirpj1+9k8ifsvlxLaFA6vEGVHeJ5IATFdVPIIm/l7c2/tuILUN7iS+MhaXLTu1g3msZ2Dgvc9yNfIAGDx/WlyLAdAis7mDxACYOzdaPIsB0CKzuYPEAJg7N1o8iwHQIrO5g8QAmDs3WjyLAdAis7mDxACYOzdaPIsB0CKzuYPEAJg7N1o8iwHQIrO5g8QAmDs3WjyLAdAis7mD/B/Kti8QTpldZAAAAABJRU5ErkJggg==" alt="" data-original-src="np://user.desktop.nicepage.com/Site_87799860/images/2147.png" data-color="#030104"></span>Nextflow<br></a></p></div></div>
+<div class="u-align-right u-container-style u-layout-cell u-size-30 u-block-32b9-7"><div class="u-container-layout u-block-32b9-8">
+</div></div>  </div></div></div></div>
+<style data-mode="XL">@media (min-width: 1200px) {
+  .u-block-32b9-2 {
+    min-height: 145px;
+  }
+  .u-block-32b9-3 {
+    width: 1140px;
+    margin-top: 16px;
+    margin-right: -4px;
+    margin-bottom: 40px;
+    margin-left: auto;
+  }
+  .u-block-32b9-4 {
+    min-height: 89px;
+  }
+  .u-block-32b9-5 {
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 8px;
+  }
+  .u-block-32b9-12 {
+    font-size: 1.875rem;
+    margin-top: -11px;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+  .u-block-32b9-14 {
+    background-image: none;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .u-block-32b9-7 {
+    min-height: 89px;
+  }
+  .u-block-32b9-8 {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}</style><style data-mode="LG">@media (max-width: 1199px) and (min-width: 992px) {
+  .u-block-32b9-2 {
+    min-height: 103px;
+  }
+  .u-block-32b9-3 {
+    margin-top: 16px;
+    margin-bottom: 40px;
+    position: relative;
+    width: 940px;
+    margin-right: 0;
+    margin-left: auto;
+  }
+  .u-block-32b9-4 {
+    min-height: 73px;
+  }
+  .u-block-32b9-5 {
+    padding-top: 30px;
+    padding-bottom: 8px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-32b9-12 {
+    margin-bottom: 0;
+    margin-top: -11px;
+    font-size: 1.875rem;
+    margin-right: auto;
+    margin-left: 0;
+  }
+  .u-block-32b9-14 {
+    background-image: none;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .u-block-32b9-7 {
+    min-height: 73px;
+  }
+  .u-block-32b9-8 {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}</style><style data-mode="MD">@media (max-width: 991px) and (min-width: 768px) {
+  .u-block-32b9-2 {
+    min-height: 26px;
+  }
+  .u-block-32b9-3 {
+    margin-top: 16px;
+    margin-bottom: 40px;
+    position: relative;
+    width: 720px;
+    margin-right: 0;
+    margin-left: auto;
+  }
+  .u-block-32b9-4 {
+    min-height: 100px;
+  }
+  .u-block-32b9-5 {
+    padding-top: 30px;
+    padding-bottom: 8px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-block-32b9-12 {
+    margin-bottom: 0;
+    margin-top: -11px;
+    font-size: 1.875rem;
+    margin-right: auto;
+    margin-left: 0;
+  }
+  .u-block-32b9-14 {
+    background-image: none;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .u-block-32b9-7 {
+    min-height: 56px;
+  }
+  .u-block-32b9-8 {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}</style><style data-mode="SM">@media (max-width: 767px) and (min-width: 576px) {
+  .u-block-32b9-2 {
+    min-height: 533px;
+  }
+  .u-block-32b9-3 {
+    margin-top: 16px;
+    margin-bottom: 40px;
+    position: relative;
+    width: 540px;
+    margin-right: 0;
+    margin-left: auto;
+  }
+  .u-block-32b9-4 {
+    min-height: 100px;
+  }
+  .u-block-32b9-5 {
+    padding-top: 30px;
+    padding-bottom: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .u-block-32b9-12 {
+    margin-bottom: 0;
+    margin-top: -11px;
+    font-size: 1rem;
+    margin-right: auto;
+    margin-left: 0;
+  }
+  .u-block-32b9-14 {
+    background-image: none;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .u-block-32b9-7 {
+    min-height: 84px;
+  }
+  .u-block-32b9-8 {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}</style><style data-mode="XS">@media (max-width: 575px) {
+  .u-block-32b9-2 {
+    min-height: 251px;
+  }
+  .u-block-32b9-3 {
+    margin-top: 16px;
+    margin-bottom: 40px;
+    position: relative;
+    width: 340px;
+    margin-right: 0;
+    margin-left: auto;
+  }
+  .u-block-32b9-4 {
+    min-height: 100px;
+  }
+  .u-block-32b9-5 {
+    padding-top: 30px;
+    padding-bottom: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .u-block-32b9-12 {
+    margin-bottom: 0;
+    margin-top: -11px;
+    font-size: 1rem;
+    margin-right: auto;
+    margin-left: 0;
+  }
+  .u-block-32b9-14 {
+    background-image: none;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .u-block-32b9-7 {
+    min-height: 53px;
+  }
+  .u-block-32b9-8 {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}</style></section>
 </body></html>
