@@ -19,6 +19,12 @@
     
     
     
+    
+    
+    
+    
+    
+    
     <script type="application/ld+json">{
 		"@context": "http://schema.org",
 		"@type": "Organization",
@@ -57,7 +63,7 @@
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../NGS-Data-Analysis/Single-Cell-Gene-Expression.html">Single Cell Gene Expression</a>
 </li></ul>
 </div>
-</li><li class="u-nav-item"><a class="u-active-palette-1-base u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-button-style u-hover-palette-1-light-1 u-nav-link u-text-active-white u-text-grey-90 u-text-hover-white" href="Pipelines.html" style="padding: 10px 20px;">Pipelines</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="nf-core.html">nf-core</a>
+</li><li class="u-nav-item"><a class="u-active-palette-1-base u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-button-style u-hover-palette-1-light-1 u-nav-link u-text-active-white u-text-grey-90 u-text-hover-white" href="Pipelines.html" style="padding: 10px 20px;">Pipelines</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="nf-core-pipelines-in-Myriad.html">nf-core</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="Nextflow.html">Nextflow</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="nf-core-pipelines-in-Myriad.html">nf-core pipelines in Myriad</a>
 </li></ul>
@@ -96,19 +102,68 @@
         </nav>
       </div></header>
     <section class="u-clearfix u-palette-2-light-2 u-section-1" id="sec-0cfb">
-      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+      <div class="u-clearfix u-sheet u-sheet-1">
         <h2 class="u-align-center u-text u-text-default u-text-1">nf-core pipelines in Myriad</h2>
-        <p class="u-align-center u-text u-text-black u-text-2">blah blah blah<br>
-          <br>
+        <p class="u-align-center u-text u-text-black u-text-2">By now you have learnt everything you need to kwow to run nf-core pipelines. Briefly:</p>
+      </div>
+    </section>
+    <section class="u-clearfix u-palette-2-light-2 u-section-2" id="carousel_ca1e">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-align-left u-text u-text-1">1. Install software dependencies (Nextflow + Singularity/ Docker&nbsp;/ Conda)<br>2. Choose one of the available pipelines to run.<br>3. Configure Nextflow to run on your system.<br>4. Test the pipeline:
         </p>
       </div>
     </section>
-    <section class="u-clearfix u-section-2" id="sec-6661">
+    <section class="u-clearfix u-palette-2-light-2 u-section-3" id="carousel_d635">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <p class="u-align-left u-custom-font u-font-courier-new u-text u-text-black u-text-1">nextflow run nf-core/&lt;pipeline_name&gt; -profile test,singularity --outdir &lt;OUTDIR&gt;<br>
+        </p>
+      </div>
+    </section>
+    <section class="u-clearfix u-palette-2-light-2 u-section-4" id="sec-af3b">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <p class="u-align-left u-text u-text-1">5. Check the pipeline documentation to understand the arguments that the pipeline needs<br>6. ​Run the pipeline with real data. For example:<br>
+        </p>
+      </div>
+    </section>
+    <section class="u-clearfix u-palette-2-light-2 u-section-5" id="sec-f98e">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-align-left u-custom-font u-font-courier-new u-text u-text-black u-text-1"> nextflow run nf-core/methylseq -profile singularity --input 'input_data/*.fastq.gz' --outdir results --genome GRCh38<br>
+        </p>
+      </div>
+    </section>
+    <section class="u-clearfix u-palette-2-light-2 u-section-6" id="carousel_d795">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-align-left u-text u-text-black u-text-1">
+          <br>
+          <br>
+          <br>
+          <br>Replace&nbsp;&lt;pipeline_name&gt;&nbsp;with the name of an nf-core pipeline.<br>If you don’t have Docker installed, replace&nbsp;docker&nbsp;in the command with either&nbsp;singularity&nbsp;or&nbsp;conda.<br>There is no need to download anything first — nextflow will pull the code from the GitHub repository and fetch the software requirements automatically.<br>If the pipeline fails, check the&nbsp;<a href="https://nf-co.re/docs/usage/troubleshooting/" class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1">troubleshooting docs</a>&nbsp;and ask for help on the nf-core Slack channel for that particular pipeline (see&nbsp;<a href="https://nf-co.re/join" class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-2">https://nf-co.re/join</a>).<br>
+          <br>Read the pipeline documentation to see which command-line parameters are required. These will be specific to your data type and usage.<br>Launch the pipeline with some real data by omitting the&nbsp;test&nbsp;config profile and providing the required pipeline-specific parameters. For example, if you want to run the&nbsp;methylseq&nbsp;pipeline, you might use the following command:<br>nextflow run nf-core/methylseq -profile docker --input 'input_data/*.fastq.gz' --outdir myproj/results --genome GRCh38<i></i>
+          <br>Once complete, check the pipeline execution and quality control reports. Each pipeline’s documentation describes the different outputs to expect.&nbsp;<br>You just need to install nextflow and run&nbsp;
+        </p>
+      </div>
+    </section>
+    <section class="u-clearfix u-palette-2-light-2 u-section-7" id="carousel_1875">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-align-left u-text u-text-black u-text-1">
+          <br>1- Install software dependencies (Nextflow + Docker / Singularity / Conda)<br>2- Choose one of the available pipelines to run.<br>3- Configure Nextflow to run on your system.<br>4- Test the pipeline:<br>nextflow run nf-core/&lt;pipeline_name&gt; -profile test,singularity --outdir &lt;OUTDIR&gt;<i></i>
+          <br>
+          <br>5- Check the pipeline documentation to understand the arguments that the pipeline needs<br>6- Run the pipeline with real data. For example:<br>nextflow run nf-core/methylseq -profile singularity --input 'input_data/*.fastq.gz' --outdir results --genome GRCh38<br>
+          <br>
+          <br>Launch the pipeline with some real data by omitting the&nbsp;test&nbsp;config profile and providing the required pipeline-specific parameters. For example, if you want to run the&nbsp;methylseq&nbsp;pipeline, you might use the following command:<br>nextflow run nf-core/methylseq -profile docker --input 'input_data/*.fastq.gz' --outdir myproj/results --genome GRCh38<br>
+          <br>
+          <br>Replace&nbsp;&lt;pipeline_name&gt;&nbsp;with the name of an nf-core pipeline.<br>If you don’t have Docker installed, replace&nbsp;docker&nbsp;in the command with either&nbsp;singularity&nbsp;or&nbsp;conda.<br>There is no need to download anything first — nextflow will pull the code from the GitHub repository and fetch the software requirements automatically.<br>If the pipeline fails, check the&nbsp;<a href="https://nf-co.re/docs/usage/troubleshooting/" class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1">troubleshooting docs</a>&nbsp;and ask for help on the nf-core Slack channel for that particular pipeline (see&nbsp;<a href="https://nf-co.re/join" class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-2">https://nf-co.re/join</a>).<br>
+          <br>Read the pipeline documentation to see which command-line parameters are required. These will be specific to your data type and usage.<br>Launch the pipeline with some real data by omitting the&nbsp;test&nbsp;config profile and providing the required pipeline-specific parameters. For example, if you want to run the&nbsp;methylseq&nbsp;pipeline, you might use the following command:<br>nextflow run nf-core/methylseq -profile docker --input 'input_data/*.fastq.gz' --outdir myproj/results --genome GRCh38<i></i>
+          <br>Once complete, check the pipeline execution and quality control reports. Each pipeline’s documentation describes the different outputs to expect.&nbsp;<br>You just need to install nextflow and run&nbsp;
+        </p>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-8" id="sec-6661">
       <div class="u-clearfix u-sheet u-sheet-1">
         <p class="u-align-center u-text u-text-1">blah blah blah</p>
       </div>
     </section>
-    <section class="u-clearfix u-palette-2-light-2 u-section-3" id="sec-8e74">
+    <section class="u-clearfix u-palette-2-light-2 u-section-9" id="sec-8e74">
       <div class="u-clearfix u-sheet u-sheet-1">
         <div class="fr-view u-clearfix u-rich-text u-text u-text-1">
           <h1 style="text-align: center;">
@@ -117,11 +172,11 @@
         </div>
       </div>
     </section>
-    <section class="u-clearfix u-container-align-center u-section-4" id="sec-fa4c">
+    <section class="u-clearfix u-container-align-center u-section-10" id="sec-fa4c">
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1"><span class="u-file-icon u-icon u-icon-1"><img src="../images/9974562.png" alt=""></span>
       </div>
     </section>
-    <section class="u-clearfix u-palette-2-light-2 u-section-5" id="sec-7650">
+    <section class="u-clearfix u-palette-2-light-2 u-section-11" id="sec-7650">
       <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-align-left u-container-style u-group u-palette-1-light-3 u-radius-30 u-shape-round u-group-1">
           <div class="u-container-layout u-container-layout-1">
@@ -133,7 +188,7 @@
         </div>
       </div>
     </section>
-    <section class="u-clearfix u-section-6" id="sec-9ca0">
+    <section class="u-clearfix u-section-12" id="sec-9ca0">
       <div class="u-clearfix u-sheet u-sheet-1">
         <div class="data-layout-selected u-clearfix u-layout-wrap u-layout-wrap-1">
           <div class="u-layout">
@@ -161,6 +216,19 @@
         <p class="u-small-text u-text u-text-variant u-text-1">If you have any questions or feedback, please send us an email to the <a href="mailto:l.conde@ucl.ac.uk?subject=Message%20from%20the%20%22Learn%20Bioinformatics%22%20website" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1">BLIC</a>
         </p>
       </div></footer>
-    
+    <section class="u-backlink u-clearfix u-grey-80">
+      <a class="u-link" href="https://nicepage.com/templates" target="_blank">
+        <span>Templates</span>
+      </a>
+      <p class="u-text">
+        <span>created with</span>
+      </p>
+      <a class="u-link" href="" target="_blank">
+        <span>Website Builder Software</span>
+      </a>. 
+    </section><span style="height: 64px; width: 64px; margin-left: 0px; margin-right: auto; margin-top: 0px; background-image: none; right: 20px; bottom: 20px; padding: 15px" class="u-back-to-top u-icon u-icon-circle u-opacity u-opacity-85 u-palette-1-base" data-href="#">
+        <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 551.13 551.13"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-1d98"></use></svg>
+        <svg class="u-svg-content" enable-background="new 0 0 551.13 551.13" viewBox="0 0 551.13 551.13" xmlns="http://www.w3.org/2000/svg" id="svg-1d98"><path d="m275.565 189.451 223.897 223.897h51.668l-275.565-275.565-275.565 275.565h51.668z"></path></svg>
+    </span>
   
 </body></html>
