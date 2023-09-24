@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="en"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>Fundamentals</title>
+    <link rel="stylesheet" href="../nicepage.css" media="screen">
+<link rel="stylesheet" href="Fundamentals.css" media="screen">
+    <script class="u-script" type="text/javascript" src="../jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="../nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 5.18.6, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    
+    
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "LearnBioinformatics",
+		"logo": "../images/UCL-logo2.png"
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Fundamentals">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+  <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
+  <body data-path-to-root="../" class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-header u-header" id="sec-b734"><div class="u-clearfix u-sheet u-sheet-1">
+        <a href="https://nicepage.com" class="u-image u-logo u-image-1" data-image-width="349" data-image-height="140">
+          <img src="../images/UCL-logo2.png" class="u-logo-image u-logo-image-1">
+        </a>
+        <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
+          <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px; font-weight: 500;">
+            <a class="u-button-style u-custom-active-border-color u-custom-active-color u-custom-border u-custom-border-color u-custom-borders u-custom-hover-border-color u-custom-hover-color u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
+              <svg class="u-svg-link" viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
+              <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</g></svg>
+            </a>
+          </div>
+          <div class="u-custom-menu u-nav-container">
+            <ul class="u-nav u-spacing-2 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-active-grey-5 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-button-style u-hover-grey-10 u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="../Home.html" style="padding: 10px 20px;">Home</a>
+</li><li class="u-nav-item"><a class="u-active-grey-5 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-button-style u-hover-grey-10 u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="Fundamentals.html" style="padding: 10px 20px;">Fundamentals</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="Fundamentals.html">Introduction</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="UCL-Cluster.html">UCL Cluster</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="The-Unix-Shell.html">The Unix Shell</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="Basic-R.html">Basic R</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="Bash-Scripting.html">Bash Scripting</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="Advanced-R.html">Advanced R</a>
+</li></ul>
+</div>
+</li><li class="u-nav-item"><a class="u-active-grey-5 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-button-style u-hover-grey-10 u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="../NGS_data_analysis/NGS-Data-Analysis.html" style="padding: 10px 20px;">NGS Data Analysis</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../NGS_data_analysis/NGS-Data-Analysis.html">Introduction</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../NGS_data_analysis/Preprocessing.html">Preprocessing</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../NGS_data_analysis/Variant-Calling.html">Variant Calling</a>
+</li></ul>
+</div>
+</li><li class="u-nav-item"><a class="u-active-grey-5 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-button-style u-hover-grey-10 u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="../Pipelines/Pipelines.html" style="padding: 10px 20px;">Pipelines</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../Pipelines/Pipelines.html">Introduction</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../Pipelines/nf-core.html">nf-core</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../Pipelines/Nextflow.html">Nextflow</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../Pipelines/Using-nf-core-in-Myriad.html">Using nf-core in Myriad</a>
+</li></ul>
+</div>
+</li></ul>
+          </div>
+          <div class="u-custom-menu u-nav-container-collapse">
+            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+              <div class="u-inner-container-layout u-sidenav-overflow">
+                <div class="u-menu-close"></div>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-5"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Home.html">Home</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Fundamentals.html">Fundamentals</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Fundamentals.html">Introduction</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="UCL-Cluster.html">UCL Cluster</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="The-Unix-Shell.html">The Unix Shell</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Basic-R.html">Basic R</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Bash-Scripting.html">Bash Scripting</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Advanced-R.html">Advanced R</a>
+</li></ul>
+</div>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../NGS_data_analysis/NGS-Data-Analysis.html">NGS Data Analysis</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../NGS_data_analysis/NGS-Data-Analysis.html">Introduction</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../NGS_data_analysis/Preprocessing.html">Preprocessing</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../NGS_data_analysis/Variant-Calling.html">Variant Calling</a>
+</li></ul>
+</div>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Pipelines/Pipelines.html">Pipelines</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Pipelines/Pipelines.html">Introduction</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Pipelines/nf-core.html">nf-core</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Pipelines/Nextflow.html">Nextflow</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Pipelines/Using-nf-core-in-Myriad.html">Using nf-core in Myriad</a>
+</li></ul>
+</div>
+</li></ul>
+              </div>
+            </div>
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+          </div>
+        </nav>
+      </div></header>
+    <section class="u-align-center u-clearfix u-palette-4-dark-2 u-section-1" id="sec-ab94">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h2 class="u-text u-text-default u-text-1"> Fundamentals</h2>
+        <div class="data-layout-selected u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-row">
+              <div class="u-align-center u-container-style u-layout-cell u-left-cell u-size-60 u-layout-cell-1">
+                <div class="u-container-layout u-container-layout-1">
+                  <p class="u-text u-text-default u-text-2"> As a bioinformatician, having a strong foundation in programming is crucial for effectively analyzing biological data and developing computational tools. Specific programming skills can vary depending on the focus of the bioinformatics work, however having a solid foundation on how to work on the cluster, basic linux commands and R is essential.<br>But before you start, there are two main things we want to point out:<br>
+                    <br>----------------------------------------<br>
+                    <br>In this section, we will explore key fundamental skills that you will need to master to perform bioinformatics data analyses.<br>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-align-center u-clearfix u-section-2" id="sec-db4e">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="custom-expanded u-layout-horizontal u-list u-list-1">
+          <div class="u-repeater u-repeater-1">
+            <div class="u-container-align-center u-container-style u-image u-image-round u-list-item u-radius-20 u-repeater-item u-shading u-image-1" data-image-width="670" data-image-height="1280" data-href="UCL-Cluster.html">
+              <div class="u-container-layout u-similar-container u-container-layout-1">
+                <h4 class="u-align-center u-text u-text-1">UCL Cluster</h4>
+              </div>
+            </div>
+            <div class="u-container-align-center u-container-style u-image u-image-round u-list-item u-radius-20 u-repeater-item u-shading u-image-2" data-image-width="640" data-image-height="480" data-href="The-Unix-Shell.html">
+              <div class="u-container-layout u-similar-container u-container-layout-2">
+                <h4 class="u-align-center u-text u-text-2">The Unix Shell</h4>
+              </div>
+            </div>
+            <div class="u-container-align-center u-container-style u-image u-image-round u-list-item u-radius-20 u-repeater-item u-shading u-image-3" data-image-width="640" data-image-height="629" data-href="Basic-R.html">
+              <div class="u-container-layout u-similar-container u-container-layout-3">
+                <h4 class="u-align-center u-text u-text-3">Basic R</h4>
+              </div>
+            </div>
+            <div class="u-container-align-center u-container-style u-image u-image-round u-list-item u-radius-20 u-repeater-item u-shading u-image-4" data-image-width="1280" data-image-height="853" data-href="Bash-Scripting.html">
+              <div class="u-container-layout u-similar-container u-container-layout-4">
+                <h4 class="u-align-center u-text u-text-4">Bash Scripting<br>(optional)
+                </h4>
+              </div>
+            </div>
+            <div class="u-container-align-center u-container-style u-image u-image-round u-list-item u-radius-20 u-repeater-item u-shading u-image-5" data-image-width="640" data-image-height="629" data-href="Advanced-R.html">
+              <div class="u-container-layout u-similar-container u-container-layout-5">
+                <h4 class="u-align-center u-text u-text-5">Advanced R<br>(optional)
+                </h4>
+              </div>
+            </div>
+          </div>
+          <a class="u-absolute-vcenter u-gallery-nav u-gallery-nav-prev u-hover-palette-1-light-2 u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-palette-1-dark-3 u-white u-gallery-nav-1" href="#" role="button">
+            <span aria-hidden="true">
+              <svg viewBox="0 0 451.847 451.847"><path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
+c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
+c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path></svg>
+            </span>
+            <span class="sr-only">
+              <svg viewBox="0 0 451.847 451.847"><path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
+c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
+c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path></svg>
+            </span>
+          </a>
+          <a class="u-absolute-vcenter u-gallery-nav u-gallery-nav-next u-hover-palette-1-light-2 u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-palette-1-dark-3 u-white u-gallery-nav-2" href="#" role="button">
+            <span aria-hidden="true">
+              <svg viewBox="0 0 451.846 451.847"><path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path></svg>
+            </span>
+            <span class="sr-only">
+              <svg viewBox="0 0 451.846 451.847"><path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path></svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+    
+    
+    
+    <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-0419"><div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-small-text u-text u-text-variant u-text-1">Questions? Feedback? Please <a href="mailto:l.conde@ucl.ac.uk?subject=Message%20from%20LearnBioinformatics" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1">send us an email</a>
+        </p>
+      </div></footer>
+  
+</body></html>

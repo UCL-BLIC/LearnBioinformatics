@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="en"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>Bash Scripting</title>
+    <link rel="stylesheet" href="../nicepage.css" media="screen">
+<link rel="stylesheet" href="Bash-Scripting.css" media="screen">
+    <script class="u-script" type="text/javascript" src="../jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="../nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 5.18.6, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    
+    
+    
+    
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "LearnBioinformatics",
+		"logo": "../images/UCL-logo2.png"
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Bash Scripting">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+  <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
+  <body data-path-to-root="../" class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-header u-header" id="sec-b734"><div class="u-clearfix u-sheet u-sheet-1">
+        <a href="https://nicepage.com" class="u-image u-logo u-image-1" data-image-width="349" data-image-height="140">
+          <img src="../images/UCL-logo2.png" class="u-logo-image u-logo-image-1">
+        </a>
+        <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
+          <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px; font-weight: 500;">
+            <a class="u-button-style u-custom-active-border-color u-custom-active-color u-custom-border u-custom-border-color u-custom-borders u-custom-hover-border-color u-custom-hover-color u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
+              <svg class="u-svg-link" viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
+              <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</g></svg>
+            </a>
+          </div>
+          <div class="u-custom-menu u-nav-container">
+            <ul class="u-nav u-spacing-2 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-active-grey-5 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-button-style u-hover-grey-10 u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="../Home.html" style="padding: 10px 20px;">Home</a>
+</li><li class="u-nav-item"><a class="u-active-grey-5 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-button-style u-hover-grey-10 u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="Fundamentals.html" style="padding: 10px 20px;">Fundamentals</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="Fundamentals.html">Introduction</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="UCL-Cluster.html">UCL Cluster</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="The-Unix-Shell.html">The Unix Shell</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="Basic-R.html">Basic R</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="Bash-Scripting.html">Bash Scripting</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="Advanced-R.html">Advanced R</a>
+</li></ul>
+</div>
+</li><li class="u-nav-item"><a class="u-active-grey-5 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-button-style u-hover-grey-10 u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="../NGS_data_analysis/NGS-Data-Analysis.html" style="padding: 10px 20px;">NGS Data Analysis</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../NGS_data_analysis/NGS-Data-Analysis.html">Introduction</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../NGS_data_analysis/Preprocessing.html">Preprocessing</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../NGS_data_analysis/Variant-Calling.html">Variant Calling</a>
+</li></ul>
+</div>
+</li><li class="u-nav-item"><a class="u-active-grey-5 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-button-style u-hover-grey-10 u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="../Pipelines/Pipelines.html" style="padding: 10px 20px;">Pipelines</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../Pipelines/Pipelines.html">Introduction</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../Pipelines/nf-core.html">nf-core</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../Pipelines/Nextflow.html">Nextflow</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../Pipelines/Using-nf-core-in-Myriad.html">Using nf-core in Myriad</a>
+</li></ul>
+</div>
+</li></ul>
+          </div>
+          <div class="u-custom-menu u-nav-container-collapse">
+            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+              <div class="u-inner-container-layout u-sidenav-overflow">
+                <div class="u-menu-close"></div>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-5"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Home.html">Home</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Fundamentals.html">Fundamentals</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Fundamentals.html">Introduction</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="UCL-Cluster.html">UCL Cluster</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="The-Unix-Shell.html">The Unix Shell</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Basic-R.html">Basic R</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Bash-Scripting.html">Bash Scripting</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Advanced-R.html">Advanced R</a>
+</li></ul>
+</div>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../NGS_data_analysis/NGS-Data-Analysis.html">NGS Data Analysis</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../NGS_data_analysis/NGS-Data-Analysis.html">Introduction</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../NGS_data_analysis/Preprocessing.html">Preprocessing</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../NGS_data_analysis/Variant-Calling.html">Variant Calling</a>
+</li></ul>
+</div>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Pipelines/Pipelines.html">Pipelines</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Pipelines/Pipelines.html">Introduction</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Pipelines/nf-core.html">nf-core</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Pipelines/Nextflow.html">Nextflow</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Pipelines/Using-nf-core-in-Myriad.html">Using nf-core in Myriad</a>
+</li></ul>
+</div>
+</li></ul>
+              </div>
+            </div>
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+          </div>
+        </nav>
+      </div></header>
+    <section class="u-align-center u-clearfix u-palette-4-dark-2 u-section-1" id="sec-ab94">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h2 class="u-text u-text-default u-text-1"> Bash Scripting<br>(optional)
+        </h2>
+        <div class="data-layout-selected u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-row">
+              <div class="u-container-style u-layout-cell u-left-cell u-size-60 u-layout-cell-1">
+                <div class="u-container-layout u-container-layout-1">
+                  <p class="u-align-center u-text u-text-default u-text-2"> If you completed any of the courses listed in the Unix Shell section, you should already be familiar with the concept of Bash Scripting. In a nutshell, bash scripts are Unix commands strung together and executed as individual files.&nbsp;<br>
+                    <br>The reason why we include here a specific section on Bash Scripting is because learning Unix commands and learning Bash Scripting are related but distinct skills:<br>
+                  </p>
+                  <ul class="u-align-left u-custom-list u-text u-text-3">
+                    <li>
+                      <div class="u-list-icon">
+                        <div>❯</div>
+                      </div>
+                      <span style="font-weight: 700;"></span>
+                      <span style="font-weight: 700;">Usage</span>:&nbsp;you use Linux commands directly in the terminal to perform one-off tasks or queries, while Bash scripting involves writing a series of Linux commands and logic in a script file (usually with a .sh extension) that can be executed as a program. These scripts can be reused and shared.
+                    </li>
+                    <li>
+                      <div class="u-list-icon">
+                        <div>❯</div>
+                      </div>
+                      <span style="font-weight: 700;">Skill level</span>:&nbsp;learning basic Linux commands is typically one of the first skills people acquire when using Linux. It's relatively straightforward and essential for anyone working with a Linux system, whereas Bash scripting is more advanced and requires a deeper understanding of the shell's scripting capabilities, including variables, loops, conditionals, and functions. It's typically a skill acquired after becoming comfortable with Linux commands.
+                    </li>
+                    <li>
+                      <div class="u-list-icon">
+                        <div>❯</div>
+                      </div>
+                      <span style="font-weight: 700;">Learning Approach</span>:&nbsp;Learning Linux commands is often a matter of memorization and understanding the basic syntax of each command. It's more about knowing what commands are available and when to use them. On the other hand, Bash scripting involves learning programming concepts and how to <span style="font-size: 1.125rem; background-color: #41807c; color: #ffffff; font-family: 'Open Sans',sans-serif;"></span>
+                      <span style="font-size: 1.125rem; background-color: #41807c; color: #ffffff; font-family: 'Open Sans',sans-serif;">apply them within the Bash shell. This includes learning variables, loops, conditionals, and writing reusable code.</span>
+                      <span style="font-size: 1.125rem; background-color: #41807c; color: #ffffff; font-family: 'Open Sans',sans-serif;"></span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-align-center u-clearfix u-section-2" id="sec-db4e">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <p class="u-text u-text-default u-text-1"> While mastering essential Linux commands is foundational and crucial for basic system interaction, Bash scripting represents a more advanced progression, and as such, it might not be necessary for all users. However, for those wanting to dig a bit deeper on the subject, we recommend some courses below.</p>
+      </div>
+    </section>
+    <section class="u-clearfix u-palette-4-dark-2 u-section-3" id="sec-29a1">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="u-border-3 u-border-grey-40 u-container-style u-group u-group-1">
+          <div class="u-container-layout u-valign-middle u-container-layout-1">
+            <h1 class="u-align-center u-text u-text-default u-text-1">TO DO</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-4" id="sec-aed9">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="data-layout-selected u-clearfix u-expanded-width u-gutter-10 u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-col">
+              <div class="u-size-60">
+                <div class="u-layout-row">
+                  <div class="u-container-style u-layout-cell u-left-cell u-size-60 u-layout-cell-1" src="">
+                    <div class="u-container-layout u-valign-top u-container-layout-1">
+                      <p class="u-text u-text-1"><span class="u-file-icon u-icon u-icon-1"><img src="../images/5291043.png" alt=""></span> This "Bash Scripting" tutorial by Ryan Chadwick is a continuation of the Linux Tutorial we recommended in a previous section, and will give you a solid foundation on how to write Bash scripts
+                      </p>
+                      <a href="https://ryanstutorials.net/linuxtutorial/" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-1" target="_blank">TAKE THE COURSE</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+    
+    <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-0419"><div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-small-text u-text u-text-variant u-text-1">Questions? Feedback? Please <a href="mailto:l.conde@ucl.ac.uk?subject=Message%20from%20LearnBioinformatics" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1">send us an email</a>
+        </p>
+      </div></footer>
+  
+</body></html>
