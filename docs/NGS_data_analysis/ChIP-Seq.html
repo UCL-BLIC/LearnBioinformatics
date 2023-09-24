@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="en"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>ChIP-Seq</title>
+    <link rel="stylesheet" href="../nicepage.css" media="screen">
+<link rel="stylesheet" href="ChIP-Seq.css" media="screen">
+    <script class="u-script" type="text/javascript" src="../jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="../nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 5.18.6, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    
+    
+    
+    
+    
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "LearnBioinformatics",
+		"logo": "../images/UCL-logo2.png"
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="ChIP-Seq">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+  <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
+  <body data-path-to-root="../" class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-header u-header" id="sec-b734"><div class="u-clearfix u-sheet u-sheet-1">
+        <a href="https://www.ucl.ac.uk/cancer/welcome-ucl-cancer-institute" class="u-image u-logo u-image-1" data-image-width="349" data-image-height="140" title="UCL Cancer Institute" target="_blank">
+          <img src="../images/UCL-logo2.png" class="u-logo-image u-logo-image-1">
+        </a>
+        <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
+          <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px; font-weight: 500;">
+            <a class="u-button-style u-custom-active-border-color u-custom-active-color u-custom-border u-custom-border-color u-custom-borders u-custom-hover-border-color u-custom-hover-color u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
+              <svg class="u-svg-link" viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
+              <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</g></svg>
+            </a>
+          </div>
+          <div class="u-custom-menu u-nav-container">
+            <ul class="u-nav u-spacing-2 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-active-grey-5 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-button-style u-hover-grey-10 u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="../Home.html" style="padding: 10px 20px;">Home</a>
+</li><li class="u-nav-item"><a class="u-active-grey-5 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-button-style u-hover-grey-10 u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="../Fundamentals/Fundamentals.html" style="padding: 10px 20px;">Fundamentals</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../Fundamentals/UCL-Cluster.html">UCL Cluster</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../Fundamentals/The-Unix-Shell.html">The Unix Shell</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../Fundamentals/Basic-R.html">Basic R</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../Fundamentals/Bash-Scripting.html">Bash Scripting</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../Fundamentals/Advanced-R.html">Advanced R</a>
+</li></ul>
+</div>
+</li><li class="u-nav-item"><a class="u-active-grey-5 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-button-style u-hover-grey-10 u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="NGS-Data-Analysis.html" style="padding: 10px 20px;">NGS Data Analysis</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="Preprocessing.html">Preprocessing</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="Gene-Expression.html">Gene Expression</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="Variant-Calling.html">Variant Calling</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="ChIP-Seq.html">ChIP-Seq</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="Single-Cell-Gene-Expression.html">Single Cell Gene Expression</a>
+</li></ul>
+</div>
+</li><li class="u-nav-item"><a class="u-active-grey-5 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-button-style u-hover-grey-10 u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="../Pipelines/Pipelines.html" style="padding: 10px 20px;">Pipelines</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../Pipelines/Pipelines.html">Introduction</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../Pipelines/nf-core.html">nf-core</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../Pipelines/Nextflow.html">Nextflow</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../Pipelines/Using-nf-core-in-Myriad.html">Using nf-core in Myriad</a>
+</li></ul>
+</div>
+</li></ul>
+          </div>
+          <div class="u-custom-menu u-nav-container-collapse">
+            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+              <div class="u-inner-container-layout u-sidenav-overflow">
+                <div class="u-menu-close"></div>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-5"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Home.html">Home</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Fundamentals/Fundamentals.html">Fundamentals</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Fundamentals/UCL-Cluster.html">UCL Cluster</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Fundamentals/The-Unix-Shell.html">The Unix Shell</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Fundamentals/Basic-R.html">Basic R</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Fundamentals/Bash-Scripting.html">Bash Scripting</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Fundamentals/Advanced-R.html">Advanced R</a>
+</li></ul>
+</div>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="NGS-Data-Analysis.html">NGS Data Analysis</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Preprocessing.html">Preprocessing</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Gene-Expression.html">Gene Expression</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Variant-Calling.html">Variant Calling</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="ChIP-Seq.html">ChIP-Seq</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Single-Cell-Gene-Expression.html">Single Cell Gene Expression</a>
+</li></ul>
+</div>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Pipelines/Pipelines.html">Pipelines</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Pipelines/Pipelines.html">Introduction</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Pipelines/nf-core.html">nf-core</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Pipelines/Nextflow.html">Nextflow</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Pipelines/Using-nf-core-in-Myriad.html">Using nf-core in Myriad</a>
+</li></ul>
+</div>
+</li></ul>
+              </div>
+            </div>
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+          </div>
+        </nav>
+      </div></header>
+    <section class="u-align-center u-clearfix u-palette-3-dark-1 u-section-1" id="sec-ab94">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <h2 class="u-text u-text-default u-text-1"> ChIP-Seq</h2>
+        <div class="data-layout-selected u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-row">
+              <div class="u-align-center u-container-style u-layout-cell u-left-cell u-size-60 u-layout-cell-1">
+                <div class="u-container-layout u-container-layout-1">
+                  <p class="u-text u-text-default u-text-2"> ChIP-seq is a powerful technique used to analyze interactions between proteins (typically transcription factors) and DNA at a genome-wide scale. It aims to identify specific DNA regions that are bound by the protein of interest and gain insights into gene regulation and chromatin structure.<br>
+                    <br>Key steps in ChIP-seq data analysis include:&nbsp;<br>
+                  </p>
+                  <ul class="u-align-left u-custom-list u-text u-text-3">
+                    <li>
+                      <div class="u-list-icon">
+                        <div>❯</div>
+                      </div>
+                      <span style="font-weight: 700;"></span>
+                      <span style="font-weight: 700;">Peak Calling</span>&nbsp;: Identify regions of the genome where the protein of interest is likely to bind (peaks). Popular peak callers include&nbsp;<a href="https://github.com/macs3-project/MACS" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" target="_blank">MACS2</a>, and&nbsp;<a href="https://zanglab.github.io/SICER2/" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-2" target="_blank">SICER</a>. Adjust parameters for peak calling based on your data and experimental design.
+                    </li>
+                    <li>
+                      <div class="u-list-icon">
+                        <div>❯</div>
+                      </div>
+                      <span style="font-weight: 700;">Peak Annotation</span>: Annotate the identified peaks with nearby genes and genomic features using tools like&nbsp;<a href="https://bedtools.readthedocs.io/en/latest/" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-3" target="_blank">BEDTools</a>&nbsp;or&nbsp;<a href="https://bioconductor.org/packages/release/bioc/html/ChIPseeker.html" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-4" target="_blank">ChIPseeker</a>.
+                    </li>
+                    <li>
+                      <div class="u-list-icon">
+                        <div>❯</div>
+                      </div>
+                      <span style="font-weight: 700;">Differential Binding Analysis (Optional)</span>: If you have multiple experimental conditions, compare peak sets to identify differentially bound regions using tools like&nbsp;<a href="https://bioconductor.org/packages/release/bioc/html/DiffBind.html" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-5" target="_blank">DiffBind</a>.
+                    </li>
+                    <li>
+                      <div class="u-list-icon">
+                        <div>❯</div>
+                      </div>
+                      <span style="font-weight: 700;">Motif Analysis (Optional)</span>: Identify DNA motifs enriched in the binding sites using motif discovery tools like&nbsp;<a href="https://meme-suite.org/meme/index.html" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-6" target="_blank">MEME</a>&nbsp;or&nbsp;<a href="http://homer.ucsd.edu/homer/" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-7" target="_blank">HOMER</a>.
+                    </li>
+                    <li>
+                      <div class="u-list-icon">
+                        <div>❯</div>
+                      </div>
+                      <span style="font-weight: 700;">Functional Enrichment Analysis (Optional)</span>: Determine the biological significance of the identified target genes using gene ontology (GO) or pathway enrichment analysis tools.
+                    </li>
+                    <li>
+                      <div class="u-list-icon">
+                        <div>❯</div>
+                      </div>
+                      <span style="font-weight: 700;">Visualization</span>: Create plots and visualizations to display ChIP-seq data, such as density plots and heatmaps using tools like&nbsp;<a href="http://homer.ucsd.edu/homer/" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-8" target="_blank">deeptools</a>, or genome browser tracks using the UCSC Genome Browser or&nbsp;IGV.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-align-center u-clearfix u-section-2" id="sec-db4e">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <p class="u-text u-text-default u-text-1"> Below we have included some of the common tools used for ChIP-Seq data analysis. At this point you should be able to follow their manuals and run these tools in the command line. We have also included a hands-on tutorial if you need more help, as well as anther helpful resource below.<br>
+        </p>
+      </div>
+    </section>
+    <section class="u-clearfix u-palette-3-dark-1 u-section-3" id="sec-29a1">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="u-border-3 u-border-grey-40 u-container-style u-group u-group-1">
+          <div class="u-container-layout u-valign-middle u-container-layout-1">
+            <h1 class="u-align-center u-text u-text-default u-text-1">TO DO</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-4" id="sec-aed9">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="custom-expanded data-layout-selected u-clearfix u-gutter-10 u-layout-wrap u-layout-wrap-1">
+          <div class="u-gutter-0 u-layout">
+            <div class="u-layout-col">
+              <div class="u-size-20">
+                <div class="u-layout-row">
+                  <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-1">
+                    <div class="u-container-layout u-valign-top u-container-layout-1">
+                      <p class="u-text u-text-1"><span class="u-file-icon u-icon u-icon-1"><img src="../images/5291043.png" alt=""></span>
+                        <span style="font-weight: 700;"> Peak calling</span>
+                        <br>Unusually, many of the command line tools for analysing ChIP data are more commonly used than the R packages and libraries. Chief among these is MACS software which is used to call ChIP peak regions. There is a very new version&nbsp;<a href="https://github.com/macs3-project/MACS" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" target="_blank">MACS3</a>&nbsp;but still the commonest version is MACS2 which is still similar to use. This course teaches&nbsp;how to use MACS2 to call peaks
+                      </p>
+                      <a href="https://github.com/macs3-project/MACS/wiki/Advanced:-Call-peaks-using-MACS2-subcommands" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-2" target="_blank">TAKE THE COURSE</a>
+                    </div>
+                  </div>
+                  <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-2">
+                    <div class="u-container-layout u-container-layout-2">
+                      <p class="u-text u-text-2"><span class="u-file-icon u-icon u-icon-2"><img src="../images/5291043.png" alt=""></span>
+                        <span style="font-weight: 700;"> Peak annotation</span>
+                        <br>Another key command line tool is&nbsp;<a href="https://bedtools.readthedocs.io/en/latest/" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-3" target="_blank">bedtools</a>&nbsp;which after you define peaks using MACS can be used for merging, intersecting, counting or shuffling of peaks from multiple ChIP replicates or samples. This tutorial&nbsp;contains clearly written material on how to use it.
+                      </p>
+                      <a href="https://github.com/arq5x/bedtools2/blob/master/tutorial/bedtools.md" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-4" target="_blank">TAKE THE COURSE</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="u-size-20">
+                <div class="u-layout-row">
+                  <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-3">
+                    <div class="u-container-layout u-container-layout-3">
+                      <p class="u-text u-text-3"><span class="u-file-icon u-icon u-icon-3"><img src="../images/5291043.png" alt=""></span>
+                        <span style="font-weight: 700;"> Summary plots</span>
+                        <br>Finally many ChIP plots will average signals relative to peak centres, or relative to genomic features such as gene promoters or transcription factor binding sites (TFBS). There are a myriad of tools for doing this in R - but no single package is as prevalent as the command line alternative&nbsp;<a href="https://deeptools.readthedocs.io/en/develop/" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-5" target="_blank">deepTools</a>. Similarly the best place to start is not the manual but the step-by-step examples
+                      </p>
+                      <a href="https://deeptools.readthedocs.io/en/develop/content/example_step_by_step.html" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-6" target="_blank">take the course</a>
+                    </div>
+                  </div>
+                  <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-4">
+                    <div class="u-container-layout u-container-layout-4">
+                      <p class="u-text u-text-4"><span class="u-file-icon u-icon u-icon-4"><img src="../images/5291043.png" alt=""></span>
+                        <span style="font-weight: 700;"></span><b>Hands-on ChIP-seq tut</b><b>orial</b>
+                        <br>This hand-on tutorial develop&nbsp;ed&nbsp;by Morgane Thomas-Ch&nbsp;olier is a command-line based workflow that, although it's a bit ou&nbsp;tdated,&nbsp;&nbsp;covers most of the typical steps in ChIP-Seq data analysis and can be used as a guide.
+                      </p>
+                      <a href="https://www.bio.ens.psl.eu/~mthomas/other/chip-seq-training/" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-7" target="_blank">take the course</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="u-size-20">
+                <div class="u-layout-row">
+                  <div class="u-container-style u-layout-cell u-size-60 u-layout-cell-5">
+                    <div class="u-container-layout u-container-layout-5">
+                      <p class="u-text u-text-5"><span class="u-file-icon u-icon u-icon-5"><img src="../images/5291043.png" alt=""></span>
+                        <span style="font-weight: 700;"></span><b>ChIP-seq resources</b>
+                        <br>The&nbsp;<a href="https://github.com/crazyhottommy/ChIP-seq-analysis" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-8" target="_blank">ChIP-seq analysis</a>&nbsp;repository by crazyhottommy is an excellent compilation of tools for ChIP-seq data analysis&nbsp;&nbsp;
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-grey-10 u-section-5" id="carousel_9aad">
+      <div class="u-expanded-width u-palette-3-dark-1 u-shape u-shape-rectangle u-shape-1"></div>
+      <div class="u-container-style u-group u-shape-rectangle u-white u-group-1">
+        <div class="u-container-layout u-container-layout-1">
+          <div class="u-container-style u-group u-shape-rectangle u-white u-group-2">
+            <div class="u-container-layout u-container-layout-2">
+              <h2 class="u-text u-text-1"> After this section you should be able to</h2>
+              <ul class="u-text u-text-2">
+                <li> Identify peaks and generate summary plots from your ChIP-seq data</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img class="u-image u-image-1" src="../images/e12de5fa5fe5fa8fd9e8e2cf2313f88abbd03a6f26eae806eedeec16541cf3f9fc63b4bc4fda59b9c06bfc341a842a063a502c751886a327086fdc_1280.png" data-image-width="1280" data-image-height="1280">
+    </section>
+    
+    
+    
+    <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-0419"><div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-small-text u-text u-text-variant u-text-1">Questions? Feedback? Please <a href="mailto:l.conde@ucl.ac.uk?subject=Message%20from%20LearnBioinformatics" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1">send us an email</a>
+        </p>
+      </div></footer>
+  
+</body></html>

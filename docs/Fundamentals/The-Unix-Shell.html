@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="en"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>The Unix Shell</title>
+    <link rel="stylesheet" href="../nicepage.css" media="screen">
+<link rel="stylesheet" href="The-Unix-Shell.css" media="screen">
+    <script class="u-script" type="text/javascript" src="../jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="../nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 5.18.6, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    
+    
+    
+    
+    
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "LearnBioinformatics",
+		"logo": "../images/UCL-logo2.png"
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="The Unix Shell">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+  <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
+  <body data-path-to-root="../" class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-header u-header" id="sec-b734"><div class="u-clearfix u-sheet u-sheet-1">
+        <a href="https://www.ucl.ac.uk/cancer/welcome-ucl-cancer-institute" class="u-image u-logo u-image-1" data-image-width="349" data-image-height="140" title="UCL Cancer Institute" target="_blank">
+          <img src="../images/UCL-logo2.png" class="u-logo-image u-logo-image-1">
+        </a>
+        <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
+          <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px; font-weight: 500;">
+            <a class="u-button-style u-custom-active-border-color u-custom-active-color u-custom-border u-custom-border-color u-custom-borders u-custom-hover-border-color u-custom-hover-color u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
+              <svg class="u-svg-link" viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
+              <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</g></svg>
+            </a>
+          </div>
+          <div class="u-custom-menu u-nav-container">
+            <ul class="u-nav u-spacing-2 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-active-grey-5 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-button-style u-hover-grey-10 u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="../Home.html" style="padding: 10px 20px;">Home</a>
+</li><li class="u-nav-item"><a class="u-active-grey-5 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-button-style u-hover-grey-10 u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="Fundamentals.html" style="padding: 10px 20px;">Fundamentals</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="UCL-Cluster.html">UCL Cluster</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="The-Unix-Shell.html">The Unix Shell</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="Basic-R.html">Basic R</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="Bash-Scripting.html">Bash Scripting</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="Advanced-R.html">Advanced R</a>
+</li></ul>
+</div>
+</li><li class="u-nav-item"><a class="u-active-grey-5 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-button-style u-hover-grey-10 u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="../NGS_data_analysis/NGS-Data-Analysis.html" style="padding: 10px 20px;">NGS Data Analysis</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../NGS_data_analysis/Preprocessing.html">Preprocessing</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../NGS_data_analysis/Gene-Expression.html">Gene Expression</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../NGS_data_analysis/Variant-Calling.html">Variant Calling</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../NGS_data_analysis/ChIP-Seq.html">ChIP-Seq</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../NGS_data_analysis/Single-Cell-Gene-Expression.html">Single Cell Gene Expression</a>
+</li></ul>
+</div>
+</li><li class="u-nav-item"><a class="u-active-grey-5 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-button-style u-hover-grey-10 u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="../Pipelines/Pipelines.html" style="padding: 10px 20px;">Pipelines</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../Pipelines/Pipelines.html">Introduction</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../Pipelines/nf-core.html">nf-core</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../Pipelines/Nextflow.html">Nextflow</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../Pipelines/Using-nf-core-in-Myriad.html">Using nf-core in Myriad</a>
+</li></ul>
+</div>
+</li></ul>
+          </div>
+          <div class="u-custom-menu u-nav-container-collapse">
+            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+              <div class="u-inner-container-layout u-sidenav-overflow">
+                <div class="u-menu-close"></div>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-5"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Home.html">Home</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Fundamentals.html">Fundamentals</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="UCL-Cluster.html">UCL Cluster</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="The-Unix-Shell.html">The Unix Shell</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Basic-R.html">Basic R</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Bash-Scripting.html">Bash Scripting</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Advanced-R.html">Advanced R</a>
+</li></ul>
+</div>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../NGS_data_analysis/NGS-Data-Analysis.html">NGS Data Analysis</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../NGS_data_analysis/Preprocessing.html">Preprocessing</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../NGS_data_analysis/Gene-Expression.html">Gene Expression</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../NGS_data_analysis/Variant-Calling.html">Variant Calling</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../NGS_data_analysis/ChIP-Seq.html">ChIP-Seq</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../NGS_data_analysis/Single-Cell-Gene-Expression.html">Single Cell Gene Expression</a>
+</li></ul>
+</div>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Pipelines/Pipelines.html">Pipelines</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Pipelines/Pipelines.html">Introduction</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Pipelines/nf-core.html">nf-core</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Pipelines/Nextflow.html">Nextflow</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Pipelines/Using-nf-core-in-Myriad.html">Using nf-core in Myriad</a>
+</li></ul>
+</div>
+</li></ul>
+              </div>
+            </div>
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+          </div>
+        </nav>
+      </div></header>
+    <section class="u-align-center u-clearfix u-palette-4-dark-2 u-section-1" id="sec-ab94">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h2 class="u-text u-text-default u-text-1"> The Unix shell</h2>
+        <div class="data-layout-selected u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-row">
+              <div class="u-align-center u-container-style u-layout-cell u-left-cell u-size-60 u-layout-cell-1">
+                <div class="u-container-layout u-container-layout-1">
+                  <p class="u-text u-text-default u-text-2"> If you are used to working with Windows, you might find working on the cluster a bit overwhelming, and this is because the cluster uses Linux, an operating system that instead of a graphical user interface (with icons, windows, and a start menu like Windows), is ​managed and accessed through a&nbsp;<span style="font-weight: 700;">command-line&nbsp;interface</span>&nbsp;(aka&nbsp;<span style="font-weight: 700;">Unix shell</span>)&nbsp;.<br>
+                    <br>Unix-like&nbsp; operating systems such as Linux and macOS ​operate through the use of Unix commands. These commands consist of text-based instructions that users input into the shell (on Macs this is done with the Terminal app). Essentially, the shell is a program that takes these keyboard instructions and communicates them to the operating system to execute various tasks. This is how users can interact with the operating system, enabling them to perform actions like navigating the file system, handling files and directories (e.g., copying, moving, renaming), overseeing processes, configuring system settings, and accomplishing a wide range of other functions.<br>
+                    <br>As you should know by now, understanding the Unix shell is crucial for working effectively on a cluster, for several reasons:<br>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <ul class="u-align-left u-custom-list u-text u-text-3">
+          <li>
+            <div class="u-list-icon">
+              <div>❯</div>
+            </div>
+            <span style="font-weight: 700;"></span>
+            <span style="font-weight: 700;">File and Directory Management</span>: Working with files and directories is a fundamental part of cluster usage. You'll need to transfer data, create directories, copy files, and manage permissions—all of which are done through Unix shell commands.
+          </li>
+          <li>
+            <div class="u-list-icon">
+              <div>❯</div>
+            </div>
+            <span style="font-weight: 700;">Job Submission</span>
+            <span style="font-size: 1.125rem; background-color: #41807c; color: #ffffff; font-family: 'Open Sans',sans-serif;">: To run computational tasks on a cluster, you typically submit jobs to a scheduling system. Job submission often involves crafting scripts or commands in the Unix shell to specify job requirements, such as CPU cores, memory, and runtime.</span>
+          </li>
+          <li>
+            <div class="u-list-icon">
+              <div>❯</div>
+            </div>
+            <span style="font-weight: 700;">Environment Configuration</span>
+            <span style="font-size: 1.125rem; background-color: #41807c; color: #ffffff; font-family: 'Open Sans',sans-serif;">: Setting up your working environment, including loading software modules, configuring environment variables, and activating specific Python or R virtual environments, is typically done through shell commands.</span>
+          </li>
+          <li>
+            <div class="u-list-icon">
+              <div>❯</div>
+            </div>
+            <span style="font-weight: 700;">Monitoring and Management</span>
+            <span style="font-size: 1.125rem; background-color: #41807c; color: #ffffff; font-family: 'Open Sans',sans-serif;">: You'll use Unix shell commands to monitor the status of your jobs, check system resource usage, and troubleshoot issues. This includes using commands like top, ps, and grep to manage running processes.</span>
+          </li>
+          <li>
+            <div class="u-list-icon">
+              <div>❯</div>
+            </div>
+            <span style="font-weight: 700;">Scripting</span>
+            <span style="font-size: 1.125rem; background-color: #41807c; color: #ffffff; font-family: 'Open Sans',sans-serif;">: Many cluster tasks involve creating and running scripts, often written in Unix-compatible scripting languages like Bash or Python. Scripting allows you to automate repetitive tasks, manage data pipelines, and control job submission programmatically.</span>
+          </li>
+          <li>
+            <div class="u-list-icon">
+              <div>❯</div>
+            </div>
+            <span style="font-weight: 700;">Data Transfer</span>
+            <span style="font-size: 1.125rem; background-color: #41807c; color: #ffffff; font-family: 'Open Sans',sans-serif;">: Transferring data to and from the cluster is a routine task, and Unix shell tools like scp, rsync, and wget are commonly used for secure and efficient data transfer.</span>
+          </li>
+          <li>
+            <div class="u-list-icon">
+              <div>❯</div>
+            </div>
+            <span style="font-weight: 700;">Security and Permissions</span>
+            <span style="font-size: 1.125rem; background-color: #41807c; color: #ffffff; font-family: 'Open Sans',sans-serif;">: Understanding Unix file permissions and user/group management is critical to ensure data security and control access to your files and scripts on the cluster.</span>
+          </li>
+          <li>
+            <div class="u-list-icon">
+              <div>❯</div>
+            </div>
+            <span style="font-weight: 700;">Customization</span>
+            <span style="font-size: 1.125rem; background-color: #41807c; color: #ffffff; font-family: 'Open Sans',sans-serif;">: You can customize your cluster environment by configuring your shell's profile files (e.g., .bashrc) to set aliases, environment variables, and custom functions that streamline your workflow.</span>
+          </li>
+          <li>
+            <div class="u-list-icon">
+              <div>❯</div>
+            </div>
+            <span style="font-weight: 700;">Debugging</span>
+            <span style="font-size: 1.125rem; background-color: #41807c; color: #ffffff; font-family: 'Open Sans',sans-serif;">: When issues arise, knowing how to debug problems through log files and error messages using Unix tools and techniques is invaluable for troubleshooting.</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="u-align-center u-clearfix u-section-2" id="sec-db4e">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-text u-text-1"> In this section you will learn fundamental skills for working in the cluster thought the shell.&nbsp;​There are plenty of tutorials and courses (both online and on site at UCL) that you can take to learn Unix commands. Some of our favorite options are listed below. You don't need to take all these courses, ​just pick one, but be sure to dedicate enough time to complete it fully before progressing to the next section.<br>
+          <br>Please note that all the courses below focus on teaching you Unix commands, but they also introduce the concept of&nbsp;<span style="font-weight: 700;">Bash Scripting</span>. We will take a more comprehensive look into Bash Scripting in a later section.
+        </p>
+      </div>
+    </section>
+    <section class="u-clearfix u-palette-4-dark-2 u-section-3" id="sec-29a1">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="u-border-3 u-border-grey-40 u-container-style u-group u-group-1">
+          <div class="u-container-layout u-valign-middle u-container-layout-1">
+            <h1 class="u-align-center u-text u-text-default u-text-1">TO DO</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-4" id="sec-0f1c">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="data-layout-selected u-clearfix u-expanded-width u-gutter-10 u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-col">
+              <div class="u-size-30">
+                <div class="u-layout-row">
+                  <div class="u-container-style u-layout-cell u-left-cell u-size-30 u-layout-cell-1" src="">
+                    <div class="u-container-layout u-valign-top u-container-layout-1">
+                      <p class="u-text u-text-1"><span class="u-file-icon u-icon u-icon-1"><img src="../images/5291043.png" alt=""></span> A link to the free online&nbsp;<span style="font-weight: 700;">Linux Tutorial</span>&nbsp;developed by Ryan Chadwick is below. We like it because it is very thorough but at the same time very easy to read.
+                      </p>
+                      <a href="https://ryanstutorials.net/linuxtutorial/" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-1" target="_blank">TAKE THE COURSE</a>
+                    </div>
+                  </div>
+                  <div class="u-container-style u-layout-cell u-right-cell u-size-30 u-layout-cell-2">
+                    <div class="u-container-layout u-container-layout-2">
+                      <p class="u-text u-text-2"><span class="u-file-icon u-icon u-icon-2"><img src="../images/5291043.png" alt=""></span> The&nbsp;<a href="https://www.ucl.ac.uk/research-it-services/" target="_blank" class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-2">UCL Advanced research Computing Center (ARC)</a>&nbsp;offers training materials and workshops related to Unix shell and high-performance computing. Some are online, and some are in person and happen a few times during the year. Visit their&nbsp;<a href="https://www.ucl.ac.uk/advanced-research-computing/education/training" target="_blank" class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-3">Training</a>&nbsp;website for an updated list of training resources and future workshops and events. But in particular, this online "<span style="font-weight: 700;">Introducing the Unix Shell</span>"&nbsp;course&nbsp;is one you shouldn't miss.
+                      </p>
+                      <a href="https://moodle.ucl.ac.uk/course/view.php?id=12953" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-4" target="_blank">TAke the course</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="u-size-30">
+                <div class="u-layout-row">
+                  <div class="u-container-style u-layout-cell u-left-cell u-size-30 u-layout-cell-3">
+                    <div class="u-container-layout u-valign-top u-container-layout-3">
+                      <p class="u-text u-text-3"><span class="u-file-icon u-icon u-icon-3"><img src="../images/5291043.png" alt=""></span>
+                        <a href="https://carpentries.org/" target="_blank" class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-5">The Carpentries</a>&nbsp;is an umbrella organization that encompasses both the&nbsp;<a href="https://datacarpentry.org/" target="_blank" class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-6">Data Carpentry</a>&nbsp;and the&nbsp;<a href="https://software-carpentry.org/" target="_blank" class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-7">Software Carpentry</a>&nbsp;organizations, both of which provide training in essential data and software skills to researchers and professionals. While not specific to UCL, they offer a wide range of workshops and lessons covering Unix shell, R and Python for data organization, data cleaning and data analysis, software development practices, version control with Git, and more. The "<span style="font-weight: 700;">Introduction to the Command Line for Genomics</span>" course from Data carpentry could be a great option too as it's tailored for genomics.
+                      </p>
+                      <a href="https://datacarpentry.org/shell-genomics/" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-8" target="_blank">TAKE THE COURSE</a>
+                    </div>
+                  </div>
+                  <div class="u-container-style u-layout-cell u-right-cell u-size-30 u-layout-cell-4" src="">
+                    <div class="u-container-layout u-container-layout-4">
+                      <p class="u-text u-text-4"><span class="u-file-icon u-icon u-icon-4"><img src="../images/5291043.png" alt=""></span> Finally, if you want to do further training, another&nbsp;more intensive, 2 day course, from Software Carpentry taught&nbsp;in person at UCL&nbsp;through the ARC is their "<span style="font-weight: 700;">Software Carpentry</span>"&nbsp;worshop. Visit their&nbsp;<a href="https://www.ucl.ac.uk/advanced-research-computing/education/training" target="_blank" class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-9">Training</a>&nbsp;website for information on future&nbsp;dates.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-grey-10 u-section-5" id="carousel_9aad">
+      <div class="u-expanded-width u-palette-4-dark-2 u-shape u-shape-rectangle u-shape-1"></div>
+      <div class="u-container-style u-group u-shape-rectangle u-white u-group-1">
+        <div class="u-container-layout u-container-layout-1">
+          <div class="u-container-style u-group u-shape-rectangle u-white u-group-2">
+            <div class="u-container-layout u-container-layout-2">
+              <h2 class="u-text u-text-1"> After this section you should be able to</h2>
+              <ul class="u-text u-text-2">
+                <li> Efficiently navigating the filesystem (cd, ls, pwd...) and understanding relative and absolute paths.</li>
+                <li>Ability to create, move, copy, rename, and delete files and directories (mkdir, cp, mv, rm...)</li>
+                <li>Using text editors like vim or nano</li>
+                <li>Connecting to remote servers using SSH (ssh) and securely transferring files (scp, sftp, rsync..)</li>
+                <li>&nbsp;Mastering the use of pipes (|) to pass the output of one command as the input to another</li>
+                <li>Proficiency in text manipulation and processing using tools like grep, sed, awk, and cut to extract, transform, and format data.</li>
+                <li>Customizing your shell environment with configuration files like .bashrc or .zshrc to set aliases, customize prompts, and define functions</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img class="u-image u-image-1" src="../images/e12de5fa5fe5fa8fd9e8e2cf2313f88abbd03a6f26eae806eedeec16541cf3f9fc63b4bc4fda59b9c06bfc341a842a063a502c751886a327086fdc_1280.png" data-image-width="1280" data-image-height="1280">
+    </section>
+    
+    
+    
+    <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-0419"><div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-small-text u-text u-text-variant u-text-1">Questions? Feedback? Please <a href="mailto:l.conde@ucl.ac.uk?subject=Message%20from%20LearnBioinformatics" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1">send us an email</a>
+        </p>
+      </div></footer>
+  
+</body></html>

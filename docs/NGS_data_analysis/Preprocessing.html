@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="en"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>Preprocessing</title>
+    <link rel="stylesheet" href="../nicepage.css" media="screen">
+<link rel="stylesheet" href="Preprocessing.css" media="screen">
+    <script class="u-script" type="text/javascript" src="../jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="../nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 5.18.6, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    
+    
+    
+    
+    
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "LearnBioinformatics",
+		"logo": "../images/UCL-logo2.png"
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Preprocessing">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+  <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
+  <body data-path-to-root="../" class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-header u-header" id="sec-b734"><div class="u-clearfix u-sheet u-sheet-1">
+        <a href="https://www.ucl.ac.uk/cancer/welcome-ucl-cancer-institute" class="u-image u-logo u-image-1" data-image-width="349" data-image-height="140" title="UCL Cancer Institute" target="_blank">
+          <img src="../images/UCL-logo2.png" class="u-logo-image u-logo-image-1">
+        </a>
+        <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
+          <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px; font-weight: 500;">
+            <a class="u-button-style u-custom-active-border-color u-custom-active-color u-custom-border u-custom-border-color u-custom-borders u-custom-hover-border-color u-custom-hover-color u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
+              <svg class="u-svg-link" viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
+              <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</g></svg>
+            </a>
+          </div>
+          <div class="u-custom-menu u-nav-container">
+            <ul class="u-nav u-spacing-2 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-active-grey-5 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-button-style u-hover-grey-10 u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="../Home.html" style="padding: 10px 20px;">Home</a>
+</li><li class="u-nav-item"><a class="u-active-grey-5 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-button-style u-hover-grey-10 u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="../Fundamentals/Fundamentals.html" style="padding: 10px 20px;">Fundamentals</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../Fundamentals/UCL-Cluster.html">UCL Cluster</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../Fundamentals/The-Unix-Shell.html">The Unix Shell</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../Fundamentals/Basic-R.html">Basic R</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../Fundamentals/Bash-Scripting.html">Bash Scripting</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../Fundamentals/Advanced-R.html">Advanced R</a>
+</li></ul>
+</div>
+</li><li class="u-nav-item"><a class="u-active-grey-5 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-button-style u-hover-grey-10 u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="NGS-Data-Analysis.html" style="padding: 10px 20px;">NGS Data Analysis</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="Preprocessing.html">Preprocessing</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="Gene-Expression.html">Gene Expression</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="Variant-Calling.html">Variant Calling</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="ChIP-Seq.html">ChIP-Seq</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="Single-Cell-Gene-Expression.html">Single Cell Gene Expression</a>
+</li></ul>
+</div>
+</li><li class="u-nav-item"><a class="u-active-grey-5 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-button-style u-hover-grey-10 u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="../Pipelines/Pipelines.html" style="padding: 10px 20px;">Pipelines</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../Pipelines/Pipelines.html">Introduction</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../Pipelines/nf-core.html">nf-core</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../Pipelines/Nextflow.html">Nextflow</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="../Pipelines/Using-nf-core-in-Myriad.html">Using nf-core in Myriad</a>
+</li></ul>
+</div>
+</li></ul>
+          </div>
+          <div class="u-custom-menu u-nav-container-collapse">
+            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+              <div class="u-inner-container-layout u-sidenav-overflow">
+                <div class="u-menu-close"></div>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-5"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Home.html">Home</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Fundamentals/Fundamentals.html">Fundamentals</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Fundamentals/UCL-Cluster.html">UCL Cluster</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Fundamentals/The-Unix-Shell.html">The Unix Shell</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Fundamentals/Basic-R.html">Basic R</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Fundamentals/Bash-Scripting.html">Bash Scripting</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Fundamentals/Advanced-R.html">Advanced R</a>
+</li></ul>
+</div>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="NGS-Data-Analysis.html">NGS Data Analysis</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Preprocessing.html">Preprocessing</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Gene-Expression.html">Gene Expression</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Variant-Calling.html">Variant Calling</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="ChIP-Seq.html">ChIP-Seq</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Single-Cell-Gene-Expression.html">Single Cell Gene Expression</a>
+</li></ul>
+</div>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Pipelines/Pipelines.html">Pipelines</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Pipelines/Pipelines.html">Introduction</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Pipelines/nf-core.html">nf-core</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Pipelines/Nextflow.html">Nextflow</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Pipelines/Using-nf-core-in-Myriad.html">Using nf-core in Myriad</a>
+</li></ul>
+</div>
+</li></ul>
+              </div>
+            </div>
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+          </div>
+        </nav>
+      </div></header>
+    <section class="u-align-center u-clearfix u-palette-3-dark-1 u-section-1" id="sec-ab94">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <h2 class="u-text u-text-default u-text-1"> Preprocessing</h2>
+        <div class="data-layout-selected u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-row">
+              <div class="u-align-center u-container-style u-layout-cell u-left-cell u-size-60 u-layout-cell-1">
+                <div class="u-container-layout u-container-layout-1">
+                  <p class="u-text u-text-default u-text-2"> Preprocessing of NGS data is essentially uniform across various data types, involving several steps ensuring data quality and integrity before specialized downstream analyses diverge for distinct biological insights. The fundamental steps during preprocessing are:<br>
+                  </p>
+                  <ul class="u-align-left u-custom-list u-text u-text-3">
+                    <li>
+                      <div class="u-list-icon">
+                        <div>❯</div>
+                      </div>
+                      <span style="font-weight: 700;"></span>Quality Control (QC)<span style="font-size: 1.125rem; background-color: #b29a36; color: #ffffff; font-family: 'Open Sans',sans-serif;">: The first task is to assess the quality of your sequencing data. QC involves checking for issues such as base call accuracy, sequence length distribution, and per-base sequence quality scores. Tools like</span>
+                      <span style="font-size: 1.125rem; background-color: #b29a36; color: #ffffff; font-family: 'Open Sans',sans-serif;">&nbsp;</span>
+                      <font face="'Open Sans',sans-serif">
+                        <a href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" target="_blank">FastQC</a>
+                      </font>
+                      <span style="font-size: 1.125rem; background-color: #b29a36; color: #ffffff; font-family: 'Open Sans',sans-serif;">&nbsp;</span>
+                      <span style="font-size: 1.125rem; background-color: #b29a36; color: #ffffff; font-family: 'Open Sans',sans-serif;">are commonly used to generate quality reports.</span>
+                    </li>
+                    <li>
+                      <div class="u-list-icon">
+                        <div>❯</div>
+                      </div>Adapter Trimming<span style="font-size: 1.125rem; background-color: #b29a36; color: #ffffff; font-family: 'Open Sans',sans-serif;">: During library preparation, sequencing adapters are added to the ends of DNA fragments. These adapters must be removed from the sequencing reads to prevent them from interfering with downstream analyses. Tools like</span>
+                      <span style="font-size: 1.125rem; background-color: #b29a36; color: #ffffff; font-family: 'Open Sans',sans-serif;">&nbsp;</span>
+                      <font face="'Open Sans',sans-serif">
+                        <a href="http://www.usadellab.org/cms/?page=trimmomatic" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-2" target="_blank">Trimmomatic</a>
+                      </font>
+                      <span style="font-size: 1.125rem; background-color: #b29a36; color: #ffffff; font-family: 'Open Sans',sans-serif;">&nbsp;</span>
+                      <span style="font-size: 1.125rem; background-color: #b29a36; color: #ffffff; font-family: 'Open Sans',sans-serif;">or</span>
+                      <span style="font-size: 1.125rem; background-color: #b29a36; color: #ffffff; font-family: 'Open Sans',sans-serif;">&nbsp;</span>
+                      <font face="'Open Sans',sans-serif">
+                        <a href="https://github.com/FelixKrueger/TrimGalore" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-3" target="_blank">Trim_Galore</a>
+                      </font>
+                      <span style="font-size: 1.125rem; background-color: #b29a36; color: #ffffff; font-family: 'Open Sans',sans-serif;">&nbsp;</span>
+                      <span style="font-size: 1.125rem; background-color: #b29a36; color: #ffffff; font-family: 'Open Sans',sans-serif;">are employed for this purpose.</span>
+                    </li>
+                    <li>
+                      <div class="u-list-icon">
+                        <div>❯</div>
+                      </div>Read Filtering<span style="font-size: 1.125rem; background-color: #b29a36; color: #ffffff; font-family: 'Open Sans',sans-serif;">: Some sequencing reads may be of low quality or contain sequencing errors. Filtering criteria are applied to remove reads that do not meet specified quality thresholds. Common filtering criteria include read length and base quality scores.</span>
+                    </li>
+                    <li>
+                      <div class="u-list-icon">
+                        <div>❯</div>
+                      </div>Reference Mapping<span style="font-size: 1.125rem; background-color: #b29a36; color: #ffffff; font-family: 'Open Sans',sans-serif;">: For many NGS applications, such as DNA-seq and RNA-seq, reads are aligned or mapped to a reference genome or transcriptome. This process allows for variant calling, gene expression quantification, and other analyses.</span>
+                      <span style="font-size: 1.125rem; background-color: #b29a36; color: #ffffff; font-family: 'Open Sans',sans-serif;">&nbsp;</span>
+                      <font face="'Open Sans',sans-serif">
+                        <a href="https://github.com/lh3/bwa" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-4" target="_blank">BWA</a>
+                      </font>
+                      <span style="font-size: 1.125rem; background-color: #b29a36; color: #ffffff; font-family: 'Open Sans',sans-serif;">&nbsp;</span>
+                      <span style="font-size: 1.125rem; background-color: #b29a36; color: #ffffff; font-family: 'Open Sans',sans-serif;">for DNA or</span>
+                      <span style="font-size: 1.125rem; background-color: #b29a36; color: #ffffff; font-family: 'Open Sans',sans-serif;">&nbsp;</span>
+                      <font face="'Open Sans',sans-serif">
+                        <a href="https://github.com/alexdobin/STAR" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-5" target="_blank">STAR</a>
+                      </font>
+                      <span style="font-size: 1.125rem; background-color: #b29a36; color: #ffffff; font-family: 'Open Sans',sans-serif;">&nbsp;</span>
+                      <span style="font-size: 1.125rem; background-color: #b29a36; color: #ffffff; font-family: 'Open Sans',sans-serif;">for RNAseq are common aligners.</span>
+                    </li>
+                    <li>
+                      <div class="u-list-icon">
+                        <div>❯</div>
+                      </div>Duplicate Removal<span style="font-size: 1.125rem; background-color: #b29a36; color: #ffffff; font-family: 'Open Sans',sans-serif;">: Sequencing library preparation can lead to the generation of duplicate reads, which can bias downstream analyses. Duplicate removal is crucial to ensure that each unique fragment is represented only once.</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-align-center u-clearfix u-section-2" id="sec-db4e">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-text u-text-default u-text-1"> In a nutshell, preprocessing data involves going from FastQC to BAM files.<br>
+          <br>In the fundamental section you learned how to transfer your FastQC files to the cluster, how to find in the cluster the software that you need (e.g. fastqC, BWA, ...), how to load the software, and how to use the command line (or write a script) to run these tools.&nbsp;​With this knowledge, you are now well-prepared to carry out NGS data preprocessing on the cluster: you just need to go through the steps above, decide what tools to use in each step, and run the tools on the command line, one step at a time. All the help you need is in the manuals for each tool.<br>
+          <br>But if you feel that you still need a bit of extra help with this, don't worry, we have also included below a few examples of NGS hands-on tutorials and workflows. These tutorials provide clear step-by-step instructions, so you can use them for further guidance.
+        </p>
+        <blockquote class="u-text u-text-2"> Later on, in the Pipelines section, you'll also discover how to use Nextflow pipelines for NGS data analysis, particularly for preprocessing data, but sometimes also for downstream analysis. Running a Nextflow pipeline is generally straightforward, but occasional issues may arise and debugging them constitutes a more advanced topic, and that's why we have left that for a later section. Additionally, we believe that building a solid understanding of the individual steps before delving into pipelines will enhance your learning experience.</blockquote>
+      </div>
+    </section>
+    <section class="u-clearfix u-palette-3-dark-1 u-section-3" id="sec-29a1">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="u-border-3 u-border-grey-40 u-container-style u-group u-group-1">
+          <div class="u-container-layout u-valign-middle u-container-layout-1">
+            <h1 class="u-align-center u-text u-text-default u-text-1">TO DO</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-4" id="sec-aed9">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="data-layout-selected u-clearfix u-expanded-width u-gutter-10 u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-col">
+              <div class="u-size-30">
+                <div class="u-layout-row">
+                  <div class="u-container-style u-layout-cell u-left-cell u-size-30 u-layout-cell-1" src="">
+                    <div class="u-container-layout u-valign-top u-container-layout-1">
+                      <p class="u-text u-text-1"><span class="u-file-icon u-icon u-icon-1"><img src="../images/5291043.png" alt=""></span> This "<span style="font-weight: 700;">Data Wrangling and Processing for Genomics</span>" course from&nbsp;<a href="https://datacarpentry.org/" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" target="_blank">Data Carpentry</a>&nbsp;is a continuation of the "Introduction to the Command Line for Genomics" that we included in The Unix Shell section. This particular tutorial focuses on preprocessing data for variant calling.
+                      </p>
+                      <a href="https://datacarpentry.org/wrangling-genomics/" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-2" target="_blank">TAKE THE COURSE</a>
+                    </div>
+                  </div>
+                  <div class="u-container-style u-layout-cell u-right-cell u-size-30 u-layout-cell-2">
+                    <div class="u-container-layout u-container-layout-2">
+                      <p class="u-text u-text-2"><span class="u-file-icon u-icon u-icon-2"><img src="../images/5291043.png" alt=""></span> The "<a href="https://scienceparkstudygroup.github.io/rna-seq-lesson/" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-3" target="_blank">RNA-seq lesson</a>" course developed by Bliek Tijs, Frans van der Kloet and Marc Galland from the Amsterdam Science Park Study Group, is a Carpentries-style lesson on RNA-Sequencing data analysis. Section "<span style="font-weight: 700;">03 From fastq files to alignments</span>"&nbsp;focuses on the preprocessing steps.
+                      </p>
+                      <a href="https://datacarpentry.org/wrangling-genomics/" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-4" target="_blank">TAKE THE COURSE</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="u-size-30">
+                <div class="u-layout-row">
+                  <div class="u-container-style u-layout-cell u-left-cell u-size-60 u-layout-cell-3">
+                    <div class="u-container-layout u-container-layout-3">
+                      <p class="u-text u-text-3"><span class="u-file-icon u-icon u-icon-3"><img src="../images/5291043.png" alt=""></span> Practicals 1&nbsp;("<span style="font-weight: 700;">QC and quality trimming of raw sequencing reads"</span>)&nbsp;&nbsp;and&nbsp;2 ("<span style="font-weight: 700;">Short read alignment with STAR"</span>)&nbsp;from the&nbsp;<a href="https://bioinformatics-core-shared-training.github.io/cruk-summer-school-2021/" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-5" target="_blank">Functional Genomics</a>"&nbsp;course developed by the Bioinformatics Core - CRUK Cambridge Institute, are also hands-on tutorials that focus on preprocessing steps for RNAseq data
+                      </p>
+                      <a href="https://bioinformatics-core-shared-training.github.io/cruk-summer-school-2021/Introduction/practicals/P1_Preprocessing.html" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-6" target="_blank">practical 1</a>
+                      <a href="https://bioinformatics-core-shared-training.github.io/cruk-summer-school-2021/Introduction/practicals/P2_Alignment.html" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-7" target="_blank">practical 2</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-grey-10 u-section-5" id="carousel_9aad">
+      <div class="u-expanded-width u-palette-3-dark-1 u-shape u-shape-rectangle u-shape-1"></div>
+      <div class="u-container-style u-group u-shape-rectangle u-white u-group-1">
+        <div class="u-container-layout u-container-layout-1">
+          <div class="u-container-style u-group u-shape-rectangle u-white u-group-2">
+            <div class="u-container-layout u-container-layout-2">
+              <h2 class="u-text u-text-1"> After this section you should be able to</h2>
+              <ul class="u-text u-text-2">
+                <li> Understand the main steps involved in NGS data preprocessing</li>
+                <li>Confidently run common tools for NGS data preprocessing, and understand their output</li>
+                <li>Understand what are FastQ, SAM and BAM file formats</li>
+                <li>Understand how to convert FastQ files into BAM files</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img class="u-image u-image-1" src="../images/e12de5fa5fe5fa8fd9e8e2cf2313f88abbd03a6f26eae806eedeec16541cf3f9fc63b4bc4fda59b9c06bfc341a842a063a502c751886a327086fdc_1280.png" data-image-width="1280" data-image-height="1280">
+    </section>
+    
+    
+    
+    <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-0419"><div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-small-text u-text u-text-variant u-text-1">Questions? Feedback? Please <a href="mailto:l.conde@ucl.ac.uk?subject=Message%20from%20LearnBioinformatics" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1">send us an email</a>
+        </p>
+      </div></footer>
+  
+</body></html>
