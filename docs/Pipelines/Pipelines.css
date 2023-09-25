@@ -122,34 +122,6 @@
   margin: 0;
 }
 
-.u-section-2 .u-image-4 {
-  background-image: linear-gradient(0deg, rgba(66,84,101,0.75), rgba(66,84,101,0.75)), url("../images/code-820275_1280.jpg");
-  background-position: 50% 50%;
-}
-
-.u-section-2 .u-container-layout-4 {
-  padding: 85px 45px 30px;
-}
-
-.u-section-2 .u-text-4 {
-  font-weight: 700;
-  margin: 0;
-}
-
-.u-section-2 .u-image-5 {
-  background-image: linear-gradient(0deg, rgba(66,84,101,0.75), rgba(66,84,101,0.75)), url("../images/letter-r-5569133_640.png");
-  background-position: 50% 50%;
-}
-
-.u-section-2 .u-container-layout-5 {
-  padding: 85px 45px 30px;
-}
-
-.u-section-2 .u-text-5 {
-  font-weight: 700;
-  margin: 0;
-}
-
 .u-section-2 .u-gallery-nav-1 {
   position: absolute;
   left: 10px;
@@ -202,18 +174,6 @@
     padding-left: 30px;
     padding-right: 30px;
   }
-
-  .u-section-2 .u-container-layout-4 {
-    padding-top: 30px;
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-
-  .u-section-2 .u-container-layout-5 {
-    padding-top: 30px;
-    padding-left: 30px;
-    padding-right: 30px;
-  }
 }
 
 @media (max-width: 767px) {
@@ -237,16 +197,6 @@
   }
 
   .u-section-2 .u-container-layout-3 {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
-  .u-section-2 .u-container-layout-4 {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
-  .u-section-2 .u-container-layout-5 {
     padding-left: 10px;
     padding-right: 10px;
   }
