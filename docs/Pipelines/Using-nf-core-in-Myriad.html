@@ -145,7 +145,7 @@
           </span>
           <br>
           <br> Running nf-core pipelines that are pre-installed on Myriad is designed to make the process even more user-friendly. This installation eliminates the need for users to handle various tasks such as downloading code, managing reference genomes, or allocating resources in pipeline-specific configs.<br>
-          <br>Of course, you are not obligated to use these pre-installed pipelines; you can continue to run pipelines directly from nf-core on Myriad, following the instructions provided earlier. However, if you're still not entirely comfortable with running tasks on the cluster or using nf-core and Nextflow, this option may be more straightforward for you. The pipelines we have installed are ones that we use internally or have been requested by UCL collaborators to facilitate their work.<br>
+          <br>Of course, you are not obligated to use these pre-installed pipelines; you can continue to run pipelines directly from nf-core on Myriad, following the instructions provided earlier. However, if you're still not entirely comfortable with running tasks on the cluster or using nf-core and Nextflow, this option may be more straightforward for you. The pipelines we have installed are ones that we use internally or have been requested by UCL collaborators to facilitate their work. If there is one particular pipeline that you would like us to install, please drop us an email.<br>
           <br>The process we follow to install nf-core pipelines is straightforward:<br>
         </p>
         <ol class="u-align-left u-text u-text-2">
@@ -222,7 +222,7 @@ To start using a specific pipeline, you can simply load it by employing the "mod
               </div>
             </div>
           </div>
-          <div class="u-accordion-item">
+          <div class="u-accordion-item u-accordion-item-2">
             <a class="u-accordion-link u-button-style u-grey-5 u-text-active-black u-text-grey-60 u-text-hover-black u-accordion-link-2" id="link-accordion-4c47" aria-controls="accordion-4c47" aria-selected="false">
               <span class="u-accordion-link-text"> EXPAND ALIAS IN THE QSUB SCRIPT <span class="u-accordion-link-icon u-icon u-icon-3"><svg class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" id="svg-efcb" style="width: 1em; height: 1em;"><g><g><path d="M509.121,125.966c-3.838-3.838-10.055-3.838-13.893,0L256.005,365.194L16.771,125.966c-3.838-3.838-10.055-3.838-13.893,0    c-3.838,3.838-3.838,10.055,0,13.893l246.18,246.175c1.842,1.842,4.337,2.878,6.947,2.878c2.61,0,5.104-1.036,6.946-2.878    l246.17-246.175C512.959,136.021,512.959,129.804,509.121,125.966z"></path>
 </g>
@@ -240,7 +240,7 @@ You dont need to do this is you are running the nfcore_pipeline commands directl
               </div>
             </div>
           </div>
-          <div class="u-accordion-item">
+          <div class="u-accordion-item u-accordion-item-3">
             <a class="u-accordion-link u-button-style u-grey-5 u-text-active-black u-text-grey-60 u-text-hover-black u-accordion-link-3" id="link-accordion-a910" aria-controls="accordion-a910" aria-selected="false">
               <span class="u-accordion-link-text"> ALLOCATION OF RESOURCES IN THE QSUB SCRIPT <span class="u-accordion-link-icon u-icon u-icon-5"><svg class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" id="svg-55f1" style="width: 1em; height: 1em;"><g><g><path d="M509.121,125.966c-3.838-3.838-10.055-3.838-13.893,0L256.005,365.194L16.771,125.966c-3.838-3.838-10.055-3.838-13.893,0    c-3.838,3.838-3.838,10.055,0,13.893l246.18,246.175c1.842,1.842,4.337,2.878,6.947,2.878c2.61,0,5.104-1.036,6.946-2.878    l246.17-246.175C512.959,136.021,512.959,129.804,509.121,125.966z"></path>
 </g>
@@ -251,29 +251,82 @@ You dont need to do this is you are running the nfcore_pipeline commands directl
             </a>
             <div class="u-accordion-pane u-container-style u-opacity u-opacity-70 u-white u-accordion-pane-3" id="accordion-a910" aria-labelledby="link-accordion-a910">
               <div class="u-container-layout u-container-layout-3">
-                <p class="u-text u-text-4">Sample text. Click to select the text box. Click again or double click to start editing the text. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p class="u-text u-text-4">When creating a qsub script to execute a Nextflow pipeline, as shown above, it's not necessary to request excessive memory or more than one CPU. The qsub script primarily serves as the runner for Nextflow, which acts as a <span style="font-weight: 700;">job controller</span> responsible for submitting various tasks (such as fastqc, trim_galore, STAR, etc.) to the queue.<br>
+                  <br>This 'controller' job is typically not computationally intensive, so excessive resource allocation can result in unnecessary queue wait times lasting hours. The individual processes managed by Nextflow (e.g., fastqc, trim_galore, STAR) will be dispatched to other nodes with resource allocations specified in the internal configuration file. Therefore, you need not be concerned with manually allocating resources to these jobs. In fact, it is advisable to avoid using specific computer resource arguments (e.g., --max_cpus or --max_time) in your script unless you really understand how the resource allocation for that partycular pipeline has been set up<br>
+                </p>
               </div>
             </div>
           </div>
           <div class="u-accordion-item u-accordion-item-4">
-            <a class="u-accordion-link u-button-style u-grey-5 u-text-active-black u-text-grey-60 u-text-hover-black u-accordion-link-4" id="link-a7d8" aria-controls="a7d8" aria-selected="false">
-              <span class="u-accordion-link-text"> LOADING THE PIPELINE MODULE BUT NOT USING IT <span class="u-accordion-link-icon u-icon u-icon-7"><svg class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" id="svg-6813" style="width: 1em; height: 1em;"><g><g><path d="M509.121,125.966c-3.838-3.838-10.055-3.838-13.893,0L256.005,365.194L16.771,125.966c-3.838-3.838-10.055-3.838-13.893,0    c-3.838,3.838-3.838,10.055,0,13.893l246.18,246.175c1.842,1.842,4.337,2.878,6.947,2.878c2.61,0,5.104-1.036,6.946-2.878    l246.17-246.175C512.959,136.021,512.959,129.804,509.121,125.966z"></path>
+            <a class="u-accordion-link u-button-style u-grey-5 u-text-active-black u-text-grey-60 u-text-hover-black u-accordion-link-4" id="link-accordion-a910" aria-controls="accordion-a910" aria-selected="false">
+              <span class="u-accordion-link-text"> always use -resume and -with-tower arguments </span><span class="u-accordion-link-icon u-icon u-text-grey-40 u-icon-7"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-62d7"></use></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" id="svg-62d7" style="enable-background:new 0 0 512 512;"><g><g><path d="M509.121,125.966c-3.838-3.838-10.055-3.838-13.893,0L256.005,365.194L16.771,125.966c-3.838-3.838-10.055-3.838-13.893,0    c-3.838,3.838-3.838,10.055,0,13.893l246.18,246.175c1.842,1.842,4.337,2.878,6.947,2.878c2.61,0,5.104-1.036,6.946-2.878    l246.17-246.175C512.959,136.021,512.959,129.804,509.121,125.966z"></path>
 </g>
 </g></svg></span>
-              </span><span class="u-accordion-link-icon u-icon u-text-grey-40 u-icon-8"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-a771"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-a771"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
-	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
             </a>
-            <div class="u-accordion-pane u-container-style u-opacity u-opacity-70 u-white u-accordion-pane-4" id="a7d8" aria-labelledby="link-a7d8">
-              <div class="u-container-layout u-container-layout-4"></div>
+            <div class="u-accordion-pane u-container-style u-opacity u-opacity-70 u-white u-accordion-pane-4" id="accordion-a910" aria-labelledby="link-accordion-a910">
+              <div class="u-container-layout u-container-layout-4">
+                <p class="u-text u-text-default u-text-5">We strongly recomend that you get used to run your nextflow jobs always with the “<span style="font-weight: 700;">-resume</span>” argument, so that in case the pipeline fails, you can resubmit it again and it will pick up from where it left. If for whatever reason the pipeline stops running at some point and you resubmit without that argument, the pipeline will restart from the start.<br>
+                  <br>Related to the -resume argument, we recommend that you do not work in $TMPDIR, i.e., do not add "cd $TMPDIR" in your qsub script, as that might prevent the -resume argument to work properly.<br>
+                  <br>We also strongly recommend that you always use the “<span style="font-weight: 700;">-with-tower</span>” argument. For this argument to work, you first need to create set it up in&nbsp;<a href="https://tower.nf" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-2" target="_blank">nextflow tower</a>. Nextflow Tower is a platform that provides a graphical user interface for managing and monitoring Nextflow workflows, so you can use it to&nbsp;track your pipelines in the web at real time, and it’s really useful for troubleshooting is there were any issues during the pipeline execution. Just open an account and follow the instractions to create a personal access token.&nbsp;
+                </p>
+              </div>
             </div>
           </div>
-          <div class="u-accordion-item">
-            <a class="u-accordion-link u-button-style u-grey-5 u-text-active-black u-text-grey-60 u-text-hover-black u-accordion-link-5" id="link-a7d8" aria-controls="a7d8" aria-selected="false">
-              <span class="u-accordion-link-text">always use -resume and -with-tower arguments </span><span class="u-accordion-link-icon u-icon u-text-grey-40 u-icon-9"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-5095"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-5095"><path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
-	c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path></svg></span>
+          <div class="u-accordion-item u-accordion-item-5">
+            <a class="u-accordion-link u-button-style u-grey-5 u-text-active-black u-text-grey-60 u-text-hover-black u-accordion-link-5" id="link-accordion-a910" aria-controls="accordion-a910" aria-selected="false">
+              <span class="u-accordion-link-text"> LOADING THE PIPELINE MODULE BUT NOT USING IT <span class="u-accordion-link-icon u-icon u-icon-8"><svg class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" id="svg-6813"><g><g><path d="M509.121,125.966c-3.838-3.838-10.055-3.838-13.893,0L256.005,365.194L16.771,125.966c-3.838-3.838-10.055-3.838-13.893,0    c-3.838,3.838-3.838,10.055,0,13.893l246.18,246.175c1.842,1.842,4.337,2.878,6.947,2.878c2.61,0,5.104-1.036,6.946-2.878    l246.17-246.175C512.959,136.021,512.959,129.804,509.121,125.966z"></path>
+</g>
+</g></svg></span>
+              </span><span class="u-accordion-link-icon u-icon u-text-grey-40 u-icon-9"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-9b4c"></use></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" id="svg-9b4c" style="enable-background:new 0 0 512 512;"><g><g><path d="M509.121,125.966c-3.838-3.838-10.055-3.838-13.893,0L256.005,365.194L16.771,125.966c-3.838-3.838-10.055-3.838-13.893,0    c-3.838,3.838-3.838,10.055,0,13.893l246.18,246.175c1.842,1.842,4.337,2.878,6.947,2.878c2.61,0,5.104-1.036,6.946-2.878    l246.17-246.175C512.959,136.021,512.959,129.804,509.121,125.966z"></path>
+</g>
+</g></svg></span>
             </a>
-            <div class="u-accordion-pane u-container-style u-opacity u-opacity-70 u-white u-accordion-pane-5" id="a7d8" aria-labelledby="link-a7d8">
-              <div class="u-container-layout u-container-layout-5"></div>
+            <div class="u-accordion-pane u-container-style u-opacity u-opacity-70 u-white u-accordion-pane-5" id="accordion-a910" aria-labelledby="link-accordion-a910">
+              <div class="u-container-layout u-container-layout-5">
+                <p class="u-text u-text-6"> Another common mistake is to load a module for an nf-core pipeline, but then run it using "nextflow run nf-core/&lt;pipeline&gt;" instead of the nfcore_&lt;pipeline&gt; command..<br>
+                  <br>I.e., if your qsub script looks like this:<br>
+                </p>
+                <div class="u-align-left u-border-2 u-border-white u-container-style u-group u-opacity u-opacity-70 u-palette-2-dark-1 u-radius-27 u-shape-round u-group-1">
+                  <div class="u-container-layout u-container-layout-6">
+                    <p class="u-custom-font u-text u-text-body-color u-text-7">module load blic-modules<br>module load nfcore/rnaseq/3.10.1<br>
+                      <br>nextflow run nfcore/rnaseq [ARGS]&nbsp;
+                    </p>
+                  </div>
+                </div>
+                <p class="u-text u-text-8"> Then you are loading the module for the rnaseq pipeline that we installed in Myriad, but you are not using it. You are effectively loading the module but then downloading and running the pipeline directly from nf-core.<br>
+                  <br>Please note there is nothing wrong with&nbsp;running the pipeline directly from nf-core as long as you are aware that that's the one you are running (and not the module) and run it with an appropiate config as discussed above.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="u-accordion-item u-accordion-item-6">
+            <a class="u-accordion-link u-button-style u-grey-5 u-text-active-black u-text-grey-60 u-text-hover-black u-accordion-link-6" id="link-accordion-a910" aria-controls="accordion-a910" aria-selected="false">
+              <span class="u-accordion-link-text"> Process `XXXXX` terminated for an unknown reason -- Likely it has been terminated by the external system </span><span class="u-accordion-link-icon u-icon u-text-grey-40 u-icon-10"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-b2b6"></use></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" id="svg-b2b6" style="enable-background:new 0 0 512 512;"><g><g><path d="M509.121,125.966c-3.838-3.838-10.055-3.838-13.893,0L256.005,365.194L16.771,125.966c-3.838-3.838-10.055-3.838-13.893,0    c-3.838,3.838-3.838,10.055,0,13.893l246.18,246.175c1.842,1.842,4.337,2.878,6.947,2.878c2.61,0,5.104-1.036,6.946-2.878    l246.17-246.175C512.959,136.021,512.959,129.804,509.121,125.966z"></path>
+</g>
+</g></svg></span>
+            </a>
+            <div class="u-accordion-pane u-container-style u-opacity u-opacity-70 u-white u-accordion-pane-6" id="accordion-a910" aria-labelledby="link-accordion-a910">
+              <div class="u-container-layout u-container-layout-7">
+                <p class="u-text u-text-9"> Most of the time, when the pipeline fails with an "<span style="font-weight: 700;">Process&nbsp;</span>
+                  <span style="font-weight: 700;">XXX terminated for an unknown reason -- Likely it has been terminated by the external system</span>”, this is usually a glitch and&nbsp;resubmitting the job (using the -resume argument to make sure that the pipeline doesn't start from the beginning) usually solves it.<br>
+                  <br>If you have&nbsp;resubmitted a few times and still fails, then the next thing would be to check that the process has the right resources (time/mem/cpu) assigned. Although the config file that we installed contains appropiate resource allocations, there are occasions where we might need to optimise it (for example, if someone is running a pipeline with files that are bigger than usual we might need to increase the allocations). So if this is the case, contact us and we can look at this for you.&nbsp;<br>
+                  <br>If the resource allocation is not the issue, then you will have to troubleshoot it, and usually that requires you to go to the <span style="font-weight: 700;">work</span> folder that failed and try to debug the issue based on what you see there. If any of this sounds unfamiliar to you (for example, what the&nbsp;<b>work</b>&nbsp;folder is), then we&nbsp;<u>strongly</u>&nbsp;suggest that you take a look at the <a href="Nextflow.html" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-3" target="_blank">Nextflow</a>&nbsp;section before you continue using these pipelines. They do not always run smoothly, so it’s important to understand how they work to be able to troubleshoot them<br>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="u-accordion-item u-accordion-item-7">
+            <a class="u-accordion-link u-button-style u-grey-5 u-text-active-black u-text-grey-60 u-text-hover-black u-accordion-link-7" id="link-accordion-a910" aria-controls="accordion-a910" aria-selected="false">
+              <span class="u-accordion-link-text">dos2unix</span><span class="u-accordion-link-icon u-icon u-text-grey-40 u-icon-11"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-8d8c"></use></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" id="svg-8d8c" style="enable-background:new 0 0 512 512;"><g><g><path d="M509.121,125.966c-3.838-3.838-10.055-3.838-13.893,0L256.005,365.194L16.771,125.966c-3.838-3.838-10.055-3.838-13.893,0    c-3.838,3.838-3.838,10.055,0,13.893l246.18,246.175c1.842,1.842,4.337,2.878,6.947,2.878c2.61,0,5.104-1.036,6.946-2.878    l246.17-246.175C512.959,136.021,512.959,129.804,509.121,125.966z"></path>
+</g>
+</g></svg></span>
+            </a>
+            <div class="u-accordion-pane u-container-style u-opacity u-opacity-70 u-white u-accordion-pane-7" id="accordion-a910" aria-labelledby="link-accordion-a910">
+              <div class="u-container-layout u-container-layout-8">
+                <p class="u-text u-text-10"> While this is not directly related to nf-core or Nextflow, if you are transferring files from Windows or macOS to the cluster, we highly recommend running the 'dos2unix' command on these files. This ensures proper reformatting of line endings, which differ between Windows/Mac and Unix systems.<br>
+                  <br>We've encountered situations where users requested assistance with pipelines, only to discover that the input files were improperly formatted. Line endings, in particular, have been a common source of such issues.<br>
+                </p>
+              </div>
             </div>
           </div>
         </div>
