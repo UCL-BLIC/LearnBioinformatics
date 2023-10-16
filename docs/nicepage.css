@@ -18721,6 +18721,9 @@ blockquote .small:before {
   margin: 0;
   padding: 0;
 }
+.u-categories .u-expand-leaf svg {
+  visibility: hidden;
+}
 aside .u-categories.u-categories-vertical {
   width: 100%;
 }
@@ -18771,17 +18774,18 @@ aside .u-categories.u-categories-vertical ul {
 .u-categories.u-categories-vertical .u-expand-closed ul {
   display: none;
 }
-.u-categories.u-categories-horizontal ul {
+.u-categories.u-categories-horizontal ul ul {
+  display: none;
+}
+.u-categories.u-categories-horizontal ul,
+.u-categories.u-categories-horizontal ul .u-expand-open ul,
+.u-categories.u-categories-horizontal ul .u-expand-open .u-categories-item-content {
   display: inline-block;
 }
 .u-categories.u-categories-horizontal ul .u-categories-item {
   display: inline-block;
-  float: left;
 }
 .u-categories.u-categories-horizontal ul .u-icon {
-  display: none;
-}
-.u-categories.u-categories-horizontal ul ul {
   display: none;
 }
 .u-categories-listbox {
