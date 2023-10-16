@@ -13,12 +13,12 @@
 }
 
 .u-section-2 .u-text-1 {
-  margin-bottom: 33px;
-  margin-top: 33px;
+  margin: 32px 0;
 }
 
 .u-section-2 .u-btn-1 {
   background-image: none;
+  margin-top: 0;
   padding: 0;
 }
 
@@ -33,11 +33,6 @@
 }
 
 .u-section-2 .u-btn-4 {
-  background-image: none;
-  padding: 0;
-}
-
-.u-section-2 .u-btn-5 {
   background-image: none;
   padding: 0;
 }
